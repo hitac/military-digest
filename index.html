@@ -33,12 +33,15 @@ main{max-width:640px;margin:24px auto;padding:0 16px 60px}
 .dl-report:hover{background:#bbdefb}
 .dl-map{color:#2e7d32;border:1px solid #c8e6c9;background:#e8f5e9}
 .dl-map:hover{background:#c8e6c9}
+.exp-btn{cursor:pointer;font:inherit;font-size:.78em;color:#f57f17;border:1px solid #ffe082;background:#fff8e1;padding:4px 12px;border-radius:20px;white-space:nowrap}
+.exp-btn:hover{background:#ffe082}
 </style>
 </head>
 <body>
 <div id="hd">
   <span class="logo">🌍 軍事<span>ダイジェスト</span></span>
   <nav>
+    <button class="exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
     <a class="rss" href="feed.xml">📡 RSS</a>
   </nav>
 </div>
@@ -55,5 +58,21 @@ main{max-width:640px;margin:24px auto;padding:0 16px 60px}
 <div class="dc"><div class="dc-date"><span class="dc-md">5/2</span><span class="dc-yw">2026 (土)</span></div><div class="dc-title">軍事・戦場動画ダイジェスト</div><div class="dc-links"><a class="dl-btn dl-report" href="2026/2026-05-02-report.html">📋 レポート</a><a class="dl-btn dl-map" href="2026/2026-05-02.html">🗺 地図</a></div></div>
 </div>
 </main>
+<script>
+function exportRatings(){
+  const _RK='digest_ratings';
+  try{
+    const m=JSON.parse(localStorage.getItem(_RK)||'{}');
+    const cnt=Object.keys(m).length;
+    if(!cnt){alert('評価データがありません。\n各レポートページで★を付けてからエクスポートしてください。');return;}
+    const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='ratings.json';
+    a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  }catch(e){alert('エクスポートエラー: '+e);}
+}
+</script>
 </body>
 </html>
