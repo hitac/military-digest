@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-05-09 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-05-09.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-05-09</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>30 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（30 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8ae8l/russian_t90m_destroyed_in_the_kupyansk_direction/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシアのT-90M戦車、クピャンスク方面で破壊。</div><div class="vc-en">Russian T-90m destroyed in the Kupyansk direction. Northern Eagle Battalion, 151st Mechanized Brigade. Published 09.05.2026</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 16:58</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8ae8l/russian_t90m_destroyed_in_the_kupyansk_direction/" data-title="Russian T-90m destroyed in the Kupyansk direction. Northern Eagle Battalion, 151" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8no0q/the_cost_of_invasion/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">侵攻の代償。</div><div class="vc-en">The cost of invasion.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 21:29</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8no0q/the_cost_of_invasion/" data-title="The cost of invasion." data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8mscc/birds_of_madyar_drop_a_couple_of_trench_cleaners/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">「マジャールの鳥たち」がロシア陣地に「塹壕掃除機」を投下。</div><div class="vc-en">&quot;Birds of Madyar&quot; drop a couple of Trench Cleaners on a russian position [414th Brigade of unmanned Systems, May 2026]</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 20:56</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8mscc/birds_of_madyar_drop_a_couple_of_trench_cleaners/" data-title="&quot;Birds of Madyar&quot; drop a couple of Trench Cleaners on a russian position [414th " data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8lk4g/russian_soldiers_try_to_advance_in_mobile_toilets/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシア兵、移動式トイレで進軍を試みる。</div><div class="vc-en">russian soldiers try to advance in mobile toilets [11th Border Detachment Kramatorsk &quot;Forpost&quot;, May 2026]</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 20:39</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8lk4g/russian_soldiers_try_to_advance_in_mobile_toilets/" data-title="russian soldiers try to advance in mobile toilets [11th Border Detachment Kramat" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8kdf1/did_they_seriously_use_ai_slop_during_the_victory/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">戦勝記念日パレードで本当にAIのカスを使ったのか？</div><div class="vc-en">Did they seriously use AI slop during the Victory Day parade?</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 20:23</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8kdf1/did_they_seriously_use_ai_slop_during_the_victory/" data-title="Did they seriously use AI slop during the Victory Day parade?" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8hmww/moscow_4th_line_of_defense_and_total_exposure_of/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">モスクワ：第4防衛線と後方の完全な露出、- ドローン爆撃機。</div><div class="vc-en">Moscow: 4th line of defense and total exposure of the rear, - DroneBomber</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 19:48</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8hmww/moscow_4th_line_of_defense_and_total_exposure_of/" data-title="Moscow: 4th line of defense and total exposure of the rear, - DroneBomber" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1t8h8ez/ukrainian_heavy_drone_bomber_hitting_russian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナの重ドローン爆撃機がロシア兵を攻撃。</div><div class="vc-en">Ukrainian Heavy drone bomber hitting Russian soldiers. No Location given. 05/09/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/09 19:43</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1t8h8ez/ukrainian_heavy_drone_bomber_hitting_russian/" data-title="Ukrainian Heavy drone bomber hitting Russian soldiers. No Location given. 05/09/" data-src="r/CombatFootage" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1t8d92y/hezbollah_bomber_drone_records_itself_shot_down_w/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ヒズボラの爆撃ドローンが小火器で撃墜される様子を自ら記録（シリア国境地域、2017年）。</div><div class="vc-en">Hezbollah bomber drone records itself shot down w/ small arms fire, Syrian border area, 7/26/2017</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/09 18:44</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1t8d92y/hezbollah_bomber_drone_records_itself_shot_down_w/" data-title="Hezbollah bomber drone records itself shot down w/ small arms fire, Syrian borde" data-src="r/CombatFootage" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8bcxe/russian_victory_parade_because_similar_vehicles/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシアの戦勝記念日パレード - 前線で類似車両が使われているため、これを軍事装備と呼ぶ...。</div><div class="vc-en">Russian victory parade - because similar vehicles are used on the front lines, I would call this military equipment... 09.05.2026</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 17:33</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8bcxe/russian_victory_parade_because_similar_vehicles/" data-title="Russian victory parade - because similar vehicles are used on the front lines, I" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8bcta/damn_the_ai_slop_has_even_arrived_in_russia/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">くそっ、AIのカスがロシアにも到達した。</div><div class="vc-en">Damn, the AI slop has even arrived in Russia.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 17:33</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8bcta/damn_the_ai_slop_has_even_arrived_in_russia/" data-title="Damn, the AI slop has even arrived in Russia." data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8ag6i/while_putin_is_hiding_like_a_cockroach_the_leader/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">プーチンがゴキブリのように隠れている間、自由世界のリーダーは軍を訪問している。</div><div class="vc-en">While putin is hiding like a cockroach, the leader of the free world is visiting troops.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 17:00</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8ag6i/while_putin_is_hiding_like_a_cockroach_the_leader/" data-title="While putin is hiding like a cockroach, the leader of the free world is visiting" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8acvf/the_latest_military_equipment_at_the_russian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシア戦勝記念日パレードの最新軍事装備。</div><div class="vc-en">The latest military equipment at the Russian victory parade</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 16:56</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8acvf/the_latest_military_equipment_at_the_russian/" data-title="The latest military equipment at the Russian victory parade" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t89bwf/after_45_minutes_putin_left_the_parade_in_a_rush/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">45分後、プーチンはパレードを急いで退席。通常行っていた無名戦士の墓への献花はなし。</div><div class="vc-en">After 45 minutes Putin left the parade in a rush, no laying down flowers at the tomb of the unknown soldiers like he usually does. 09.05.2026</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 16:17</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t89bwf/after_45_minutes_putin_left_the_parade_in_a_rush/" data-title="After 45 minutes Putin left the parade in a rush, no laying down flowers at the " data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t896xm/putin_pictured_during_the_parade_in_moscow_tody/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">本日モスクワのパレードで撮影されたプーチン。</div><div class="vc-en">Putin pictured during the parade in Moscow tody.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 16:12</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t896xm/putin_pictured_during_the_parade_in_moscow_tody/" data-title="Putin pictured during the parade in Moscow tody." data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t887mb/may_9_parade_in_almetyevsk_tatarstan_russia/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシア、タタルスタン共和国アルメチエフスクでの5月9日パレード。</div><div class="vc-en">May 9 parade in Almetyevsk, Tatarstan, Russia.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 15:34</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t887mb/may_9_parade_in_almetyevsk_tatarstan_russia/" data-title="May 9 parade in Almetyevsk, Tatarstan, Russia." data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8755f/my_older_brother_died_svo_a_drone_hit_him_the/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">「兄はSVOで亡くなった。ドローンにやられた」。主要プロパガンダチャンネルの戦勝記念日生放送は計画通りいかず。</div><div class="vc-en">&quot;My older brother died SVO. A drone hit him.&quot; The live broadcast for Victory Day on the main propaganda channel didn&#x27;t go according to plan. 09.05.2026</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 14:53</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8755f/my_older_brother_died_svo_a_drone_hit_him_the/" data-title="&quot;My older brother died SVO. A drone hit him.&quot; The live broadcast for Victory Day" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1t86u24/hezbollah_fpv_drone_targets_2_israeli_soldiers/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ヒズボラのFPVドローンがイスラエル兵2名を標的 - 南レバノン。</div><div class="vc-en">Hezbollah FPV drone targets 2 Israeli soldiers - Southern Lebanon.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/09 14:41</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1t86u24/hezbollah_fpv_drone_targets_2_israeli_soldiers/" data-title="Hezbollah FPV drone targets 2 Israeli soldiers - Southern Lebanon." data-src="r/CombatFootage" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t85r0k/russian_occupiers_mother_this_is_my_grandfather/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシア占領兵の母親：「祖父と息子が戦闘中行方不明」。記者：「二重のお祝いですね」と皮肉。</div><div class="vc-en">Russian occupier&#x27;s mother: &quot;This is my grandfather, and this is my son, missing in action.&quot; Journalist: &quot;So you have a double holiday today. Congratulations!&quot;</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 13:58</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t85r0k/russian_occupiers_mother_this_is_my_grandfather/" data-title="Russian occupier&#x27;s mother: &quot;This is my grandfather, and this is my son, missing " data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t85mj2/the_reason_why_nato_equipment_costs_so_much/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">NATO装備が高価な理由。</div><div class="vc-en">The reason why NATO equipment costs so much.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 13:53</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t85mj2/the_reason_why_nato_equipment_costs_so_much/" data-title="The reason why NATO equipment costs so much." data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1t85k19/ukrainian_drone_downs_russian_scalpelm_loitering/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナのドローンがロシアの徘徊型弾薬Scalpel-Mを撃墜（2026年春）。</div><div class="vc-en">Ukrainian drone downs Russian Scalpel-M loitering munition, spring 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/09 13:50</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1t85k19/ukrainian_drone_downs_russian_scalpelm_loitering/" data-title="Ukrainian drone downs Russian Scalpel-M loitering munition, spring 2026" data-src="r/CombatFootage" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8585i/moscows_may_9_parade_lasted_less_than_an_hour_no/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">モスクワの5月9日パレードは1時間未満で終了、軍事装備の展示はなし。</div><div class="vc-en">Moscow’s May 9 Parade Lasted Less Than an Hour, No Military Equipment Displayed</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 13:36</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8585i/moscows_may_9_parade_lasted_less_than_an_hour_no/" data-title="Moscow’s May 9 Parade Lasted Less Than an Hour, No Military Equipment Displayed" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1t83w5i/pdf_rebels_fight_myanmar_burma_armypolice_capture/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">PDF反乱軍がミャンマー国軍/警察と交戦。警察特殊部隊を拘束（バゴー地域、4月11日）。</div><div class="vc-en">PDF rebels fight Myanmar (Burma) Army/police; capture police commando- Bantbwaykone, Nattalin Township, Bago Region (April 11)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/09 12:39</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1t83w5i/pdf_rebels_fight_myanmar_burma_armypolice_capture/" data-title="PDF rebels fight Myanmar (Burma) Army/police; capture police commando- Bantbwayk" data-src="r/CombatFootage" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t83rpt/putins_face_says_everything_about_how_the_may_9/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">プーチンの顔が5月9日パレードのすべてを物語っている。</div><div class="vc-en">Putin’s face says everything about how the May 9 parade went</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 12:33</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t83rpt/putins_face_says_everything_about_how_the_may_9/" data-title="Putin’s face says everything about how the May 9 parade went" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t83kcg/rostov_the_aftermath_of_may_8_missile_strike_on/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロストフ — 5月8日の産業地帯ミサイル攻撃の余波。</div><div class="vc-en">Rostov — the aftermath of May 8 missile strike on an industrial zone</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 12:24</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t83kcg/rostov_the_aftermath_of_may_8_missile_strike_on/" data-title="Rostov — the aftermath of May 8 missile strike on an industrial zone" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t83bsd/kremlin_on_zelenskys_parade_permit_even/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">クレムリン、ゼレンスキーのパレード許可について：「コメントするのも恥ずかしいが、使いたくない他のロシア語もある」。</div><div class="vc-en">Kremlin on Zelensky&#x27;s parade permit: &quot;Even embarrassing to comment, but there are other Russian words we don&#x27;t want to use.&quot;</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 12:12</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t83bsd/kremlin_on_zelenskys_parade_permit_even/" data-title="Kremlin on Zelensky&#x27;s parade permit: &quot;Even embarrassing to comment, but there ar" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t83a9d/chita_russia_a_parade_of_widows_of_russian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシア、チタ — ウクライナで戦死したロシア兵の未亡人たちのパレード。</div><div class="vc-en">Chita, Russia — a parade of widows of Russian soldiers who went to Ukraine and returned in body bags</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 12:10</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t83a9d/chita_russia_a_parade_of_widows_of_russian/" data-title="Chita, Russia — a parade of widows of Russian soldiers who went to Ukraine and r" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8355t/aftermath_of_russian_invaders_after_a_failed/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">マラ・トクマチカ近郊でのロシア侵略者の攻撃失敗後の余波。</div><div class="vc-en">Aftermath of russian invaders after a failed assault near Mala Tokmachka</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/09 12:04</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1t8355t/aftermath_of_russian_invaders_after_a_failed/" data-title="Aftermath of russian invaders after a failed assault near Mala Tokmachka" data-src="r/UkraineWarVideoReport" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1t82p80/hezbollah_published_fpv_drone_attack_targetting/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ヒズボラ、南レバノンでIDF兵士を標的としたFPVドローン攻撃を公開。</div><div class="vc-en">Hezbollah published FPV drone attack targetting IDF soldier - South Lebanon</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/09 11:43</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1t82p80/hezbollah_published_fpv_drone_attack_targetting/" data-title="Hezbollah published FPV drone attack targetting IDF soldier - South Lebanon" data-src="r/CombatFootage" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1t81o6e/a_ukrainian_civilian_records_how_another_civilian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ民間人、ドニプロ郊外で携帯型防空ミサイルによりイラン/ロシア製シャヘドUAV撃墜を記録。</div><div class="vc-en">A Ukrainian civilian records how another civilian shoots down an Iranian/Russian &quot;Shahed&quot; UAV in the suburbs of Dnipro with a MANPADS.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/09 10:50</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1t81o6e/a_ukrainian_civilian_records_how_another_civilian/" data-title="A Ukrainian civilian records how another civilian shoots down an Iranian/Russian" data-src="r/CombatFootage" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1t816vw/ukrainian_soldier_holding_trenches_near_bakhmut/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">バフムート近郊で塹壕を守るウクライナ兵（2023年）。</div><div class="vc-en">Ukrainian soldier holding trenches near Bakhmut [2023]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/09 10:23</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1t816vw/ukrainian_soldier_holding_trenches_near_bakhmut/" data-title="Ukrainian soldier holding trenches near Bakhmut [2023]" data-src="r/CombatFootage" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>作業1: 日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<ul>
+<li>  [id=0] ロシアのT-90M戦車がクピャンスク方面で破壊された。北方鷲大隊、第151機械化旅団による（2026年5月9日公開）。</li>
+<li>  [id=3] ロシア兵が「移動式トイレ」（即席の、あるいは質素な車両を指す可能性）に乗って進軍を試みた。第11国境支隊クラマトルスク「フォアポスト」による（2026年5月）。</li>
+</ul>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<ul>
+<li>  [id=23] ロストフの産業地帯に対する5月8日のミサイル攻撃の余波。</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  [id=2] 「マジャールの鳥たち」がロシア陣地に複数の「塹壕掃除機（Trench Cleaners）」を投下した（第414無人システム旅団、2026年5月）。</li>
+<li>  [id=6] ウクライナの重ドローン爆撃機がロシア兵を攻撃した。</li>
+<li>  [id=15] 戦勝記念日の生放送中、ロシアの主要プロパガンダチャンネルで「兄が特別軍事作戦で死亡した。ドローンにやられた」と証言があった。</li>
+<li>  [id=19] ウクライナのドローンがロシアの徘徊型弾薬Scalpel-Mを撃墜した（2026年春）。</li>
+<li>  [id=28] ドニプロ郊外で、ウクライナの民間人が携帯型防空ミサイル（MANPADS）でイラン/ロシアの「シャヘド」UAVを撃墜する様子を別の民間人が記録した。</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  [id=1] 「侵攻の代償」と題された投稿。</li>
+<li>  [id=4] 戦勝記念日パレードでAIの粗悪なコンテンツが使用されたかという疑問。</li>
+<li>  [id=5] モスクワの第4防衛線と後方の完全な露出に関する指摘。</li>
+<li>  [id=8] ロシアの戦勝記念日パレードについて、前線で同様の車両が使われていることから「これが軍事装備だ」と皮肉を込めてコメント。</li>
+<li>  [id=9] 「AIの粗悪なコンテンツがロシアにも到達した」とのコメント。</li>
+<li>  [id=10] 「プーチンがゴキブリのように隠れている間に、自由世界のリーダーは部隊を訪問している」とのコメント。</li>
+<li>  [id=11] ロシア戦勝記念日パレードの「最新軍事装備」について言及（皮肉の可能性あり）。</li>
+<li>  [id=12] プーチン大統領が45分でパレードを急いで退席し、通常行われる無名戦士の墓への献花をしなかった（2026年5月9日）。</li>
+<li>  [id=13] モスクワでのパレード中のプーチンの写真。</li>
+<li>  [id=14] ロシアのタタルスタン共和国アルメチエフスクでの5月9日パレード。</li>
+<li>  [id=17] ロシア占領兵の母親が「祖父と息子が戦闘中行方不明」と語り、ジャーナリストが「二重のお祝いですね」と皮肉を込めて祝福するやり取り。</li>
+<li>  [id=18] NATO装備が高価である理由についての言及。</li>
+<li>  [id=20] モスクワの5月9日パレードは1時間未満で終了し、軍事装備の展示はなかった。</li>
+<li>  [id=22] プーチンの顔が5月9日パレードの全てを物語っていると指摘。</li>
+<li>  [id=24] クレムリンがゼレンスキーのパレード許可について「コメントするのも恥ずかしいが、使いたくない他のロシア語もある」と発言。</li>
+<li>  [id=25] ロシアのチタで、ウクライナで戦死し遺体袋で戻ってきたロシア兵の未亡人たちのパレード。</li>
+<li>  [id=26] マラ・トクマチカ近郊でのロシア侵略者の攻撃失敗後の余波。</li>
+<li>  [id=29] バフムート近郊で塹壕を守るウクライナ兵（2023年）。</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  [id=7] シリア国境地域で、ヒズボラの爆撃ドローンが小火器で撃墜される様子を自ら記録した映像（2017年7月26日）。</li>
+<li>  [id=16] 南レバノンで、ヒズボラのFPVドローンがイスラエル兵2名を標的とした。</li>
+<li>  [id=27] 南レバノンでヒズボラがIDF兵士を標的としたFPVドローン攻撃を公開した。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<ul>
+<li>  [id=21] ミャンマーのバゴー地域ナッタリン郡区バントブウェコーンで、PDF反乱軍がミャンマー国軍/警察と交戦し、警察特殊部隊を捕獲した（4月11日）。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<p>1.  <strong>[id=0] ロシアのT-90M戦車、クピャンスク方面で破壊。</strong>: 最新鋭ロシア戦車の破壊は注目に値する。</p>
+<p>2.  <strong>[id=3] ロシア兵、移動式トイレで進軍を試みる。</strong>: 即席または質素な車両を指す可能性があり、戦況の深刻さを示す。</p>
+<p>3.  <strong>[id=19] ウクライナのドローンがロシアの徘徊型弾薬Scalpel-Mを撃墜（2026年春）。</strong>: ドローン対ドローンの迎撃戦は現代戦の進化を示す。</p>
+<p>4.  <strong>[id=20] モスクワの5月9日パレードは1時間未満で終了、軍事装備の展示はなし。</strong>: 重要な記念行事の規模縮小はロシアの現状を反映。</p>
+<p>5.  <strong>[id=28] ウクライナ民間人、ドニプロ郊外で携帯型防空ミサイルによりイラン/ロシア製シャヘドUAV撃墜を記録。</strong>: 市民が直接防空に参加する様子が注目される。</p>
+<br>
+<p>---</p>
+<h2>作業2: タイトル翻訳JSON</h2></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/russian-drone-strikes-apartment-building-in-kharkiv-less-than-24-hours-into-ceasefire/" target="_blank">Russian drone strikes apartment building in Kharkiv less than 24 hours into ceasefire</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年5月9日 23:30 UTC</span></div><div class="art-body"><p>以下に要約します。</p>
+<br>
+<ul>
+<li>  <strong>主題</strong>: ロシア軍が停戦開始から24時間以内にウクライナのKharkiv市へドローン攻撃を実施した件。</li>
+<li>  <strong>背景・文脈</strong>: 停戦合意後わずか24時間足らずでの攻撃は、国際的な停戦努力に対するロシアの姿勢に疑問を投げかける。この事態は、特にウクライナ東部における紛争の継続的な緊張と市民生活への脅威を浮き彫りにする。</li>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   停戦開始後24時間以内にロシア軍がウクライナのKharkiv市へドローン攻撃を実施した。</p>
+<p>    *   攻撃はKharkiv市 Industrial districtにある9階建ての集合住宅を標的とした。</p>
+<p>    *   Kharkiv Oblast Governor Oleh Syniehubovが被害状況を公表した。</p>
+<p>    *   民間人が影響を受け、8歳男児2名が急性ストレス反応を示したが、死者は報告されていない。</p>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: 停戦の直後の攻撃は、ロシアが外交的解決や国際的な規範よりも、ウクライナへの軍事的圧力を継続する意思があることを示唆する。これは、今後の和平交渉の見通しを著しく困難にし、国際社会におけるロシアへの信頼をさらに低下させる。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/russian-drone-strikes-apartment-building-in-kharkiv-less-than-24-hours-into-ceasefire/" data-title="Russian drone strikes apartment building in Kharkiv less than 24 hours into ceas" data-src="Kyiv Independent" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/putin-believes-war-in-ukraine-is-almost-over/" target="_blank">Putin says he believes war in Ukraine almost over</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年5月9日 22:42 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: プーチン大統領がウクライナでの戦争が間もなく終結すると述べ、Zelensky大統領との会談に意欲を示したこと。</li>
+</ul>
+<br>
+<ul>
+<li><strong>背景・文脈</strong>: ロシアによるウクライナ侵攻が長期化する中、ロシア側トップが紛争終結の見通しと会談姿勢について言及したことは、今後の国際情勢や外交努力に影響を与える可能性を秘める。従来の会談条件からの変化が示唆されており、外交的解決の可能性を探る上で重要なシグナルとなる。</li>
+</ul>
+<br>
+<ul>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   プーチン大統領は、ウクライナでの戦争が「ほぼ終わった」（almost over）と信じていると発言した。</p>
+<p>    *   プーチン大統領は、Volodymyr Zelensky大統領との会談に前向きな姿勢を示した。</p>
+<p>    *   プーチン大統領は、Zelensky大統領との会談場所として「第三国」での開催を提案した。</p>
+<p>    *   これは、Zelensky大統領をモスクワに招くという、従来の招待方針からの「転換」（a shift）である。</p>
+<br>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: この発言は、ロシアが現在の戦況に自信を持っているか、あるいは外交的解決への道筋を探る意図を示唆する。第三国での会談提案は、従来のロシアの立場からの柔軟性を示す可能性を秘める一方で、「ほぼ終わった」という認識は、ロシアが現在の占領状況を既成事実化し、その状態での終結を目指している可能性も孕む。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/putin-believes-war-in-ukraine-is-almost-over/" data-title="Putin says he believes war in Ukraine almost over" data-src="Kyiv Independent" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/russias-war-comes-home/" target="_blank">Russia&#x27;s war comes home</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年5月9日 19:56 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/russias-war-comes-home/" data-title="Russia&#x27;s war comes home" data-src="Kyiv Independent" data-date="2026-05-09"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
