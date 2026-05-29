@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-05-29 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-05-29.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-05-29</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>30 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（30 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trfwsy/russian_logistics_vehicles_are_seen_burning_at/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナのドローン攻撃後、クリミアの路上でロシアの兵站車両が炎上。</div><div class="vc-en">Russian logistics vehicles are seen burning at the side of the road in Crimea after Ukrainian drone strikes - May 2026</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 21:15</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trfwsy/russian_logistics_vehicles_are_seen_burning_at/" data-title="Russian logistics vehicles are seen burning at the side of the road in Crimea af" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tra7x6/russias_volgograd_oil_refinery_shuts_down_giant/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナの攻撃後、ロシアのボルゴグラード製油所が停止、ヤロスラヴリ近郊で燃料タンクが炎上。</div><div class="vc-en">Russia&#x27;s Volgograd oil refinery shuts down, giant fuel tanks burn near Yaroslavl after Ukraine&#x27;s attacks</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 18:03</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tra7x6/russias_volgograd_oil_refinery_shuts_down_giant/" data-title="Russia&#x27;s Volgograd oil refinery shuts down, giant fuel tanks burn near Yaroslavl" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tqtkbf/footage_showing_the_ukrainian_drone_attack_on/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシアフリゲート「アドミラル・エッセン」被弾のノヴォロシースクへのウクライナドローン攻撃映像。</div><div class="vc-en">Footage showing the Ukrainian drone attack on Novorossiysk in which the Russian Frigate ‘Admiral Essen’ was hit - 23rd May 2026</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 06:47</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tqtkbf/footage_showing_the_ukrainian_drone_attack_on/" data-title="Footage showing the Ukrainian drone attack on Novorossiysk in which the Russian " data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trgd9z/ukrainian_drones_of_various_types_eliminate/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナドローンがドネツク後方で多数のロシア歩兵を排除し、兵站輸送を破壊。「BLACK SKY」戦闘映像。</div><div class="vc-en">Ukrainian drones of various types eliminate dozens of Russian infantry and destroy logistics transport in rear areas in the Donetsk region. Footage of combat work of drone operators of &quot;BLACK SKY</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 21:32</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trgd9z/ukrainian_drones_of_various_types_eliminate/" data-title="Ukrainian drones of various types eliminate dozens of Russian infantry and destr" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1trfnu5/ukraines_sbs_59th_assault_brigade_signum_drone/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ第59強襲旅団ドローン部隊がリマン地域の森でロシア歩兵を追撃し、致命的な攻撃。</div><div class="vc-en">Ukraine&#x27;s SBS 59th Assault Brigade &quot;Signum&quot; drone pilots continue tο hunt down Russian infantry ın Lyman-area forests, landing lethal strikes. 05.29.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 21:06</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1trfnu5/ukraines_sbs_59th_assault_brigade_signum_drone/" data-title="Ukraine&#x27;s SBS 59th Assault Brigade &quot;Signum&quot; drone pilots continue tο hunt down R" data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trfnez/approximate_flight_routes_of_ukrainian_drones/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">今夜ロシア目標を攻撃したウクライナドローンの概略飛行経路。</div><div class="vc-en">Approximate flight routes of Ukrainian drones attacking Russian targets tonight.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 21:05</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trfnez/approximate_flight_routes_of_ukrainian_drones/" data-title="Approximate flight routes of Ukrainian drones attacking Russian targets tonight." data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trf4xe/russian_telegram_channels_realising_the_damage/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシアのテレグラムチャンネルが占領地域におけるウクライナによる兵站被害を認識。</div><div class="vc-en">Russian telegram channels realising the damage caused by Ukraine on their logistics in occupied regions</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 20:46</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trf4xe/russian_telegram_channels_realising_the_damage/" data-title="Russian telegram channels realising the damage caused by Ukraine on their logist" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trexmq/sevastopol_occupied_crimea_people_are_waiting_to/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">占領下のクリミア・セヴァストポリでガソリン欠乏により人々が給油待ち。</div><div class="vc-en">Sevastopol occupied Crimea people are waiting to refuel their cars while there&#x27;s no gas at all</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 20:38</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trexmq/sevastopol_occupied_crimea_people_are_waiting_to/" data-title="Sevastopol occupied Crimea people are waiting to refuel their cars while there&#x27;s" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1treabn/неzbоllаh_fрv_drоnе_rесоrds_оthеr_drоnе_аttасkіng/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ヒズボラのFPVドローンがメルカバ戦車攻撃を記録後、別の目標を攻撃。</div><div class="vc-en">Неzbоllаh FРV drоnе rесоrds оthеr drоnе аttасkіng Mеrkаvа bеfоrе thе ѕроttеr FРV gоеѕ tо аttасk аnоthеr tаrgеt. 5/26/26. Rachaf, Lebanon</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 20:15</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1treabn/неzbоllаh_fрv_drоnе_rесоrds_оthеr_drоnе_аttасkіng/" data-title="Неzbоllаh FРV drоnе rесоrds оthеr drоnе аttасkіng Mеrkаvа bеfоrе thе ѕроttеr FРV" data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tre0yl/video_of_the_fire_at_the_yaroslavl3_oil_pumpring/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナドローン攻撃後のヤロスラヴリ-3石油ポンピングステーション火災映像。</div><div class="vc-en">Video of the fire at the Yaroslavl-3 oil pumpring station following a Ukrainian drone stike.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 20:06</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tre0yl/video_of_the_fire_at_the_yaroslavl3_oil_pumpring/" data-title="Video of the fire at the Yaroslavl-3 oil pumpring station following a Ukrainian " data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trdo3u/additional_footage_of_the_fire_at_the_yaroslavl3/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ攻撃後のヤロスラヴリ-3石油ポンピングステーション火災の追加映像。</div><div class="vc-en">Additional footage of the fire at the Yaroslavl-3 oil pumping station after the Ukrainian strike.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 19:54</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1trdo3u/additional_footage_of_the_fire_at_the_yaroslavl3/" data-title="Additional footage of the fire at the Yaroslavl-3 oil pumping station after the " data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1tray47/ukrainian_k2_uas_team_using_darts_strike_drones/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナK2 UASチームがダーツドローンでデバルツェボ-アルチェフスク高速道路上のロシア兵站を攻撃。</div><div class="vc-en">Ukrainian K2 UAS team using Darts strike drones against russian logistics located Debaltsevo-Alchevsk highway (RU pov included)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 18:26</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1tray47/ukrainian_k2_uas_team_using_darts_strike_drones/" data-title="Ukrainian K2 UAS team using Darts strike drones against russian logistics locate" data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1tr7mux/fpv_kamikaze_drones_hit_multiple_russian_soldiers/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">FPV神風ドローンが複数のロシア兵士を攻撃。ウクライナ第414攻撃UAS旅団が公開。</div><div class="vc-en">FPV kamikaze drones hit multiple Russian soldiers. Ukraine&#x27;s 414th Strike UAS Brigade, published 5/29/2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 16:39</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1tr7mux/fpv_kamikaze_drones_hit_multiple_russian_soldiers/" data-title="FPV kamikaze drones hit multiple Russian soldiers. Ukraine&#x27;s 414th Strike UAS Br" data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr7859/the_situation_regarding_the_ukrainian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ドネツク/ザポリージャ/ドニプロペトロウシク軸でのウクライナ反攻に関する状況。</div><div class="vc-en">The Situation Regarding The Ukrainian Counterattack on the Donetsk/Zaporizhzhia/Dnipropetrovsk Axis</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 16:26</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr7859/the_situation_regarding_the_ukrainian/" data-title="The Situation Regarding The Ukrainian Counterattack on the Donetsk/Zaporizhzhia/" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr6m33/k2_joins_in_on_the_hunt_for_russian_logistics_on/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">第20独立無人システム旅団「K-2」が「Highway To Hell」でロシア兵站の追撃に参加。</div><div class="vc-en">&quot;K-2&quot; joins in on the hunt for russian logistics on the &quot;Highway To Hell&quot; [20th separate Brigade of Unmanned Systems &quot;K-2&quot;, Donetzk, May 2026]</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 16:08</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr6m33/k2_joins_in_on_the_hunt_for_russian_logistics_on/" data-title="&quot;K-2&quot; joins in on the hunt for russian logistics on the &quot;Highway To Hell&quot; [20th " data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1tr51y4/ukraine_sof_middle_strike_drones_destroy_2_torm2/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナSOF中型攻撃ドローンがM-14高速道路ベルジャンスクでTOR-M2を2両破壊。</div><div class="vc-en">Ukraine SOF middle strike drones destroy 2 TOR-M2, 1 at M-14 highway, Berdiansk, 5/29/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 15:17</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1tr51y4/ukraine_sof_middle_strike_drones_destroy_2_torm2/" data-title="Ukraine SOF middle strike drones destroy 2 TOR-M2, 1 at M-14 highway, Berdiansk," data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr4zc4/the_russians_are_trying_to_apply_dazzle/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシア軍がウクライナのドローンAI標的アルゴリズムからトラックを隠すため「ダズル迷彩」を試行。</div><div class="vc-en">The russians are trying to apply &quot;dazzle camouflage&quot; to disguise their trucks from ukrainian drone AI targetting algorithms [May 2026]</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 15:14</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr4zc4/the_russians_are_trying_to_apply_dazzle/" data-title="The russians are trying to apply &quot;dazzle camouflage&quot; to disguise their trucks fr" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr4m7s/russian_firinglogistic_position_struck_by/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ第422UAS連隊が南部占領地域でロシアの砲撃/兵站陣地を攻撃。</div><div class="vc-en">Russian firing/logistic position struck by Ukrainian 422nd UAS Regiment Luftwaffe. Southern occupied Ukraine. 29.05.2026</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 15:03</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr4m7s/russian_firinglogistic_position_struck_by/" data-title="Russian firing/logistic position struck by Ukrainian 422nd UAS Regiment Luftwaff" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr4i8b/ukrainian_stick_drones_downed_russian_fpv_strike/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナのスティックドローンがヘルソン方面でロシアFPV攻撃ドローンを撃墜。</div><div class="vc-en">Ukrainian stick drones downed Russian FPV strike drones. Kherson direction. 39th Marine Brigade. Published 29.05.2026</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 14:59</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr4i8b/ukrainian_stick_drones_downed_russian_fpv_strike/" data-title="Ukrainian stick drones downed Russian FPV strike drones. Kherson direction. 39th" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1tr4exl/ukrainian_soldiers_came_under_russian_artillery/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ兵士がロシアの砲撃を受けるも間一髪で損失なし。コスチャンチニフカ方面。</div><div class="vc-en">Ukrainian soldiers came under Russian artillery attack. Close call. No losses. Kostiantinivka direction. Posted 29.05.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 14:56</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1tr4exl/ukrainian_soldiers_came_under_russian_artillery/" data-title="Ukrainian soldiers came under Russian artillery attack. Close call. No losses. K" data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1tr4d5i/archive_ukrainian_marksman_under_grsp_neptune/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">アゾフ第12旅団狙撃兵が熱画像スコープでロシア偵察兵と交戦（セレブリャンスクの森）。</div><div class="vc-en">(Archive) Ukrainian marksman under GRSP &quot;Neptune&quot; 12th Azov National Guard Brigade engaged Russian scouts using thermal scope Serebryansk forest (Briefly shaky cam)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 14:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1tr4d5i/archive_ukrainian_marksman_under_grsp_neptune/" data-title="(Archive) Ukrainian marksman under GRSP &quot;Neptune&quot; 12th Azov National Guard Briga" data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1tr3g9d/tomahawk_missiles_flying_over_iraq_day_1_iran_war/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">イラン戦争初日、イラク上空を飛行するトマホークミサイル。</div><div class="vc-en">tomahawk missiles flying over Iraq day 1 Iran war</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 14:23</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1tr3g9d/tomahawk_missiles_flying_over_iraq_day_1_iran_war/" data-title="tomahawk missiles flying over Iraq day 1 Iran war" data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr315t/russian_authorities_issued_a_missile_alert_in/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシア当局が初めてシベリアにミサイル警報発令。チュメニは前線から2,700km。</div><div class="vc-en">Russian authorities issued a missile alert in Siberia for the first time. Officials in the Tyumen region urged residents to stay indoors and keep away from windows. Tyumen is located 2,700 kilometers from the front line.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 14:09</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr315t/russian_authorities_issued_a_missile_alert_in/" data-title="Russian authorities issued a missile alert in Siberia for the first time. Offici" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr2te0/ukrainian_forces_have_liberated_territory_near/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ軍がドニプロペトロウシク州ノヴォセリフカ付近の領土を解放、ロシア軍は46平方キロメートル失う。</div><div class="vc-en">Ukrainian forces have liberated territory near Novoselivka in Dnipropetrovsk region, close to the administrative border with Donetsk region, with Russian forces losing at least 46 square kilometers of ground, according to the OSINT community DeepState, citing Ukraine’s General Staff</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 14:01</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr2te0/ukrainian_forces_have_liberated_territory_near/" data-title="Ukrainian forces have liberated territory near Novoselivka in Dnipropetrovsk reg" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1tr2ph5/allegedly_mq9_hit_over_yemen_video_showing_some/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">イエメン上空でMQ9が被弾、破片が落下する映像。</div><div class="vc-en">Allegedly MQ9 hit over Yemen video showing some debris falling</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 13:57</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1tr2ph5/allegedly_mq9_hit_over_yemen_video_showing_some/" data-title="Allegedly MQ9 hit over Yemen video showing some debris falling" data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr2g0i/missile_threat_for_the_first_time_since_the/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシアのヤマールで開戦以来初めてミサイル脅威、ウクライナ国境から2,500km以上。</div><div class="vc-en">Missile threat for the first time since the beginning of the war in Yamal, Russia: more than 2,500 km from Ukraine’s state border.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 13:47</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr2g0i/missile_threat_for_the_first_time_since_the/" data-title="Missile threat for the first time since the beginning of the war in Yamal, Russi" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr2fpq/a_russian_invader_taking_a_dump_got_a_surprise/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">排泄中のロシア侵略者がウクライナFPVドローンによる奇襲攻撃を受ける。</div><div class="vc-en">A russian invader taking a dump got a surprise visit by a Ukrainian FPV drone.</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 13:47</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr2fpq/a_russian_invader_taking_a_dump_got_a_surprise/" data-title="A russian invader taking a dump got a surprise visit by a Ukrainian FPV drone." data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr1u40/42yearold_italian_volunteer_alex_pineschi_was/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">イタリア人義勇兵アレックス・ピネスキ氏がリマン近郊でウクライナ防衛中に戦死。</div><div class="vc-en">42-year-old Italian volunteer Alex Pineschi was killed while defending Ukraine near Lyman, according to reports from fellow foreign volunteers and Ukrainian media. Before coming to Ukraine, Pineschi had spent years in conflict zones in Syria and Iraq, where he fought against ISIS. RIP hero!</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 13:25</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr1u40/42yearold_italian_volunteer_alex_pineschi_was/" data-title="42-year-old Italian volunteer Alex Pineschi was killed while defending Ukraine n" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr1s33/russian_sources_are_reporting_the_beginning_of/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシアがクリミア陸上回廊（マリウポリ-メリトポリ高速道路）での地雷敷設作業開始を報告。</div><div class="vc-en">Russian sources are reporting the beginning of mine-laying operations along sections of the land corridor to Crimea, particularly on the Mariupol–Melitopol highway. May 2026</div><div class="vc-foot"><span class="badge">r/UkraineWarVideoReport</span><span class=pub>05/29 13:23</span></div><div class="stars" data-url="https://www.reddit.com/r/UkraineWarVideoReport/comments/1tr1s33/russian_sources_are_reporting_the_beginning_of/" data-title="Russian sources are reporting the beginning of mine-laying operations along sect" data-src="r/UkraineWarVideoReport" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1tr17vv/pdf_peoples_defense_force_rebel_recording_clash/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ミャンマー軍に対するPDF反乱軍の衝突記録。タニンダーリ地域。</div><div class="vc-en">PDF (People&#x27;s Defense Force) rebel recording clash against Myanmar (Burma) Army; Tanintharyi Region (before 5/29/2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>05/29 13:02</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1tr17vv/pdf_peoples_defense_force_rebel_recording_clash/" data-title="PDF (People&#x27;s Defense Force) rebel recording clash against Myanmar (Burma) Army;" data-src="r/CombatFootage" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<ul>
+<li>  <strong>TOR-M2（対空ミサイルシステム）2両</strong>: ウクライナ特殊作戦部隊（SOF）の中型攻撃ドローンにより破壊された。うち1両はM-14高速道路のベルジャンスクで確認された。(id=15)</li>
+<li>  <strong>ロシア兵站車両</strong>: クリミアの路上でウクライナのドローン攻撃後に炎上しているのが確認された。(id=0)</li>
+<li>  <strong>ロシア兵站輸送</strong>: ドネツク地域の後方でウクライナの様々な種類のドローンにより破壊された。(id=3)</li>
+<li>  <strong>ロシア兵站</strong>: デバルツェボ-アルチェフスク高速道路上で、ウクライナK2 UASチームがダーツ攻撃ドローンを使用して攻撃した。(id=11)</li>
+<li>  <strong>ロシア兵站</strong>: ドネツクの「Highway To Hell」で、第20独立無人システム旅団「K-2」が追撃に参加した。(id=14)</li>
+<li>  <strong>ロシア軍トラック</strong>: ウクライナのドローンAIターゲティングアルゴリズムから隠すため、「ダズル迷彩」を適用しようとしている。(id=16)</li>
+</ul>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<ul>
+<li>  ロシアのボルゴグラード製油所が稼働停止し、ウクライナの攻撃によりヤロスラヴリ近郊で巨大な燃料タンクが炎上した。(id=1)</li>
+<li>  ウクライナ兵士がコスチャンチニフカ方面でロシアの砲撃を受けるも、間一髪で損失はなかった。(id=19)</li>
+<li>  ロシア当局がシベリア（チュメニ州、前線から2,700km）で開戦以来初めてミサイル警報を発令し、住民に屋内退避を促した。(id=22)</li>
+<li>  ロシアのヤマール（ウクライナ国境から2,500km以上）で、開戦以来初めてミサイル脅威が報告された。(id=25)</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  ノヴォロシースクへのウクライナドローン攻撃で、ロシア海軍フリゲート「アドミラル・エッセン」が被弾した映像が公開された。(id=2)</li>
+<li>  ドネツク地域後方で、ウクライナの「BLACK SKY」ドローンが数十人のロシア歩兵を排除し、兵站輸送を破壊した。(id=3)</li>
+<li>  ウクライナ第59強襲旅団「Signum」のドローンパイロットがリマン地域の森でロシア歩兵を追撃し、致命的な攻撃を行った。(id=4)</li>
+<li>  ウクライナのドローン攻撃によりヤロスラヴリ-3石油ポンピングステーションで火災が発生し、その映像と追加映像が公開された。(id=9, 10)</li>
+<li>  排泄中のロシア兵がウクライナFPVドローンによる奇襲攻撃を受けた。(id=26)</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  ロシアのテレグラムチャンネルが、占領地域におけるウクライナによる兵站被害を認識し始めている。(id=6)</li>
+<li>  占領下のクリミア・セヴァストポリでガソリンが不足し、人々が給油を待っている。(id=7)</li>
+<li>  ウクライナ国家警備隊アゾフ第12旅団「ネプチューン」の狙撃兵が熱画像スコープを使用し、セレブリャンスクの森でロシア偵察兵と交戦した。(id=20)</li>
+<li>  ウクライナ軍がドニプロペトロウシク州ノヴォセリフカ付近の領土を解放し、ロシア軍は少なくとも46平方キロメートルの領土を失った。(id=23)</li>
+<li>  42歳のイタリア人義勇兵アレックス・ピネスキ氏がリマン近郊でウクライナ防衛中に戦死した。(id=27)</li>
+<li>  ロシアの情報源は、クリミアへの陸上回廊、特にマリウポリ-メリトポリ高速道路沿いで地雷敷設作業が開始されたと報告している。(id=28)</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>装甲車両・戦車</h3>
+<ul>
+<li>  <strong>メルカバ戦車</strong>: ヒズボラのFPVドローンが、別のドローンがメルカバ戦車を攻撃する様子を記録した。(id=8)</li>
+</ul>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  ヒズボラのFPVドローンがレバノンのラシャフでメルカバ戦車を攻撃した別のドローンを記録し、その後FPVドローンは別の目標を攻撃した。(id=8)</li>
+<li>  イエメン上空でMQ9が被弾し、破片が落下する映像が公開された。(id=24)</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<ul>
+<li>  イラン戦争初日、イラク上空を飛行するトマホークミサイルの映像が報告された。(id=21)</li>
+<li>  ミャンマー（ビルマ）軍に対するPDF（人民防衛隊）反乱軍の衝突記録がタニンダーリ地域で公開された。(id=29)</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<p>1.  <strong>ウクライナSOF、TOR-M2対空ミサイルシステム2両を破壊</strong>: 特殊作戦部隊の中型攻撃ドローンがロシアの対空システムを破壊。(id=15)</p>
+<p>2.  <strong>ヒズボラFPVドローンがメルカバ戦車攻撃を記録</strong>: 中東の紛争地域でドローンによる戦車攻撃が継続。(id=8)</p>
+<p>3.  <strong>ロシア海軍フリゲート「アドミラル・エッセン」被弾</strong>: ウクライナのドローン攻撃がロシア海軍の主要艦艇に及んだ。(id=2)</p>
+<p>4.  <strong>ロシア本土奥深くで初のミサイル警報</strong>: シベリアやヤマールといった前線から遠く離れた地域でミサイル脅威が報告。(id=22, 25)</p>
+<p>5.  <strong>排泄中のロシア兵がFPVドローンで奇襲</strong>: 戦場の皮肉な一面を示す、衝撃的なドローン攻撃。(id=26)</p>
+<br>
+<p>---</p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/japan-buys-over-14-million-in-military-equipment-for-ukraine-under-nato-weapons-program/" target="_blank">Japan buys over $14 million in military equipment for Ukraine under NATO weapons program</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年5月30日 01:11 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/japan-buys-over-14-million-in-military-equipment-for-ukraine-under-nato-weapons-program/" data-title="Japan buys over $14 million in military equipment for Ukraine under NATO weapons" data-src="Kyiv Independent" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/policy/2026/05/cyber-force-service-branch-proposal/413863/" target="_blank">Cyber Force? Senator pushes to create service branch under the Army</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年5月29日 16:19 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/policy/2026/05/cyber-force-service-branch-proposal/413863/" data-title="Cyber Force? Senator pushes to create service branch under the Army" data-src="Defense One" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-war-latest-nato-condemns-reckless-russian-drone-strike-on-romanian-apartment-building/" target="_blank">Ukraine war latest: NATO condemns &#x27;reckless&#x27; Russian drone strike on Romanian apartment building</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年5月29日 22:20 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-war-latest-nato-condemns-reckless-russian-drone-strike-on-romanian-apartment-building/" data-title="Ukraine war latest: NATO condemns &#x27;reckless&#x27; Russian drone strike on Romanian ap" data-src="Kyiv Independent" data-date="2026-05-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
