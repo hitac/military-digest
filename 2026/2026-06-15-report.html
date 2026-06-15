@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-06-15 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-06-15.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-06-15</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>13 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（13 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6qtmc/operation_mistral_2_croatian_4th_guards_brigade/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Operation Mistral 2, Croatian 4th Guards Brigade tanks</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 19:33</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6qtmc/operation_mistral_2_croatian_4th_guards_brigade/" data-title="Operation Mistral 2, Croatian 4th Guards Brigade tanks" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6ubtt/russian_btr82_gets_shot_at_point_blank_krusk_oct/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian BTR-82 gets shot at point blank. Krusk, Oct 2024</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 21:41</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6ubtt/russian_btr82_gets_shot_at_point_blank_krusk_oct/" data-title="Russian BTR-82 gets shot at point blank. Krusk, Oct 2024" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6shr1/russian_logistics_under_fire_fromukrainian_drones/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian logistics under fire fromUkrainian drones. Huliaipole, Zaporizhzhia Oblast. June 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 20:33</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6shr1/russian_logistics_under_fire_fromukrainian_drones/" data-title="Russian logistics under fire fromUkrainian drones. Huliaipole, Zaporizhzhia Obla" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6o7c3/ukraines_border_guard_service_dpsu_fenix_unit/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s Border Guard Service (DPSU) &quot;Fenix&quot; unit used fiber-optic FPV + heavy bomber drones, targeting dozens οf Russian infantrymen &amp; artillery pieces. (Ten minute compilation showing recent work) Published 6/15/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 18:03</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6o7c3/ukraines_border_guard_service_dpsu_fenix_unit/" data-title="Ukraine&#x27;s Border Guard Service (DPSU) &quot;Fenix&quot; unit used fiber-optic FPV + heavy " data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6mzrz/itn_documentary_broll_showing_combat_life_during/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ITN documentary b-roll showing combat, life, during Vietnam War few months before Paris Peace Agreement-late 1972</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 17:20</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6mzrz/itn_documentary_broll_showing_combat_life_during/" data-title="ITN documentary b-roll showing combat, life, during Vietnam War few months befor" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6lys6/ukrainian_bulava_drone_destroyed_russian_fuel/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian Bulava drone destroyed Russian fuel truck near Dolynske, Zaporizhia Oblast. Active Actions Department, GUR. Published 14.06.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 16:44</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6lys6/ukrainian_bulava_drone_destroyed_russian_fuel/" data-title="Ukrainian Bulava drone destroyed Russian fuel truck near Dolynske, Zaporizhia Ob" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6lt3c/ukrainian_soldier_shot_down_attacking_russian_fpv/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian soldier shot down attacking Russian FPV drone. 25th Airborne Brigade, Pokrovsk direction. June 2026. Published 15.06.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 16:38</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6lt3c/ukrainian_soldier_shot_down_attacking_russian_fpv/" data-title="Ukrainian soldier shot down attacking Russian FPV drone. 25th Airborne Brigade, " data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6khz3/rebels_attack_myanmar_burma_army_using_guns/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Rebels attack Myanmar (Burma) Army using guns, drones, RPGs- Myingyan District, Mandalay Region, 5/15-5/27/2025</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 15:52</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6khz3/rebels_attack_myanmar_burma_army_using_guns/" data-title="Rebels attack Myanmar (Burma) Army using guns, drones, RPGs- Myingyan District, " data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6jzyb/extended_video_jnim_assaulting_russia_africa/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">(Extended video) JNIM assaulting Russia &quot;Africa corps&quot; outpost while supported bythe drones. Outpost reportedly captured located Sévaré airport Mopti Airport</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 15:34</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6jzyb/extended_video_jnim_assaulting_russia_africa/" data-title="(Extended video) JNIM assaulting Russia &quot;Africa corps&quot; outpost while supported b" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u6fe6z/ukrainian_drone_strikes_against_russian_starlink/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian drone strikes against Russian starlink jamming EW station, published 15 June 2026, SBU “Alpha” &amp; 422nd Unmanned Systems Regiment</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 12:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u6fe6z/ukrainian_drone_strikes_against_russian_starlink/" data-title="Ukrainian drone strikes against Russian starlink jamming EW station, published 1" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u681fc/ukrainian_phoenix_unit_hunt_weekly_combat_results/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian Phoenix Unit Hunt: Weekly Combat Results, Published 06/14/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 05:58</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u681fc/ukrainian_phoenix_unit_hunt_weekly_combat_results/" data-title="Ukrainian Phoenix Unit Hunt: Weekly Combat Results, Published 06/14/2026" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u676h0/reported_patriot_sam_intercepting_russian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Reported Patriot SAM intercepting Russian Zircon/Kinzhal hypersonic missile over Kyiv</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 05:13</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u676h0/reported_patriot_sam_intercepting_russian/" data-title="Reported Patriot SAM intercepting Russian Zircon/Kinzhal hypersonic missile over" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u66z8r/ru_pov_ukrainian_fpv_drone_hit_russian_buchanka/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">(RU POV) Ukrainian FPV drone hit Russian Buchanka (loaf van) killing driver</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/15 05:02</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u66z8r/ru_pov_ukrainian_fpv_drone_hit_russian_buchanka/" data-title="(RU POV) Ukrainian FPV drone hit Russian Buchanka (loaf van) killing driver" data-src="r/CombatFootage" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 429 RESOURCE_EXHAUSTED. {&#x27;error&#x27;: {&#x27;code&#x27;: 429, &#x27;message&#x27;: &#x27;You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n</em> Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 43.015388131s.&#x27;, &#x27;status&#x27;: &#x27;RESOURCE_EXHAUSTED&#x27;, &#x27;details&#x27;: [{&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.Help&#x27;, &#x27;links&#x27;: [{&#x27;description&#x27;: &#x27;Learn more about Gemini API quotas&#x27;, &#x27;url&#x27;: &#x27;https://ai.google.dev/gemini-api/docs/rate-limits&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.QuotaFailure&#x27;, &#x27;violations&#x27;: [{&#x27;quotaMetric&#x27;: &#x27;generativelanguage.googleapis.com/generate_content_free_tier_requests&#x27;, &#x27;quotaId&#x27;: &#x27;GenerateRequestsPerDayPerProjectPerModel-FreeTier&#x27;, &#x27;quotaDimensions&#x27;: {&#x27;location&#x27;: &#x27;global&#x27;, &#x27;model&#x27;: &#x27;gemini-2.5-flash&#x27;}, &#x27;quotaValue&#x27;: &#x27;20&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.RetryInfo&#x27;, &#x27;retryDelay&#x27;: &#x27;43s&#x27;}]}}*</p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/as-patriot-missiles-run-low-ukraine-scrambles-for-alternatives-under-russian-missile-fire/" target="_blank">As Patriot missiles run low, Ukraine scrambles for alternatives under Russian missile fire</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月15日 23:22 UTC</span></div><div class="art-body"><p>以下に軍事・安全保障に関する英語記事の要約を記述します。</p>
+<br>
+<p>---</p>
+<br>
+<ul>
+<li><strong>主題</strong>:</li>
+</ul>
+<p>ウクライナがロシアのミサイル攻撃に直面し、Patriotミサイルの在庫枯渇に懸念を抱きながら防空代替策を模索している現状。</p>
+<br>
+<ul>
+<li><strong>背景・文脈</strong>:</li>
+</ul>
+<p>ロシアによる大規模な弾道・極超音速ミサイル攻撃が続く中、ウクライナの防空システムは高性能なPatriotミサイルに大きく依存している。この依存とPatriotミサイルの枯渇懸念が、ウクライナの防空能力の持続可能性に関する深刻な問題を提起している。</p>
+<br>
+<ul>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   6月15日、ロシアはウクライナに対し34発の弾道ミサイルを発射し、KyivのPechersk Lavraの一部が炎上する被害が発生した。</p>
+<p>    *   KyivのPatriot防空システムは、首都を標的とした19発の弾道ミサイルのうち15発、および6発の3M22 &quot;Zirkon&quot;極超音速巡航ミサイルのうち5発を撃墜する高い迎撃率を示した。</p>
+<p>    *   しかし、この迎撃成功は、ロシアの弾道ミサイルに対し、実績のある西側供与システムとしてはPatriotにほぼ完全に依存しているウクライナの防空体制の脆弱性を露呈させた。</p>
+<p>    *   Patriotミサイルの在庫が減少しており、ウクライナはロシアの継続的なミサイル攻撃に対抗するため、代替防空システムの確保に奔走している。</p>
+<br>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>:</li>
+</ul>
+<p>Patriotミサイルの不足は、ウクライナの防空能力を著しく低下させ、ロシアが重要インフラや都市への攻撃を激化させる余地を与える。西側諸国によるPatriotの追加供与や代替防空システムの迅速な配備は、ウクライナの防衛維持と戦況の安定化に不可欠である。</p>
+<br>
+<p>---</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/as-patriot-missiles-run-low-ukraine-scrambles-for-alternatives-under-russian-missile-fire/" data-title="As Patriot missiles run low, Ukraine scrambles for alternatives under Russian mi" data-src="Kyiv Independent" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/exclusive-european-parliament-to-scrutinize-its-most-pro-russian-member/" target="_blank">Exclusive: European Parliament to scrutinize its most pro-Russian member</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月15日 21:33 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/exclusive-european-parliament-to-scrutinize-its-most-pro-russian-member/" data-title="Exclusive: European Parliament to scrutinize its most pro-Russian member" data-src="Kyiv Independent" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/breaking-eu-opens-1st-negotiation-cluster-for-ukraine-moldova/" target="_blank">EU opens 1st negotiation cluster for Ukraine, Moldova</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月15日 21:12 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/breaking-eu-opens-1st-negotiation-cluster-for-ukraine-moldova/" data-title="EU opens 1st negotiation cluster for Ukraine, Moldova" data-src="Kyiv Independent" data-date="2026-06-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
