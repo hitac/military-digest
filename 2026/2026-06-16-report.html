@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-06-16 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-06-16.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-06-16</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>11 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（11 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7q5o0/ukrainian_vartovi_battalion_struck_russian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナのVartovi大隊がロシア兵、車両、歩兵陣地を攻撃。第36海兵旅団、Kostiantinivka。</div><div class="vc-en">Ukrainian Vartovi Battalion struck Russian soldiers, vehicles plus infantry positions. 36th Marine Brigade. Kostiantinivka. Published 16.06.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 21:05</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7q5o0/ukrainian_vartovi_battalion_struck_russian/" data-title="Ukrainian Vartovi Battalion struck Russian soldiers, vehicles plus infantry posi" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7q072/ukrainian_artillery_struck_russian_positions/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ砲兵がロシア陣地を攻撃。Kostyantynivka方面。第28機械化旅団。</div><div class="vc-en">Ukrainian artillery struck Russian positions. Kostyantynivka direction. 28th Mechanized Brigade&#x27;s. Published 16.06.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 20:59</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7q072/ukrainian_artillery_struck_russian_positions/" data-title="Ukrainian artillery struck Russian positions. Kostyantynivka direction. 28th Mec" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7nm7s/ukraines_3rd_assault_brigade_paskuda_kraken_1654/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ第3突撃旅団とKraken大隊がFPVドローンでロシア兵と交戦、追跡・隠蔽兵を発見。</div><div class="vc-en">Ukraine&#x27;s 3rd Assault Brigade &quot;Paskuda&quot; &amp; &quot;Kraken 1654&quot; Battalions engaged Russian soldiers using FPV drones, chasing some, w/ others found hiding. (Original audio) 06/15/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 19:31</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7nm7s/ukraines_3rd_assault_brigade_paskuda_kraken_1654/" data-title="Ukraine&#x27;s 3rd Assault Brigade &quot;Paskuda&quot; &amp; &quot;Kraken 1654&quot; Battalions engaged Russi" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7nbin/operation_southern_move_croatian_offensive/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">オペレーション・サザンムーブ - クロアチアの攻勢。</div><div class="vc-en">Operation Southern Move - Croatian Offensive</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 19:20</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7nbin/operation_southern_move_croatian_offensive/" data-title="Operation Southern Move - Croatian Offensive" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7na0b/ukraines_77th_airmobile_brigade_rubaka_drone_team/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ第77空挺機動旅団ドローンチームが様々な方法でロシア攻撃隊を撃退、攻撃結果を実演。</div><div class="vc-en">Ukraine&#x27;s 77th Airmobile Brigade &quot;Rubaka&quot; drone team repelled Russian attackers using variegated means, demonstrating drone strike types vs. results. (NSFW) 06/16/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 19:19</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7na0b/ukraines_77th_airmobile_brigade_rubaka_drone_team/" data-title="Ukraine&#x27;s 77th Airmobile Brigade &quot;Rubaka&quot; drone team repelled Russian attackers " data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7mxlm/ukrainian_national_guards_spartan_team_repelled/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ国家警備隊「Spartan」がロシア歩兵攻撃を撃退、弾薬投下・FPVドローンで21名排除。</div><div class="vc-en">Ukrainian National Guard&#x27;s &quot;Spartan&quot; team repelled stepped-up Russian infantry attacks, eliminating 21 more attackers w/ munition drops + ambush &amp; conventional FPV drone strikes. 06/16/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 19:07</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7mxlm/ukrainian_national_guards_spartan_team_repelled/" data-title="Ukrainian National Guard&#x27;s &quot;Spartan&quot; team repelled stepped-up Russian infantry a" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7mars/ukraines_60th_mechanized_brigade_fatum_defeated/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ第60機械化旅団「Fatum」がロシア歩兵攻撃を撃破、市街・森林・野原で敵歩兵を攻撃。</div><div class="vc-en">Ukraine&#x27;s 60th Mechanized Brigade &quot;Fatum&quot; defeated Russian infantry attacks, striking enemy infantry ın residential ruins, tree lines, fields, &amp;c. JUN.16.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 18:44</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7mars/ukraines_60th_mechanized_brigade_fatum_defeated/" data-title="Ukraine&#x27;s 60th Mechanized Brigade &quot;Fatum&quot; defeated Russian infantry attacks, str" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7kwsn/archive_june_45_2023_ukrainian_artan_special_unit/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">(アーカイブ 2023年6月) ウクライナArtan特殊部隊がベルゴロド地域で越境襲撃、落書きも。</div><div class="vc-en">(Archive June 4-5 2023) Ukrainian Artan Special unit under Main Intelligence Directorate conducting border crossing raid Belgorod region even leaving graffiti (Pro Russian reporter Patrick Lancester featured said graffiti)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 17:55</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7kwsn/archive_june_45_2023_ukrainian_artan_special_unit/" data-title="(Archive June 4-5 2023) Ukrainian Artan Special unit under Main Intelligence Dir" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7fjha/archive_april_2023_sonechko_sof_unit_under_main/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">(アーカイブ 2023年4月) Sonechko SOF部隊がベルゴロド地域で越境襲撃、CQBでロシア兵1名殺害。</div><div class="vc-en">(Archive April 2023) Sonechko SOF unit under Main Intelligence Directorate conducting cross border raid at Belgorod region. 1 Russian killed during CQB</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 14:43</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7fjha/archive_april_2023_sonechko_sof_unit_under_main/" data-title="(Archive April 2023) Sonechko SOF unit under Main Intelligence Directorate condu" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u7fha6/usf_hits_radars_ad_ammo_depots_rubicone_centers/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ軍がクリミア・ドネツクのレーダー、防空システム、弾薬庫などを攻撃。</div><div class="vc-en">USF🇺🇦 hits radars, AD, ammo depots, Rubicone centers. Crimea/Donetsk, 16/06/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 14:41</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u7fha6/usf_hits_radars_ad_ammo_depots_rubicone_centers/" data-title="USF🇺🇦 hits radars, AD, ammo depots, Rubicone centers. Crimea/Donetsk, 16/06/2026" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1u75jue/ukrainian_drones_hit_moscow_oil_refinery_kapotnia/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナドローンがモスクワのKapotnia地区にある石油精製所を攻撃。</div><div class="vc-en">Ukrainian drones hit Moscow oil refinery. Kapotnia District, Moscow. Published June 16, 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/16 06:24</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1u75jue/ukrainian_drones_hit_moscow_oil_refinery_kapotnia/" data-title="Ukrainian drones hit Moscow oil refinery. Kapotnia District, Moscow. Published J" data-src="r/CombatFootage" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<ul>
+<li><strong>[id=0]</strong> ウクライナのVartovi大隊（第36海兵旅団）がKostiantinivkaにおいて、ロシア兵、<strong>車両</strong>、歩兵陣地を攻撃した。具体的な車両型番は不明だが、ロシア軍の車両が攻撃対象となった。</li>
+</ul>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<ul>
+<li><strong>[id=1]</strong> ウクライナ第28機械化旅団の砲兵部隊がKostyantynivka方面でロシア陣地を攻撃した。</li>
+<li><strong>[id=9]</strong> ウクライナ軍（USF）がクリミアおよびドネツクでレーダー、防空システム、弾薬庫、Rubiconeセンターを攻撃した。</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li><strong>[id=2]</strong> ウクライナ第3突撃旅団「Paskuda」および「Kraken 1654」大隊がFPVドローンを使用してロシア兵と交戦し、一部を追跡し、隠れている兵士を発見した。（オリジナル音声付き）</li>
+<li><strong>[id=4]</strong> ウクライナ第77空挺機動旅団「Rubaka」のドローンチームが、様々なドローン攻撃の種類とそれによる結果を実演し、ロシアの攻撃隊を撃退した。（NSFW）</li>
+<li><strong>[id=5]</strong> ウクライナ国家警備隊「Spartan」チームが、弾薬投下、待ち伏せ、および従来のFPVドローン攻撃を用いて、ロシア歩兵による激化した攻撃を撃退し、21名以上の攻撃者を排除した。</li>
+<li><strong>[id=10]</strong> ウクライナのドローンがモスクワのKapotnia地区にある石油精製所を攻撃した。</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li><strong>[id=0]</strong> ウクライナのVartovi大隊（第36海兵旅団）がKostiantinivkaにて、ロシア兵と歩兵陣地を攻撃した。</li>
+<li><strong>[id=5]</strong> ウクライナ国家警備隊「Spartan」チームがロシア歩兵の激化した攻撃を撃退し、21名以上の攻撃者を排除した。</li>
+<li><strong>[id=6]</strong> ウクライナ第60機械化旅団「Fatum」が、住宅廃墟、木立、野原などで敵歩兵を攻撃し、ロシア歩兵による攻撃を撃破した。</li>
+<li><strong>[id=7]</strong> (アーカイブ 2023年6月4-5日) ウクライナArtan特殊部隊が、主要情報総局の指揮下でベルゴロド地域において国境越境襲撃を実施し、落書きも残した。</li>
+<li><strong>[id=8]</strong> (アーカイブ 2023年4月) 主要情報総局の指揮下にあるSonechko特殊作戦部隊が、ベルゴロド地域で国境越境襲撃を実施し、近接戦闘（CQB）でロシア兵1名を殺害した。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<ul>
+<li><strong>[id=3]</strong> 「Operation Southern Move - クロアチアの攻勢」と題された投稿があった。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<ul>
+<li><strong>[id=0]</strong> ウクライナ第36海兵旅団がロシアの車両を攻撃：ロシア軍の車両が攻撃対象となった重要な事例。</li>
+<li><strong>[id=10]</strong> ウクライナドローンがモスクワの石油精製所を攻撃：ロシア本土の重要インフラへの攻撃。</li>
+<li><strong>[id=5]</strong> ウクライナ国家警備隊「Spartan」チームがロシア歩兵21名を排除：多数の敵兵を排除した戦果。</li>
+<li><strong>[id=4]</strong> ウクライナ第77空挺機動旅団がドローン攻撃の種類と結果を実演：ドローンを用いた多様な戦術の示唆。</li>
+<li><strong>[id=9]</strong> ウクライナ軍がクリミア・ドネツクのレーダー、防空、弾薬庫等を攻撃：広範囲にわたる重要な軍事インフラへの攻撃。</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>作業2: タイトル翻訳JSON</h2></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/trump-says-ukraine-war-has-no-impact-on-us-but-vows-to-help-end-it/" target="_blank">Trump says Ukraine war has &#x27;no impact&#x27; on US, but vows to help end it</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月17日 01:02 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/trump-says-ukraine-war-has-no-impact-on-us-but-vows-to-help-end-it/" data-title="Trump says Ukraine war has &#x27;no impact&#x27; on US, but vows to help end it" data-src="Kyiv Independent" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/defense-systems/2026/06/chatgpt-debut-pentagon-openai/414237/" target="_blank">ChatGPT to debut on Pentagon&#x27;s GenAI.mil in ‘early July’, OpenAI says</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年6月16日 16:02 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/defense-systems/2026/06/chatgpt-debut-pentagon-openai/414237/" data-title="ChatGPT to debut on Pentagon&#x27;s GenAI.mil in ‘early July’, OpenAI says" data-src="Defense One" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/policy/2026/06/navy-preps-science-and-tech-strategy-built-speed-and-focus/414226/" target="_blank">Navy preps science-and-tech strategy built for speed and focus</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年6月16日 15:44 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/policy/2026/06/navy-preps-science-and-tech-strategy-built-speed-and-focus/414226/" data-title="Navy preps science-and-tech strategy built for speed and focus" data-src="Defense One" data-date="2026-06-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
