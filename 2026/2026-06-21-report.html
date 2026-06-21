@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-06-21 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-06-21.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-06-21</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>9 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（9 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ubl250/ukrainian_unmanned_system_forces_mediumrange_uavs/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ無人機がケルチの燃料貯蔵所、クリミアのレーダー・ガス施設、ホルリウカの燃料タンカー、ザポリージャ州の兵站を攻撃。</div><div class="vc-en">Ukrainian unmanned system forces medium-range UAVs attacked a fuel depot at an oil terminal in Kerch, two Russian radar systems, three gas compressor stations across occupied Crimea, a fuel tanker in Horlivka, and Russian logistics vehicles in the Zaporizhzhia region. 21/06/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/21 08:51</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ubl250/ukrainian_unmanned_system_forces_mediumrange_uavs/" data-title="Ukrainian unmanned system forces medium-range UAVs attacked a fuel depot at an o" data-src="r/CombatFootage" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uc285l/ukrainian_active_actions_department_gur_struck/" target="_blank"><span class="vc-ico">💥</span><div class="vc-body"><div class="vc-ja">ウクライナ国防省情報総局（GUR）がロシアの兵站、兵士、陣地、車両、通信を攻撃。</div><div class="vc-en">Ukrainian Active Actions department (GUR) struck Russian logistics, soldiers, positions, vehicles plus comms. Recent week. Published 21.06.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/21 21:47</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uc285l/ukrainian_active_actions_department_gur_struck/" data-title="Ukrainian Active Actions department (GUR) struck Russian logistics, soldiers, po" data-src="r/CombatFootage" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ubrwbm/extended_archived_video_summer_2025_sumy_region/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">(2025年夏 スームィ州) ウクライナ特殊部隊がロシア特殊部隊DRGと交戦するアーカイブ映像。</div><div class="vc-en">(Extended archived video Summer 2025 Sumy Region) Ukrainian SOF battling Russian Spetnaz DRG</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/21 14:46</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ubrwbm/extended_archived_video_summer_2025_sumy_region/" data-title="(Extended archived video Summer 2025 Sumy Region) Ukrainian SOF battling Russian" data-src="r/CombatFootage" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ubrr83/rebels_capture_myanmar_burma_army_mepali_camp/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">反乱軍がミャンマー軍メパリキャンプを占領 - モン州ビリン郡区。</div><div class="vc-en">Rebels capture Myanmar (Burma) Army Mepali Camp- Bilin Township, Mon State- 2/1/2025</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/21 14:40</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ubrr83/rebels_capture_myanmar_burma_army_mepali_camp/" data-title="Rebels capture Myanmar (Burma) Army Mepali Camp- Bilin Township, Mon State- 2/1/" data-src="r/CombatFootage" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ubp2wv/07042026_3_russians_surrendered_atthe_ukraine/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ヘルソン州オレシュキー（ダチ）でロシア兵3名がウクライナのドローン攻撃により降伏。</div><div class="vc-en">(07.04.2026) 3 Russians surrendered atthe Ukraine drone under 34th Marine Brigade located Oleshky (Dachi), Kherson Oblast. Among russian soldiers named Anton Milaev revealed tobe Great-grandson bythe Soviet leader Leonid Brezhnev.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/21 12:41</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ubp2wv/07042026_3_russians_surrendered_atthe_ukraine/" data-title="(07.04.2026) 3 Russians surrendered atthe Ukraine drone under 34th Marine Brigad" data-src="r/CombatFootage" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ubjy09/islamic_movement_0f_uzbekistan_ambushes_german/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ウズベキスタン・イスラム運動がドイツ軍輸送隊を待ち伏せ。アフガニスタン、クンドゥル。</div><div class="vc-en">Islamic Movement 0f Uzbekistan ambushes German convoy. Kundur, Afghanistan. 2/2011.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/21 07:43</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ubjy09/islamic_movement_0f_uzbekistan_ambushes_german/" data-title="Islamic Movement 0f Uzbekistan ambushes German convoy. Kundur, Afghanistan. 2/20" data-src="r/CombatFootage" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ubbh40/russian_logistics_under_ukrainian_mid_range_drone/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナの中距離ドローン攻撃を受けるロシアの兵站。</div><div class="vc-en">Russian logistics under Ukrainian mid range drone attack. June 2026 [Russian POV]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/21 00:05</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ubbh40/russian_logistics_under_ukrainian_mid_range_drone/" data-title="Russian logistics under Ukrainian mid range drone attack. June 2026 [Russian POV" data-src="r/CombatFootage" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ubb881/russian_soldiers_hitting_mine_datelocation_unknown/" target="_blank"><span class="vc-ico">💥</span><div class="vc-body"><div class="vc-ja">ロシア兵が地雷に接触。日時・場所不明。</div><div class="vc-en">Russian soldiers hitting mine. Date/Location unknown.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/20 23:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ubb881/russian_soldiers_hitting_mine_datelocation_unknown/" data-title="Russian soldiers hitting mine. Date/Location unknown." data-src="r/CombatFootage" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ubb7wu/russian_soldiers_under_ukrainian_fpv_drone_attack/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナFPVドローン攻撃を受けるロシア兵。日時・場所不明。</div><div class="vc-en">Russian soldiers under Ukrainian FPV drone attack. Date/location unknown.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/20 23:53</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ubb7wu/russian_soldiers_under_ukrainian_fpv_drone_attack/" data-title="Russian soldiers under Ukrainian FPV drone attack. Date/location unknown." data-src="r/CombatFootage" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<p>（該当する具体的な車両型番や破壊状況の報告はありませんでした。）</p>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  ウクライナの無人システムが中距離UAVを用いて、ケルチの石油ターミナルにある燃料貯蔵庫、ロシアのレーダーシステム2基、占領下のクリミアにあるガス圧縮ステーション3基、ホルリフカの燃料タンカー、ザポリージャ地域のロシア兵站車両を攻撃しました（2026/06/21）。</li>
+<li>  第34海兵旅団所属のウクライナドローンの指示により、ヘルソン州オレシュキー（ダーチ）でロシア兵3名が降伏しました。降伏した兵士の中には、ソビエト指導者レオニード・ブレジネフのひ孫とされる人物が含まれていました（2026/04/07）。</li>
+<li>  ウクライナの中距離ドローンがロシアの兵站を攻撃しました（ロシア側視点、2026年6月）。</li>
+<li>  ウクライナのFPVドローンがロシア兵を攻撃しました（日時・場所不明）。</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  2025年夏のスムィ州でのアーカイブ映像によると、ウクライナ特殊作戦部隊（SOF）とロシア特殊部隊（Spetnaz DRG）が交戦しました。</li>
+<li>  ウクライナ軍情報総局（GUR）の「アクティブ・アクション部門」が、ロシアの兵站、兵士、陣地、車両、通信を攻撃しました（最近の週、2026/06/21公開）。</li>
+<li>  ロシア兵が地雷に接触する事案が発生しました（日時・場所不明）。</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  2011年2月、アフガニスタンのクンドゥズでウズベキスタン・イスラム運動がドイツ軍の車列を待ち伏せ攻撃しました。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<ul>
+<li>  2025年2月1日、ミャンマー（ビルマ）の反乱軍が、モン州ビリン郷にあるミャンマー陸軍のメパリ基地を占領しました。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<ul>
+<li>  [id=4] ウクライナドローンの指示でロシア兵が降伏、ブレジネフのひ孫も含まれるという異例の事態。</li>
+<li>  [id=0] ケルチの燃料貯蔵庫やクリミアのガス施設など、ウクライナ無人システムによる広範囲な重要標的への攻撃。</li>
+<li>  [id=2] ウクライナ特殊部隊とロシア特殊部隊による直接的な交戦のアーカイブ映像。</li>
+<li>  [id=3] ミャンマー反乱軍によるメパリ基地の占領、地域紛争の動き。</li>
+<li>  [id=6] ロシア側視点から捉えられた、ウクライナの中距離ドローンによる兵站攻撃。</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>作業2: タイトル翻訳JSON</h2></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/20-000-teddy-bears-displayed-in-los-angeles-to-symbolize-ukrainian-children-abducted-by-russia/" target="_blank">20,000 teddy bears displayed in Los Angeles to symbolize Ukrainian children abducted by Russia</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月21日 23:35 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ロシアによるウクライナ人児童の強制移送・誘拐問題を国際社会に訴えるため、Los Angelesで大規模なテディベアの展示が行われた。</li>
+<li><strong>背景・文脈</strong>: ロシアによるウクライナ人児童の強制移送は、国際人道法に違反する重大な戦争犯罪と見なされており、国際刑事裁判所（ICC）がロシアのプーチン大統領に逮捕状を発行した主要な根拠の一つである。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    - Los Angelesにおいて、ロシアに誘拐されたとされるウクライナ人児童20,000人を象徴する20,000体のテディベアが展示された。</p>
+<p>    - この大規模インスタレーションは6月20日に実施された。</p>
+<p>    - 展示は、複数の親ウクライナ組織（coalition of pro-Ukraine organizations）による連合が発表したプレスリリースを通じて公表された。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: この展示は、直接的な軍事行動ではないものの、ロシアの戦争犯罪、特に非戦闘員である児童に対する人道法違反行為を国際社会に再認識させることを目的としたソフトパワー戦略である。地政学的には、ロシアに対する国際的な非難を維持し、ウクライナへの継続的な支援を促す世論形成に寄与し、ロシアへの国際的な圧力を強化する効果が期待される。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/20-000-teddy-bears-displayed-in-los-angeles-to-symbolize-ukrainian-children-abducted-by-russia/" data-title="20,000 teddy bears displayed in Los Angeles to symbolize Ukrainian children abdu" data-src="Kyiv Independent" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-war-latest-ukraine-strikes-both-sides-of-crimean-bridge-zelensky-warns-of-new-massive-strike-by-russia/" target="_blank">Ukraine war latest: Ukraine strikes both sides of Crimean Bridge, Zelensky warns of &#x27;new massive strike&#x27; by Russia</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月21日 22:19 UTC</span></div><div class="art-body"><p><strong>主題</strong>: ウクライナによるCrimean Bridgeへの攻撃と、ロシアによる大規模報復攻撃の可能性に関する最新情勢。</p>
+<br>
+<p><strong>背景・文脈</strong>: Crimean Bridgeはロシアにとって軍事物資輸送の重要拠点であり、占領の象徴であるため、ウクライナによる同橋への攻撃はロシアへの圧力強化を意味する。同時に、ロシアの報復攻撃への警戒が高まっている。</p>
+<br>
+<p><strong>主要な内容</strong>:</p>
+<ul>
+<li>  ウクライナ軍は6月20-21日、夜間ドローン攻撃により、占領下のCrimean Bridgeの両側のエネルギー・軍事目標を攻撃した。</li>
+<li>  Zelensky大統領は、ロシアが「new massive strike」を準備していると警告した。</li>
+<li>  ウクライナのドローンは、CrimeaおよびSiberiaのロシアの石油・ガス施設も標的とした。</li>
+<li>  ロシア軍によるZaporizhzhiaへの爆撃で、少なくとも5名が死亡、12名が負傷した。</li>
+</ul>
+<br>
+<p><strong>軍事的・地政学的意義</strong>: 今回のCrimean Bridgeへの攻撃は、ウクライナの長距離攻撃能力が依然として健在であり、ロシアの防衛網に脆弱性があることを示唆する。これにより、紛争のエスカレーション、特にロシアによる報復攻撃の可能性が高まり、地域情勢の不安定化が進む恐れがある。</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-war-latest-ukraine-strikes-both-sides-of-crimean-bridge-zelensky-warns-of-new-massive-strike-by-russia/" data-title="Ukraine war latest: Ukraine strikes both sides of Crimean Bridge, Zelensky warns" data-src="Kyiv Independent" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/former-polish-lawmaker-returns-state-honor-in-protest-over-zelensky-award-revocation/" target="_blank">Former Polish lawmaker returns state honor in protest over Zelensky&#x27;s award revocation</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月21日 19:24 UTC</span></div><div class="art-body"><h2>要約</h2>
+<br>
+<ul>
+<li>  <strong>主題</strong>: ポーランドの元議員が、ポーランド大統領によるVolodymyr Zelenskyウクライナ大統領への国家勲章剥奪に抗議し、自身の国家勲章を返還した出来事。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>背景・文脈</strong>: ロシアの侵攻以降、ウクライナはポーランドを含む国際社会からの支援を受けているが、両国間には歴史認識や経済問題などで摩擦も存在する。今回の勲章剥奪とそれに伴う抗議は、ポーランド国内の政治的分裂、および両国関係の複雑さを示す兆候である。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   元ポーランド議員Piotr Foglerが6月20日、自身の国家勲章「Golden Cross of Merit」を返還した。</p>
+<p>    *   この行動は、ポーランド大統領Karol NawrockiがVolodymyr Zelensky大統領の「Order of the White Eagle」勲章を剥奪したことへの抗議として行われた。</p>
+<p>    *   Fogler氏の抗議は、Zelensky大統領への勲章剥奪がポーランド国内で論争を呼んでいる可能性を示唆している。</p>
+<br>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: この出来事は、ロシアの侵略に対するウクライナ支援における、国際社会、特にNATO加盟国間の結束に潜在的な亀裂が存在する可能性を示唆する。政治的な軋轢が深まることは、ウクライナへの軍事・財政支援の継続性や規模に影響を与え、戦況や地域におけるパワーバランスに間接的な影響を及ぼす可能性がある。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/former-polish-lawmaker-returns-state-honor-in-protest-over-zelensky-award-revocation/" data-title="Former Polish lawmaker returns state honor in protest over Zelensky&#x27;s award revo" data-src="Kyiv Independent" data-date="2026-06-21"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
