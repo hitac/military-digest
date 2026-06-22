@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-06-22 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-06-22.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-06-22</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>8 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（8 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ucx0hh/ukrainian_sparklat_unit_struck_russian_logistics/" target="_blank"><span class="vc-ico">💥</span><div class="vc-body"><div class="vc-ja">ウクライナ軍Sparklat部隊がロシア軍の兵站と兵士を攻撃。一部は前線から50km以上後方。</div><div class="vc-en">Ukrainian Sparklat unit struck Russian logistics plus soldiers. Some strikes 50+ km behind front. Published 22.06.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/22 21:06</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ucx0hh/ukrainian_sparklat_unit_struck_russian_logistics/" data-title="Ukrainian Sparklat unit struck Russian logistics plus soldiers. Some strikes 50+" data-src="r/CombatFootage" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ucwh6p/pdf_forces_ambush_junta_enforcers_6426_chauk/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">PDF部隊がミャンマー・チャウクで軍事政権の実行部隊を待ち伏せ攻撃。</div><div class="vc-en">PDF forces ambush Junta enforcers [6/4/26 Chauk, Myanmar]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/22 20:46</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ucwh6p/pdf_forces_ambush_junta_enforcers_6426_chauk/" data-title="PDF forces ambush Junta enforcers [6/4/26 Chauk, Myanmar]" data-src="r/CombatFootage" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uctqrd/frontier_corps_encounters_bla_hoshab_pakistan/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">パキスタン国境警備隊がホシャブでBLAと遭遇戦。</div><div class="vc-en">Frontier corps encounters BLA, Hoshab, Pakistan</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/22 19:06</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uctqrd/frontier_corps_encounters_bla_hoshab_pakistan/" data-title="Frontier corps encounters BLA, Hoshab, Pakistan" data-src="r/CombatFootage" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ucn73f/ukrainian_hurs_middle_strike_drone_attacks/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナHURの中距離攻撃ドローンがザポリージャ州で壕に隠れたロシアのパンツィールS2 SAMシステムを攻撃。</div><div class="vc-en">Ukrainian HUR’s middle strike drone attacks Russian “Pantsir-S2” SAM system, hiding inside dugout, Zaporizhzha region, published Jun 22 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/22 15:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ucn73f/ukrainian_hurs_middle_strike_drone_attacks/" data-title="Ukrainian HUR’s middle strike drone attacks Russian “Pantsir-S2” SAM system, hid" data-src="r/CombatFootage" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ucl9vu/ukranian_fpv_drone_hits_ruaf_bukhanka_van_through/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナのFPVドローンがロシア空軍の「ブハンカ」バンをハッチから攻撃。</div><div class="vc-en">Ukranian FPV drone hits RuAF “Bukhanka” van through open hatch (June 19th, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/22 13:56</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ucl9vu/ukranian_fpv_drone_hits_ruaf_bukhanka_van_through/" data-title="Ukranian FPV drone hits RuAF “Bukhanka” van through open hatch (June 19th, 2026)" data-src="r/CombatFootage" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uck2ye/russian_dashcam_video_shows_truck_swerving_off/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ロシアのドライブレコーダー映像、ウクライナのドローン攻撃中にトラックが道路を外れる。ルハンシク州ノヴォアイダル。</div><div class="vc-en">Russian dashcam video shows truck swerving off road during Ukrainian drone attack. Novoaidar, Luhansk Oblast. 16.06.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/22 13:06</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uck2ye/russian_dashcam_video_shows_truck_swerving_off/" data-title="Russian dashcam video shows truck swerving off road during Ukrainian drone attac" data-src="r/CombatFootage" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ucj9wj/footage_of_an_airstrike_by_the_ukrainian_air/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">ウクライナ空軍によるザポリージャ州ヴァシリフカ近郊の橋への空爆映像。民間人による被害映像も含む。</div><div class="vc-en">Footage of an airstrike by the Ukrainian air force on a bridge near Vasylivka, Zaporizhzhia Oblast. Also includes aftermath footage recorded by a civilian.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/22 12:31</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ucj9wj/footage_of_an_airstrike_by_the_ukrainian_air/" data-title="Footage of an airstrike by the Ukrainian air force on a bridge near Vasylivka, Z" data-src="r/CombatFootage" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1ucf99b/frontier_corps_ops_against_bla_dalbadin_pakistan/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">パキスタン国境警備隊がダルバディンでBLAに対する作戦を実行。</div><div class="vc-en">Frontier corps ops against BLA, dalbadin, Pakistan</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>06/22 08:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1ucf99b/frontier_corps_ops_against_bla_dalbadin_pakistan/" data-title="Frontier corps ops against BLA, dalbadin, Pakistan" data-src="r/CombatFootage" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>作業1: 日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<ul>
+<li>ロシアの「Pantsir-S2」SAMシステム：ウクライナHURの攻撃ドローンにより破壊された。同システムは塹壕内に隠蔽されていたが、ザポリージャ地域で攻撃を受けた。</li>
+<li>ロシア空軍の「Bukhanka」バン：ウクライナのFPVドローンにより、開いたハッチから直接攻撃を受けた。</li>
+</ul>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<ul>
+<li>ウクライナ空軍がザポリージャ州ヴァシリウカ付近の橋を空爆した。攻撃後の民間人による被害映像も公開されている。</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>ウクライナのSparklat unitがロシアの兵站と兵士を攻撃。一部の攻撃は前線から50km以上後方の目標に対して行われた。</li>
+<li>ウクライナHURの攻撃ドローンが、塹壕内に隠れていたロシアの「Pantsir-S2」SAMシステムを攻撃した。</li>
+<li>ウクライナのFPVドローンが、ロシア空軍の「Bukhanka」バンの開いたハッチを狙って命中させた。</li>
+<li>ロシアのドライブレコーダー映像には、ウクライナのドローン攻撃中にトラックが道路を外れていく様子が記録された。ルハンスク州ノヴォアイダールでの出来事。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<br>
+<ul>
+<li><strong>ミャンマー:</strong></li>
+</ul>
+<p>    - PDF部隊がチャウクにて、軍事政権（Junta）の執行官を待ち伏せ攻撃した。</p>
+<ul>
+<li><strong>パキスタン:</strong></li>
+</ul>
+<p>    - フロンティア・コープス（Frontier corps）がホシャブにて、BLA（Baloch Liberation Army）と遭遇。</p>
+<p>    - フロンティア・コープスがダルバディンにて、BLAに対する作戦を実施した。</p>
+<br>
+<h2>本日のハイライト</h2>
+<p>1. <strong>ロシアの「Pantsir-S2」SAMシステムがドローン攻撃で破壊</strong>: 塹壕内に隠れていたにも関わらず、ドローンにより狙われた。</p>
+<p>2. <strong>ウクライナFPVドローンがロシアのバンをハッチから攻撃</strong>: 正確な攻撃で、軍用車両の弱点を突いた。</p>
+<p>3. <strong>ウクライナ部隊が前線後方50km以上のロシア兵站・兵士を攻撃</strong>: 広範囲にわたる攻撃能力を示唆。</p>
+<p>4. <strong>ウクライナ空軍がヴァシリウカ付近の橋を空爆</strong>: 戦略インフラへの攻撃。</p>
+<p>5. <strong>ミャンマーでPDF部隊がJunta執行官を待ち伏せ</strong>: 地域紛争の一端を示す。</p>
+<br>
+<p>---</p>
+<br>
+<h2>作業2: タイトル翻訳JSON</h2></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/estonia-receives-first-medium-range-air-defense-system/" target="_blank">Estonia receives first medium-range air defense system</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月22日 22:48 UTC</span></div><div class="art-body"><p><strong>主題</strong>:</p>
+<p>Estoniaが初の中距離防空システム IRIS-T SLMを受領したことについて。</p>
+<br>
+<p><strong>背景・文脈</strong>:</p>
+<p>ウクライナ戦争が続く中でNATO東翼の安全保障環境が緊迫化しており、バルト三国の一つであるEstoniaの防衛力強化は喫緊の課題である。このシステム導入は、同国の防空能力に質的な向上をもたらす点で重要である。</p>
+<br>
+<p><strong>主要な内容</strong>:</p>
+<ul>
+<li>  Estoniaが、同国初となる中距離防空システム IRIS-T SLMを受領した。</li>
+<li>  このシステム導入により、Estoniaは既存の短距離防空システムでは対応困難だった、より長距離かつ高高度の航空脅威に対し対処可能となる。</li>
+<li>  Estonian Defense Forcesは、今回のシステム取得が同国の防空能力を大幅に向上させると強調している。</li>
+</ul>
+<br>
+<p><strong>軍事的・地政学的意義</strong>:</p>
+<p>このIRIS-T SLMの導入は、Estoniaの個別防衛力を強化し、NATO東翼の防空能力に貢献することで、ロシアに対する抑止力を向上させる。これにより、バルト海地域の安全保障環境の安定化に寄与する。</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/estonia-receives-first-medium-range-air-defense-system/" data-title="Estonia receives first medium-range air defense system" data-src="Kyiv Independent" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-war-latest-russian-missile-parts-factory-in-flames-as-tensions-over-belarus-escalate/" target="_blank">Ukraine war latest: Russian missile parts factory in flames as tensions over Belarus escalate</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月22日 21:03 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ウクライナ戦争における最新の軍事動向、特にロシア本土への攻撃、黒海での交戦、そしてベラルーシの戦争介入に関する懸念に焦点を当てている。</li>
+<li><strong>背景・文脈</strong>: ロシアによるウクライナ侵攻が長期化し、ウクライナはロシア本土や占領地への反撃を強化している。同時に、ロシアは黒海におけるプレゼンスを維持し、ベラルーシの介入可能性が新たな地政学的リスクとして浮上している。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    - ウクライナはVoronezhにあるロシアの主要ミサイル部品工場を攻撃し、大規模な火災を発生させた。</p>
+<p>    - ロシアは黒海で外国籍貨物船を攻撃し、エジプト人船員1名が死亡した。</p>
+<p>    - ロシアの攻撃により、ウクライナの主要FPV（First Person View）ドローン生産施設が損傷した。</p>
+<p>    - ウクライナによるロシア攻撃後、爆発物を搭載したドローンがエストニア国内で発見された。</p>
+<p>    - ベラルーシの反体制派は、Minsk政権が戦争に介入する計画があるとしてウクライナに警告を発した。</p>
+<p>    - ウクライナ軍によるロシアの兵站拠点への攻撃を受け、Crimeaの子供向けキャンプが中断された。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ウクライナのロシア本土深部への攻撃能力の向上と、それに伴うロシアの防衛態勢の脆弱化が示唆される。黒海における民間船舶への攻撃は国際的な緊張を高め、ベラルーシの戦争介入は戦線拡大と地域の不安定化を招く可能性があり、戦況の複雑化が進んでいる。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-war-latest-russian-missile-parts-factory-in-flames-as-tensions-over-belarus-escalate/" data-title="Ukraine war latest: Russian missile parts factory in flames as tensions over Bel" data-src="Kyiv Independent" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/polands-president-not-invited-to-ukraine-recovery-conference-in-gdansk/" target="_blank">Polish president not invited to Ukraine Recovery Conference in Gdansk, Kyiv calls it &#x27;internal matter&#x27;</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年6月22日 20:28 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ポーランド国内で開催されるウクライナ復興会議に、同国大統領が招待されなかった問題が報じられている。</li>
+<li><strong>背景・文脈</strong>: ロシアのウクライナ侵攻以降、ポーランドはウクライナの主要な支援国の一つであったが、近年両国間では穀物輸入や物流を巡る軋轢が生じている。この会議はウクライナの復興を議論する重要な機会であり、開催国ポーランドの政治的協力関係が注目される。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   ポーランドのKarol Nawrocki大統領は、Gdanskで開催されるウクライナ復興会議に招待されていない。</p>
+<p>    *   大統領府関係者は、Donald Tusk首相から招待がなかったため大統領は出席しないと説明した。</p>
+<p>    *   ウクライナ政府は、大統領の招待問題はポーランドの「内政問題」であるとの見解を示した。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ウクライナ支援の主要国であるポーランド国内の政治的亀裂は、ウクライナへの安定的な支援体制に影を落とす可能性がある。これは、西側諸国の分断を狙うロシアにとって、間接的に有利な状況を生み出す恐れがある。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/polands-president-not-invited-to-ukraine-recovery-conference-in-gdansk/" data-title="Polish president not invited to Ukraine Recovery Conference in Gdansk, Kyiv call" data-src="Kyiv Independent" data-date="2026-06-22"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
