@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-07-07 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-07-07.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-07-07</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>19 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（19 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uppfrq/uaf_drones_hit_8_oil_tankers_cargo_ship_ferry/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ軍ドローンがアゾフ海で石油タンカー8隻、貨物船、フェリーを攻撃（2026年7月6-7日夜）</div><div class="vc-en">UAF drones hit 8 oil tankers, cargo ship, ferry tonight (6-7 July 2026), Azov Sea</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 08:57</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uppfrq/uaf_drones_hit_8_oil_tankers_cargo_ship_ferry/" data-title="UAF drones hit 8 oil tankers, cargo ship, ferry tonight (6-7 July 2026), Azov Se" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uq9gus/lyman_ukraines_59th_assault_brigade_signum/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ライマン：ウクライナ第59強襲旅団「シグナム」がロシア歩兵に対し作戦継続、占領下のトーチカなどを攻撃（2026年7月7日）</div><div class="vc-en">Lyman: Ukraine&#x27;s 59th Assault Brigade &quot;Signum&quot; continues operations against Russian infantry, striking occupied pillbox &amp; other targets. JUL.07.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 21:58</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uq9gus/lyman_ukraines_59th_assault_brigade_signum/" data-title="Lyman: Ukraine&#x27;s 59th Assault Brigade &quot;Signum&quot; continues operations against Russ" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uq8e4g/isis_insurgents_attack_outpost_syria/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">シリアでISIS武装勢力が前哨基地を攻撃</div><div class="vc-en">ISIS insurgents attack outpost - Syria</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 21:17</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uq8e4g/isis_insurgents_attack_outpost_syria/" data-title="ISIS insurgents attack outpost - Syria" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uq7337/russians_get_ambushed_russian_drones_blow_up_fpv/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシア兵が待ち伏せされ、ロシアドローン爆発、FPV歩兵が攻撃する2026年7月の映像集</div><div class="vc-en">Russians get ambushed, Russian drones blow up, FPV infantry hits. Compilation July 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 20:30</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uq7337/russians_get_ambushed_russian_drones_blow_up_fpv/" data-title="Russians get ambushed, Russian drones blow up, FPV infantry hits. Compilation Ju" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uq6xuh/crimea_ukraines_unmanned_systems_forces_continued/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">クリミア：ウクライナ無人システム部隊がロシアの石油・電力インフラを攻撃、変電所5基とガス分配ノード1基を標的（7月6-7日夜）</div><div class="vc-en">Crimea: Ukraine&#x27;s Unmanned Systems Forces continued strikes against Russian oil/electrical infrastructure last night, targeting 5 electrical substations, 1 gas distribution node. July 6-7, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 20:24</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uq6xuh/crimea_ukraines_unmanned_systems_forces_continued/" data-title="Crimea: Ukraine&#x27;s Unmanned Systems Forces continued strikes against Russian oil/" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uq60kn/ukrainian_disney_squad_alpha_sof_struck_multiple/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナの「ディズニー部隊」とALPHA SOFが複数のロシア兵を攻撃（2026年7月7日発表）</div><div class="vc-en">Ukrainian Disney Squad, ALPHA SOF, struck multiple Russian soldiers. Published 07.07.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 19:52</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uq60kn/ukrainian_disney_squad_alpha_sof_struck_multiple/" data-title="Ukrainian Disney Squad, ALPHA SOF, struck multiple Russian soldiers. Published 0" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uq2yek/drone_blows_russian_soldier_into_tree_2024/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ドローンがロシア兵を木に吹き飛ばす（2024年）</div><div class="vc-en">Drone blows Russian soldier into tree, 2024</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 18:08</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uq2yek/drone_blows_russian_soldier_into_tree_2024/" data-title="Drone blows Russian soldier into tree, 2024" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1uq02zn/ukrainian_artillery_strikes_russian_personnel/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ砲兵がクルスク地域のロシア兵を攻撃（2025年3月）</div><div class="vc-en">Ukrainian artillery strikes Russian personnel. Kursk region. March 2025.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 16:26</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1uq02zn/ukrainian_artillery_strikes_russian_personnel/" data-title="Ukrainian artillery strikes Russian personnel. Kursk region. March 2025." data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upxd6s/sudan_armys_akinci_drone_shot_down_yet_another/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">スーダン軍のAKINCIドローンがUAE供給の中国製CH-95ドローンを再び撃墜</div><div class="vc-en">Sudan Army&#x27;s AKINCI Drone shot down yet another UAE supplied Chinese made CH-95 Drone</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 14:50</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upxd6s/sudan_armys_akinci_drone_shot_down_yet_another/" data-title="Sudan Army&#x27;s AKINCI Drone shot down yet another UAE supplied Chinese made CH-95 " data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upwt5s/flajnim_forces_ambushing_russianmalian_relief/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">FLA/JNIM部隊がガオ発のロシア/マリ救援輸送隊を待ち伏せ、アナフィス市の包囲下ロシア軍基地へ向かっていた模様</div><div class="vc-en">FLA/JNIM forces ambushing Russian/Malian relief convoy exiting Gao, relief convoy stated heading towards surrounded Russian Africa Corps base located recently captured Anefis City bythe JNIM/FLA forces</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 14:30</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upwt5s/flajnim_forces_ambushing_russianmalian_relief/" data-title="FLA/JNIM forces ambushing Russian/Malian relief convoy exiting Gao, relief convo" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upva8l/footage_of_the_first_confirmed_destruction_of_an/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">英国-ウクライナ製グリフィンUAVによるイラン/ロシア製シャヘド型ドローン破壊の初確認映像</div><div class="vc-en">Footage of the first confirmed destruction of an Iranian/Russian Shahed-type drone in Ukraine using the British-Ukrainian Griffen UAV. It is a jet-powered fixed-wing interceptor with a top speed of over 350 km/h, an operating altitude above 7,500 m, and a range of up to 120 km.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 13:34</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upva8l/footage_of_the_first_confirmed_destruction_of_an/" data-title="Footage of the first confirmed destruction of an Iranian/Russian Shahed-type dro" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upughz/jnim_along_fla_using_truck_mounted_122mm_grad/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">JNIMとFLAがトラック搭載122mmグラートでアナフィス市の包囲されたロシア・アフリカ軍団基地を砲撃</div><div class="vc-en">JNIM along FLA using truck mounted 122mm GRAD tubes shelling surrounded Russian Africa corps base located Anefis City</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 13:02</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upughz/jnim_along_fla_using_truck_mounted_122mm_grad/" data-title="JNIM along FLA using truck mounted 122mm GRAD tubes shelling surrounded Russian " data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upub2g/drone_mortally_wounds_russian_soldier/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ドローンがロシア兵に致命傷を与える</div><div class="vc-en">Drone mortally wounds Russian soldier</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 12:56</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upub2g/drone_mortally_wounds_russian_soldier/" data-title="Drone mortally wounds Russian soldier" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upu8qh/russian_assault_team_under_drone_attack/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシア突撃チームがドローン攻撃を受ける</div><div class="vc-en">Russian assault team under drone attack</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 12:53</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upu8qh/russian_assault_team_under_drone_attack/" data-title="Russian assault team under drone attack" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upu6su/ukrainian_drone_hits_russian_soldier_playing_dead/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナドローンが死んだふりをするロシア兵を攻撃</div><div class="vc-en">Ukrainian drone hits Russian soldier playing dead</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 12:51</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upu6su/ukrainian_drone_hits_russian_soldier_playing_dead/" data-title="Ukrainian drone hits Russian soldier playing dead" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upq5g1/russian_ka52_firing_rockets_at_antonov_airport/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシアのKa-52がアントノフ空港でロケットを発射するCCTV映像（2022年2月24日）</div><div class="vc-en">Russian Ka-52 firing rockets at Antonov Airport CCTVfootage 24/02/2022</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 09:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upq5g1/russian_ka52_firing_rockets_at_antonov_airport/" data-title="Russian Ka-52 firing rockets at Antonov Airport CCTVfootage 24/02/2022" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upizwc/ukrainian_fpv_drone_hits_russian_bukhanka_loaf_van/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナFPVドローンがロシア製ブハンカ（バン）を攻撃</div><div class="vc-en">Ukrainian FPV drone hits Russian Bukhanka (loaf van)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 03:11</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upizwc/ukrainian_fpv_drone_hits_russian_bukhanka_loaf_van/" data-title="Ukrainian FPV drone hits Russian Bukhanka (loaf van)" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upip53/ukrainian_drone_dropping_grenades_russian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナドローンがバフムート戦線で寝ているロシア兵に手榴弾を投下</div><div class="vc-en">Ukrainian drone dropping grenades Russian soilders asleep. Bahmut front. At 1:12, one Russian soldiers manages deflect grenade dropped drone date unknown.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 02:57</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upip53/ukrainian_drone_dropping_grenades_russian/" data-title="Ukrainian drone dropping grenades Russian soilders asleep. Bahmut front. At 1:12" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1upgdiy/ukrainian_fpv_drone_detonates_north_korean_240mm/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナFPVドローンがロシア軍の北朝鮮製240mm MLRS M1991を破壊。ロケットがコックピットを貫通（ドネツク地域）</div><div class="vc-en">Ukrainian FPV drone detonates North Korean 240mm MLRS M1991 Russian military. Rocket launches through cab. Donetsk region. Date unknown</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/07 01:12</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1upgdiy/ukrainian_fpv_drone_detonates_north_korean_240mm/" data-title="Ukrainian FPV drone detonates North Korean 240mm MLRS M1991 Russian military. Ro" data-src="r/CombatFootage" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p>---</p>
+<h2>作業1: 日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<ul>
+<li>  ウクライナ砲兵がクルスク地域のロシア兵を攻撃（2025年3月）。</li>
+<li>  ロシアのKa-52攻撃ヘリが2022年2月24日にアントノフ空港でロケットを発射するCCTV映像。</li>
+<li>  ロシア軍の北朝鮮製240mm MLRS M1991がウクライナFPVドローンにより破壊された。</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  ウクライナ軍ドローンがアゾフ海で石油タンカー8隻、貨物船、フェリーを攻撃（2026年7月6-7日夜）。</li>
+<li>  ウクライナ無人システム部隊がクリミアのロシア石油・電力インフラを攻撃し、変電所5基とガス分配ノード1基を標的とした（2026年7月6-7日夜）。</li>
+<li>  英国-ウクライナ製グリフィンUAVがイラン/ロシア製シャヘド型ドローンを破壊した初の映像。グリフィンUAVはジェットエンジン搭載の固定翼迎撃機で、最高時速350km以上、高度7,500m以上、航続距離120km。</li>
+<li>  ウクライナドローンが死んだふりをするロシア兵を攻撃。</li>
+<li>  ウクライナFPVドローンがロシア軍の北朝鮮製240mm MLRS M1991を破壊。コックピットを貫通しロケットが発射された（ドネツク地域）。</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  ウクライナ第59強襲旅団「シグナム」がライマンでロシア歩兵に対して作戦を継続し、占領下のトーチカなどを攻撃（2026年7月7日）。</li>
+<li>  ロシア兵が待ち伏せに遭い、ロシアドローンが爆発、FPV歩兵が攻撃する様子をまとめた映像（2026年7月）。</li>
+<li>  ウクライナの「ディズニー部隊」とアルファSOFが複数のロシア兵を攻撃（2026年7月7日発表）。</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  シリアでISISの武装勢力が前哨基地を攻撃。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<br>
+<ul>
+<li>  スーダン軍のAKINCIドローンが、UAEが供給した中国製CH-95ドローンをまたも撃墜。</li>
+<li>  FLA/JNIM部隊がガオを離れるロシア/マリ救援輸送隊を待ち伏せ攻撃。輸送隊はJNIM/FLAに最近占領されたアナフィス市にある包囲されたロシア・アフリカ軍団基地に向かっていた。</li>
+<li>  JNIMとFLAがトラック搭載の122mmグラート多連装ロケットシステムを使用し、アナフィス市に位置する包囲下のロシア・アフリカ軍団基地を砲撃。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<br>
+<ul>
+<li>  <strong>id=18</strong>: ウクライナFPVドローンがロシア軍の北朝鮮製240mm MLRS M1991を破壊。</li>
+</ul>
+<p>    *   FPVドローンが大型兵器を破壊し、ロケットがコックピットを貫通する衝撃的な映像。</p>
+<ul>
+<li>  <strong>id=10</strong>: 英国-ウクライナ製グリフィンUAVが初のシャヘド型ドローン撃墜に成功。</li>
+</ul>
+<p>    *   高性能迎撃ドローンによるシャヘド型ドローン撃墜の初確認。</p>
+<ul>
+<li>  <strong>id=0</strong>: ウクライナ軍ドローンがアゾフ海で石油タンカーなど多数の船舶を攻撃。</li>
+</ul>
+<p>    *   複数の海上目標に対する大規模なドローン攻撃が実施された。</p>
+<ul>
+<li>  <strong>id=4</strong>: ウクライナ無人システム部隊がクリミアのインフラを大規模攻撃。</li>
+</ul>
+<p>    *   ロシアが占領するクリミアの主要インフラが広範囲にわたり標的とされた。</p>
+<ul>
+<li>  <strong>id=9</strong>: マリでロシア/マリ救援輸送隊が待ち伏せされ、ロシア・アフリカ軍団基地が包囲される。</li>
+</ul>
+<p>    *   アフリカにおけるロシア軍が厳しい包囲戦に直面している様子を示す。</p>
+<br>
+<p>---</p>
+<br>
+<h2>作業2: タイトル翻訳JSON</h2></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/russian-ballistic-missiles-rock-kyiv-fire-breaks-out/" target="_blank">Russian ballistic missiles rock Kyiv, fire breaks out</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年7月8日 01:19 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ロシアによるKyivへのballistic missile攻撃に関する報告。</li>
+<li><strong>背景・文脈</strong>: ウクライナ戦争が長期化する中、ロシアはウクライナの首都Kyivへの攻撃を継続しており、本件はその一環である。ballistic missileによる攻撃は、その破壊力と迎撃の難易度から、民間インフラおよび市民の安全に対する深刻な脅威となる。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   ロシアは7月8日未明、首都Kyivに対してballistic missile攻撃を実施した。</p>
+<p>    *   Kyiv Independentの現地ジャーナリストは、爆発音が空襲警報発令の直前にKyiv市内で聞こえたと報告している。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: 本攻撃は、ロシアが依然としてKyivを含むウクライナの主要都市に対し、迎撃が困難なballistic missileを含む各種ミサイルによる攻撃能力を保持していることを示唆する。これによりウクライナの防空システムへの継続的な負荷がかかり、戦況におけるロシアの圧力維持戦略が示される。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/russian-ballistic-missiles-rock-kyiv-fire-breaks-out/" data-title="Russian ballistic missiles rock Kyiv, fire breaks out" data-src="Kyiv Independent" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/top-ukrainian-drone-ceo-searched-by-law-enforcement/" target="_blank">Raid on leading drone company fuels fears of crackdown on Ukraine&#x27;s defense tech sector</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年7月8日 00:01 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ウクライナの主要ドローン企業Vyriy Industriesに対する大規模な捜索と、それに伴うウクライナの防衛技術セクターへの懸念。</li>
+<li><strong>背景・文脈</strong>: ウクライナはロシアとの大規模紛争においてドローン技術を極めて重要な戦力と位置付けており、自国の防衛技術産業の育成と強化は戦況を左右する喫緊の課題である。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    - ウクライナのState Bureau of Investigationsが、著名なドローン産業の起業家Oleksii Babenkoが率いるVyriy Industriesの施設に対し、請負業者やBabenkoの家族宅を含め70か所で大規模な捜索を行った。</p>
+<p>    - この捜索は、ウクライナの主要ドローン企業を標的としたものであり、同国の防衛技術セクター全体に対する「取り締まり（crackdown）」の兆候であるとの懸念を惹起している。</p>
+<p>    - 捜索の広範囲な実施は、国内の防衛技術開発における潜在的な不確実性や障害を示唆している。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: 自国の主要な防衛技術企業に対する政府機関の介入は、戦時下における革新的な技術開発とその迅速な実戦配備を阻害し、ウクライナの軍事的優位性の確立に悪影響を及ぼす可能性がある。これは、ロシアとの長期戦において不可欠な国内軍事産業基盤の強化を遅らせ、国際社会におけるウクライナの自立的な防衛能力構築への信頼性にも影響を与えかねない。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/top-ukrainian-drone-ceo-searched-by-law-enforcement/" data-title="Raid on leading drone company fuels fears of crackdown on Ukraine&#x27;s defense tech" data-src="Kyiv Independent" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-war-latest-8-russian-shadow-fleet-tankers-hit-in-azov-sea-ukraines-madyar-says/" target="_blank">Ukraine war latest: 8 Russian shadow fleet tankers hit in Azov Sea, Ukraine&#x27;s &#x27;Madyar&#x27; says</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年7月7日 23:17 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-war-latest-8-russian-shadow-fleet-tankers-hit-in-azov-sea-ukraines-madyar-says/" data-title="Ukraine war latest: 8 Russian shadow fleet tankers hit in Azov Sea, Ukraine&#x27;s &#x27;M" data-src="Kyiv Independent" data-date="2026-07-07"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
