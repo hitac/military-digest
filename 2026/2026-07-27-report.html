@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-07-27 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-07-27.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-07-27</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>13 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（13 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v8eb9a/july_25_2026_34th_marine_brigade_drone_operators/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">(July 25, 2026) 34th Marine Brigade drone operators coordinate airstrike against russian drone operators conducting human safaris. Kherson region</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 21:45</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v8eb9a/july_25_2026_34th_marine_brigade_drone_operators/" data-title="(July 25, 2026) 34th Marine Brigade drone operators coordinate airstrike against" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v8bizc/chechen_rebels_attacking_russian_troops/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Chechen Rebels attacking Russian Troops Compilation Pt. 2: Chechen Wars 1994-2000s</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 20:03</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v8bizc/chechen_rebels_attacking_russian_troops/" data-title="Chechen Rebels attacking Russian Troops Compilation Pt. 2: Chechen Wars 1994-200" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v88i85/ukrainian_heavy_bomber_drone_keeps_flying_after/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian heavy bomber drone keeps flying after Russian FPV drone strike. Published 27.07.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 18:17</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v88i85/ukrainian_heavy_bomber_drone_keeps_flying_after/" data-title="Ukrainian heavy bomber drone keeps flying after Russian FPV drone strike. Publis" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v84qzy/july_27_2026_ukrainian_225th_assault_regiment/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">(July 27, 2026) Ukrainian 225th Assault regiment conducting clearing operations recovering 144 trophy Russian passports</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 16:07</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v84qzy/july_27_2026_ukrainian_225th_assault_regiment/" data-title="(July 27, 2026) Ukrainian 225th Assault regiment conducting clearing operations " data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v847wx/russian_africa_corps_carried_out_ąn_ambush/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian Africa Corps Carried out ąn Ambush Against JNIM (AQ) ln Mali (Date Unknown)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 15:49</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v847wx/russian_africa_corps_carried_out_ąn_ambush/" data-title="Russian Africa Corps Carried out ąn Ambush Against JNIM (AQ) ln Mali (Date Unkno" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v823rm/ukrainian_usfs_interceptor_fpv_drone_shot_down/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian USF’s interceptor FPV drone shot down Russian Forpost-R recon-strike UAV, 27th Jun 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 14:32</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v823rm/ukrainian_usfs_interceptor_fpv_drone_shot_down/" data-title="Ukrainian USF’s interceptor FPV drone shot down Russian Forpost-R recon-strike U" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v7vdof/cctv_footage_shows_the_moment_the_ukrainian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">CCTV footage shows the moment the Ukrainian Defense Forces struck an air-defense system in Russian Belgorod. 26/07/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 09:26</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v7vdof/cctv_footage_shows_the_moment_the_ukrainian/" data-title="CCTV footage shows the moment the Ukrainian Defense Forces struck an air-defense" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v7ugnc/defence_intelligence_of_ukraine_operators_tracked/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Defence Intelligence of Ukraine operators tracked down a Russian S-400 air defence system in Crimea. They attacked a launcher and the 96L6 radar station between the 25th and 26th of July.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 08:33</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v7ugnc/defence_intelligence_of_ukraine_operators_tracked/" data-title="Defence Intelligence of Ukraine operators tracked down a Russian S-400 air defen" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v7thyl/zaporizhzhia_sector_drone_double_tapping/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Zaporizhzhia sector, drone double tapping</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 07:35</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v7thyl/zaporizhzhia_sector_drone_double_tapping/" data-title="Zaporizhzhia sector, drone double tapping" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v7pqay/ukrainian_73rd_special_operations_center_ambush/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian 73rd Special Operations Center ambush Russian Patrol boats capturing several Russians</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 04:10</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v7pqay/ukrainian_73rd_special_operations_center_ambush/" data-title="Ukrainian 73rd Special Operations Center ambush Russian Patrol boats capturing s" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v7ndri/afghanistan_freedom_front_ambushes_raids_against/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Afghanistan Freedom Front ambushes, raids against Taliban (June 12-July 25, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 02:16</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v7ndri/afghanistan_freedom_front_ambushes_raids_against/" data-title="Afghanistan Freedom Front ambushes, raids against Taliban (June 12-July 25, 2026" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v7lcff/cockpit_pov_ukrainian_fighter_jet_shoots_down/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Cockpit POV: Ukrainian fighter jet shoots down Russian aerial target. Mykolaiv. Published 26.07.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 00:43</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v7lcff/cockpit_pov_ukrainian_fighter_jet_shoots_down/" data-title="Cockpit POV: Ukrainian fighter jet shoots down Russian aerial target. Mykolaiv. " data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1v7kxc0/ukraines_414th_usf_brigade_magyars_birds_ran_down/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; ran down dozens more Russian infantrymen using FPV strike drones. (Ep. 53) July 24, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>07/27 00:24</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1v7kxc0/ukraines_414th_usf_brigade_magyars_birds_ran_down/" data-title="Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; ran down dozens more Russian infant" data-src="r/CombatFootage" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 429 RESOURCE_EXHAUSTED. {&#x27;error&#x27;: {&#x27;code&#x27;: 429, &#x27;message&#x27;: &#x27;You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n</em> Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 44.211022848s.&#x27;, &#x27;status&#x27;: &#x27;RESOURCE_EXHAUSTED&#x27;, &#x27;details&#x27;: [{&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.Help&#x27;, &#x27;links&#x27;: [{&#x27;description&#x27;: &#x27;Learn more about Gemini API quotas&#x27;, &#x27;url&#x27;: &#x27;https://ai.google.dev/gemini-api/docs/rate-limits&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.QuotaFailure&#x27;, &#x27;violations&#x27;: [{&#x27;quotaMetric&#x27;: &#x27;generativelanguage.googleapis.com/generate_content_free_tier_requests&#x27;, &#x27;quotaId&#x27;: &#x27;GenerateRequestsPerDayPerProjectPerModel-FreeTier&#x27;, &#x27;quotaDimensions&#x27;: {&#x27;location&#x27;: &#x27;global&#x27;, &#x27;model&#x27;: &#x27;gemini-2.5-flash&#x27;}, &#x27;quotaValue&#x27;: &#x27;20&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.RetryInfo&#x27;, &#x27;retryDelay&#x27;: &#x27;44s&#x27;}]}}*</p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/polish-police-detain-suspects-after-brutal-attack-on-ukrainian-couple/" target="_blank">Polish police detain suspects after brutal attack on Ukrainian couple</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年7月28日 00:05 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ポーランド国内でのウクライナ人に対する暴力の増加と、それに伴うポーランド・ウクライナ間の外交関係の悪化に関するものである。</li>
+<li><strong>背景・文脈</strong>: 通常はロシアの侵略に対抗するパートナーであるポーランドとウクライナの関係が、外交危機により悪化している現状を示している。この事件は、国境を越えたウクライナ人に対する感情の変化と、両国間の協力体制への潜在的な影響を浮き彫りにする。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    - ポーランドのWroclawでウクライナ人カップルが残忍な攻撃を受けた。</p>
+<p>    - ポーランド警察はこの事件に関与した容疑者を拘束した。</p>
+<p>    - この攻撃は、近年ポーランド国内でウクライナ人に対する暴力事件が急増している状況下で発生した。</p>
+<p>    - 暴力の増加は、隣接するポーランドとウクライナ間の外交関係の危機によって助長されている。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ウクライナにとって最も重要な支援国の一つであるポーランドとの関係悪化は、ロシアの侵攻に対するウクライナの抗戦能力に直接的な影響を及ぼしうる。NATOの東部側面における主要国の結束の弱体化は、地域の安全保障環境全体に負の影響を与える可能性がある。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/polish-police-detain-suspects-after-brutal-attack-on-ukrainian-couple/" data-title="Polish police detain suspects after brutal attack on Ukrainian couple" data-src="Kyiv Independent" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/trump-says-hell-ask-putin-about-russia-helping-iran-target-us-bases-in-middle-east/" target="_blank">Trump says he&#x27;ll &#x27;ask Putin&#x27; about Russia helping Iran target US bases in Middle East</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年7月27日 22:11 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/trump-says-hell-ask-putin-about-russia-helping-iran-target-us-bases-in-middle-east/" data-title="Trump says he&#x27;ll &#x27;ask Putin&#x27; about Russia helping Iran target US bases in Middle" data-src="Kyiv Independent" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-war-latest-ukraine-reports-hitting-14-energy-facilities-in-occupied-crimea-over-3-days-amid-widespread-power-outages/" target="_blank">Ukraine war latest: Ukraine reports hitting 14 energy facilities in occupied Crimea over 3 days amid widespread power outages</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年7月27日 20:31 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ウクライナ軍がロシア占領下の Crimea のエネルギー施設およびロシア領内の重要インフラに対し広範な攻撃を実施している現状。</li>
+<li><strong>背景・文脈</strong>: ウクライナは、ロシアによる侵攻に対抗し、占領地およびロシア領内における軍事・経済インフラへの攻撃を強化している。これは、ロシアの戦争遂行能力を削ぎ、戦略的優位を確立するための非対称戦術の一環である。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    - ウクライナは、過去3日間でロシア占領下の Crimea にある14のエネルギー施設を攻撃し、広範な停電を発生させたと報告した。</p>
+<p>    - ロシアの攻撃により、Kharkiv と Poltava 間の最後のガソリンスタンドが破壊され、過去1日で9名が死亡、76名が負傷した。</p>
+<p>    - 致命的なロシアの弾道ミサイル攻撃を受けた展示会の主催者が拘留された。</p>
+<p>    - ウクライナのドローンは、ロシア領内の輸出ターミナルと石油インフラに対する深部攻撃を実施した。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ウクライナによる Crimea およびロシア領内へのインフラ攻撃の激化は、ロシアの兵站と経済に深刻な影響を与え、戦争遂行能力を低下させる狙いがある。これにより、ロシアは防衛体制の見直しを迫られ、ウクライナは戦場のイニシアティブを部分的に取り戻しつつあることを示唆する。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-war-latest-ukraine-reports-hitting-14-energy-facilities-in-occupied-crimea-over-3-days-amid-widespread-power-outages/" data-title="Ukraine war latest: Ukraine reports hitting 14 energy facilities in occupied Cri" data-src="Kyiv Independent" data-date="2026-07-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
