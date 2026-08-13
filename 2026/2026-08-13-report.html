@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-08-13 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-08-13.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-08-13</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>22 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（22 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vnpbi2/ukraines_1st_tank_brigade_uav_unit_pegasus_recent/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s 1st Tank Brigade UAV unit &quot;Pegasus&quot; recent work [08.2026]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 22:24</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vnpbi2/ukraines_1st_tank_brigade_uav_unit_pegasus_recent/" data-title="Ukraine&#x27;s 1st Tank Brigade UAV unit &quot;Pegasus&quot; recent work [08.2026]" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vnnb1i/lyman_ukraines_59th_assault_brigade_drone_pilots/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Lyman: Ukraine&#x27;s 59th Assault Brigade drone pilots helped defeat another Russian infiltration attempt using accurate FPV drone strikes. August 12, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 21:04</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vnnb1i/lyman_ukraines_59th_assault_brigade_drone_pilots/" data-title="Lyman: Ukraine&#x27;s 59th Assault Brigade drone pilots helped defeat another Russian" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vnigyi/myanmar_projunta_soldier_gets_struck_while_laying/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Myanmar Pro-Junta soldier gets struck while laying down fire, Kachin State, 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 18:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vnigyi/myanmar_projunta_soldier_gets_struck_while_laying/" data-title="Myanmar Pro-Junta soldier gets struck while laying down fire, Kachin State, 2026" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vngd3j/russian_air_defenses_intercepting_black_sea/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian air defenses intercepting Black Sea. Gelendzhik, Russia. 8/13/26</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 16:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vngd3j/russian_air_defenses_intercepting_black_sea/" data-title="Russian air defenses intercepting Black Sea. Gelendzhik, Russia. 8/13/26" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vnfvuy/baloch_liberation_army_attacking_pakistani/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Baloch Liberation Army attacking Pakistani outpost recoded July 31st</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 16:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vnfvuy/baloch_liberation_army_attacking_pakistani/" data-title="Baloch Liberation Army attacking Pakistani outpost recoded July 31st" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vne7mx/drone_operators_of_the_ukrainian_15th_mobile/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Drone operators of the Ukrainian 15th Mobile Border Guard Detachment &quot;Steel Border&quot; hunted Russian UAVs with a &quot;fishing rod&quot; and also attacked ATVs, trucks, antennas, EW systems, and infantry. North-Slobozhansk and Kursk area.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 15:38</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vne7mx/drone_operators_of_the_ukrainian_15th_mobile/" data-title="Drone operators of the Ukrainian 15th Mobile Border Guard Detachment &quot;Steel Bord" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vnctf4/baghdad_sniper_compilation_iraq_c_2007/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Baghdad Sniper compilation (Iraq, c. 2007)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 14:48</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vnctf4/baghdad_sniper_compilation_iraq_c_2007/" data-title="Baghdad Sniper compilation (Iraq, c. 2007)" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vn5feq/a_civilian_records_several_ukrainian_longrange/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">A civilian records several Ukrainian long-range UAVs attacking a warehouse complex, used by Wildberries and other companies, in Russia’s Republic of Bashkortostan. 13/08/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 09:01</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vn5feq/a_civilian_records_several_ukrainian_longrange/" data-title="A civilian records several Ukrainian long-range UAVs attacking a warehouse compl" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vn3x2q/nighttime_view_from_inside_the_cockpit_of_a/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Nighttime view from inside the cockpit of a Ukrainian MiG-29 fighter jet as it fires an R-73 missile at an Iranian/Russian Shahed UAV.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 07:31</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vn3x2q/nighttime_view_from_inside_the_cockpit_of_a/" data-title="Nighttime view from inside the cockpit of a Ukrainian MiG-29 fighter jet as it f" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vn3ixh/pjak_militants_shot_killed_ąn_irgc_officer_įn_thę/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">PJAK Militants Shot Killed ąn IRGC Officer įn thę Kurdistan Region (August 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 07:08</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vn3ixh/pjak_militants_shot_killed_ąn_irgc_officer_įn_thę/" data-title="PJAK Militants Shot Killed ąn IRGC Officer įn thę Kurdistan Region (August 2026)" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmxqfa/kachin_independence_army_pdf_peoples_defense/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Kachin Independence Army, PDF (People&#x27;s Defense Force) rebel FPV drone attacks against Myanmar (Burma) Army positions [Shwegu area; between 5/20-8/11/2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 02:06</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmxqfa/kachin_independence_army_pdf_peoples_defense/" data-title="Kachin Independence Army, PDF (People&#x27;s Defense Force) rebel FPV drone attacks a" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmx08w/yna_drone_bomber_strikes_on_houthi_fighters/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">YNA drone bomber strikes o.n Houthi fighters, vehicles, August 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 01:32</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmx08w/yna_drone_bomber_strikes_on_houthi_fighters/" data-title="YNA drone bomber strikes o.n Houthi fighters, vehicles, August 2026" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmwgv4/gmlrs_hunts_2s7_pion_velyka_novosilka_ukraine/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">GMLRS hunts 2S7 Pion Velyka Novosilka Ukraine</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/13 01:08</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmwgv4/gmlrs_hunts_2s7_pion_velyka_novosilka_ukraine/" data-title="GMLRS hunts 2S7 Pion Velyka Novosilka Ukraine" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmtncj/himars_gmlrs_strike_hit_russian_training_ground/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">HIMARS GMLRS strike hit Russian training ground. Donetsk Oblast [17.11.2024]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/12 23:06</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmtncj/himars_gmlrs_strike_hit_russian_training_ground/" data-title="HIMARS GMLRS strike hit Russian training ground. Donetsk Oblast [17.11.2024]" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmteej/request_russian_soldier_purposefully_revealing/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">[REQUEST] Russian soldier purposefully revealing comrade&#x27;s position</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/12 22:56</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmteej/request_russian_soldier_purposefully_revealing/" data-title="[REQUEST] Russian soldier purposefully revealing comrade&#x27;s position" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmqw9a/ukraines_group_two_sof_firstperson_perspective/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s Group Two (SOF) first-person perspective. Archive</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/12 21:15</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmqw9a/ukraines_group_two_sof_firstperson_perspective/" data-title="Ukraine&#x27;s Group Two (SOF) first-person perspective. Archive" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmqbrj/ukrainian_fiberoptic_fpv_drones_struck_multiple/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian fiber-optic FPV drones struck multiple Russian vehicles. Vovchansk direction. Ares Battalion. 57th Motorized Brigade. Published 12.08.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/12 20:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmqbrj/ukrainian_fiberoptic_fpv_drones_struck_multiple/" data-title="Ukrainian fiber-optic FPV drones struck multiple Russian vehicles. Vovchansk dir" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmpqjd/ukrainian_13th_separate_air_assault_battalion/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian 13th Separate Air Assault Battalion cleared Russian occupied positions. Oleksandrivka sector. Summer 2026, published 12.08.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/12 20:31</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmpqjd/ukrainian_13th_separate_air_assault_battalion/" data-title="Ukrainian 13th Separate Air Assault Battalion cleared Russian occupied positions" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmh4za/iraqi_army_air_assault_operation_zagros_mountains/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Iraqi Army air assault operation Zagros Mountains, Iran-Iraq War.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/12 15:20</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmh4za/iraqi_army_air_assault_operation_zagros_mountains/" data-title="Iraqi Army air assault operation Zagros Mountains, Iran-Iraq War." data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmee43/nla_national_liberation_army_fighters_ambush/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">NLA (national liberation army) fighters ambush French train carrying iron ore passing over &quot;five arches bridge&quot;. February 22, 1958. French director René Vautier film.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/12 13:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmee43/nla_national_liberation_army_fighters_ambush/" data-title="NLA (national liberation army) fighters ambush French train carrying iron ore pa" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vmcy44/mandalay_pdf_peoples_defense_force_rebels/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Mandalay PDF (People&#x27;s Defense Force) rebels attacking Myanmar (Burma) Army outpost (Mogok Township; February 14, 2022)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/12 12:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vmcy44/mandalay_pdf_peoples_defense_force_rebels/" data-title="Mandalay PDF (People&#x27;s Defense Force) rebels attacking Myanmar (Burma) Army outp" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vm87bh/footage_of_intense_russian_air_defense_fire_using/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Footage of intense Russian air defense fire using many tracer rounds during an overnight massive Ukrainian attack on the port of Novorossiysk. 12/08/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/12 08:26</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vm87bh/footage_of_intense_russian_air_defense_fire_using/" data-title="Footage of intense Russian air defense fire using many tracer rounds during an o" data-src="r/CombatFootage" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 429 RESOURCE_EXHAUSTED. {&#x27;error&#x27;: {&#x27;code&#x27;: 429, &#x27;message&#x27;: &#x27;You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n</em> Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 45.076561047s.&#x27;, &#x27;status&#x27;: &#x27;RESOURCE_EXHAUSTED&#x27;, &#x27;details&#x27;: [{&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.Help&#x27;, &#x27;links&#x27;: [{&#x27;description&#x27;: &#x27;Learn more about Gemini API quotas&#x27;, &#x27;url&#x27;: &#x27;https://ai.google.dev/gemini-api/docs/rate-limits&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.QuotaFailure&#x27;, &#x27;violations&#x27;: [{&#x27;quotaMetric&#x27;: &#x27;generativelanguage.googleapis.com/generate_content_free_tier_requests&#x27;, &#x27;quotaId&#x27;: &#x27;GenerateRequestsPerDayPerProjectPerModel-FreeTier&#x27;, &#x27;quotaDimensions&#x27;: {&#x27;location&#x27;: &#x27;global&#x27;, &#x27;model&#x27;: &#x27;gemini-2.5-flash&#x27;}, &#x27;quotaValue&#x27;: &#x27;20&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.RetryInfo&#x27;, &#x27;retryDelay&#x27;: &#x27;45s&#x27;}]}}*</p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/policy/2026/08/intel-ops-are-underway-space-commands-nascent-alabama-hq/415418/" target="_blank">Intel ops are underway at Space Command’s nascent Alabama HQ</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年8月13日 18:24 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/policy/2026/08/intel-ops-are-underway-space-commands-nascent-alabama-hq/415418/" data-title="Intel ops are underway at Space Command’s nascent Alabama HQ" data-src="Defense One" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/massive-explosion-rocks-italian-ammunition-plant-that-produces-artillery-for-ukraine/" target="_blank">Massive explosion rocks Italian ammunition plant that produces artillery for Ukraine</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年8月14日 01:02 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/massive-explosion-rocks-italian-ammunition-plant-that-produces-artillery-for-ukraine/" data-title="Massive explosion rocks Italian ammunition plant that produces artillery for Ukr" data-src="Kyiv Independent" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/head-of-mykolaiv-draft-office-arrested-on-corruption-charges/" target="_blank">Head of Mykolaiv draft office arrested on corruption charges</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年8月13日 22:55 UTC</span></div><div class="art-body"><h2>要約</h2>
+<br>
+<ul>
+<li>  <strong>主題</strong>: ウクライナのMykolaivにある徴兵事務所の所長が、徴兵忌避を幇助するための汚職容疑で逮捕された件。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>背景・文脈</strong>: ウクライナはロシアとの全面戦争中にあり、軍の人員補充が喫緊の課題となっている。この文脈で、徴兵制度における汚職は国家の防衛努力と国民の士気を著しく損なう可能性がある。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   Mykolaivの徴兵事務所長が汚職容疑で逮捕された。</p>
+<p>    *   容疑者は徴兵忌避を幇助する目的で賄賂を受け取っていたとされる。</p>
+<p>    *   ウクライナの検事総長Ruslan Kravchenkoによると、具体的な賄賂の金額は15,000ドルに上る。</p>
+<p>    *   容疑者の行為は証拠書類によって記録されていた。</p>
+<br>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: 徴兵制度内の汚職は、前線の兵力不足を助長するだけでなく、社会全体の公平性に対する不信感を高め、士気に悪影響を及ぼす。これはウクライナが国際社会からの支援を維持する上で、国内改革の重要性も示唆している。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/head-of-mykolaiv-draft-office-arrested-on-corruption-charges/" data-title="Head of Mykolaiv draft office arrested on corruption charges" data-src="Kyiv Independent" data-date="2026-08-13"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
