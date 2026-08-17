@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-08-17 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-08-17.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-08-17</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>10 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（10 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vr26mu/russian_air_defense_team_missed_ukrainian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian air defense team missed Ukrainian long-range drone. Published 17.08.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/17 19:27</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vr26mu/russian_air_defense_team_missed_ukrainian/" data-title="Russian air defense team missed Ukrainian long-range drone. Published 17.08.2026" data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vr21ra/russian_soldier_came_under_ukrainian_fpv_drone/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian soldier came under Ukrainian FPV drone attack. Published 17.08.2026. Date/location unknown</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/17 19:22</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vr21ra/russian_soldier_came_under_ukrainian_fpv_drone/" data-title="Russian soldier came under Ukrainian FPV drone attack. Published 17.08.2026. Dat" data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vr14xo/ukrainian_3rd_sof_regiment_liberated/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian 3rd SOF Regiment liberated Andriivka-Klevtsove plus captured 30 Russian soldiers. Published 17.08.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/17 18:50</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vr14xo/ukrainian_3rd_sof_regiment_liberated/" data-title="Ukrainian 3rd SOF Regiment liberated Andriivka-Klevtsove plus captured 30 Russia" data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vqzre2/pakistan_army_carried_out_ibo_against_taliban/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Pakistan Army carried out IBO against Taliban fighters | Bajaur, KP | August 17, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/17 18:02</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vqzre2/pakistan_army_carried_out_ibo_against_taliban/" data-title="Pakistan Army carried out IBO against Taliban fighters | Bajaur, KP | August 17," data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vqqbo7/new_compilation_of_ukrainian_drones_hitting/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">New compilation of Ukrainian drones hitting Russian logistics, Buk-M2 and TOR air defense systems, Pion artillery system, Terek radar, and other vehicles behind frontlines (Dovbush T20 and DARTS drone footage, August 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/17 12:00</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vqqbo7/new_compilation_of_ukrainian_drones_hitting/" data-title="New compilation of Ukrainian drones hitting Russian logistics, Buk-M2 and TOR ai" data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vqpe52/pakistani_quadcopter_against_bla_mastung/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Pakistani quadcopter against BLA, Mastung</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/17 11:14</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vqpe52/pakistani_quadcopter_against_bla_mastung/" data-title="Pakistani quadcopter against BLA, Mastung" data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vqn936/compilation_footage_uploaded_by_drone_pilots_of/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Compilation footage uploaded by drone pilots of the Ukrainian 12th Special Forces Brigade &quot;Azov&quot; showing attacks on Russian logistics.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/17 09:16</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vqn936/compilation_footage_uploaded_by_drone_pilots_of/" data-title="Compilation footage uploaded by drone pilots of the Ukrainian 12th Special Force" data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vqmpww/playstation_1_game_styled_russian_volunteer_corps/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">PlayStation 1 game styled Russian Volunteer Corps video</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/17 08:44</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vqmpww/playstation_1_game_styled_russian_volunteer_corps/" data-title="PlayStation 1 game styled Russian Volunteer Corps video" data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vqmj2c/pakistani_quadcopter_takes_out_bla_killi_zaik/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Pakistani quadcopter takes out BLA, Killi Zaik</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/17 08:32</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vqmj2c/pakistani_quadcopter_takes_out_bla_killi_zaik/" data-title="Pakistani quadcopter takes out BLA, Killi Zaik" data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vqbeq9/ukrainian_mara_battalion_destroyed_numerous/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian Mara Battalion destroyed numerous Russian ambush drones. Lyman direction. 66th Mechanized Brigade. August 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/16 23:03</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vqbeq9/ukrainian_mara_battalion_destroyed_numerous/" data-title="Ukrainian Mara Battalion destroyed numerous Russian ambush drones. Lyman directi" data-src="r/CombatFootage" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 429 RESOURCE_EXHAUSTED. {&#x27;error&#x27;: {&#x27;code&#x27;: 429, &#x27;message&#x27;: &#x27;You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n</em> Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 48.86699883s.&#x27;, &#x27;status&#x27;: &#x27;RESOURCE_EXHAUSTED&#x27;, &#x27;details&#x27;: [{&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.Help&#x27;, &#x27;links&#x27;: [{&#x27;description&#x27;: &#x27;Learn more about Gemini API quotas&#x27;, &#x27;url&#x27;: &#x27;https://ai.google.dev/gemini-api/docs/rate-limits&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.QuotaFailure&#x27;, &#x27;violations&#x27;: [{&#x27;quotaMetric&#x27;: &#x27;generativelanguage.googleapis.com/generate_content_free_tier_requests&#x27;, &#x27;quotaId&#x27;: &#x27;GenerateRequestsPerDayPerProjectPerModel-FreeTier&#x27;, &#x27;quotaDimensions&#x27;: {&#x27;location&#x27;: &#x27;global&#x27;, &#x27;model&#x27;: &#x27;gemini-2.5-flash&#x27;}, &#x27;quotaValue&#x27;: &#x27;20&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.RetryInfo&#x27;, &#x27;retryDelay&#x27;: &#x27;48s&#x27;}]}}*</p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/zelensky-appoints-new-logistics-forces-commander-following-meeting-with-military-leadership/" target="_blank">Zelensky appoints new Logistics Forces commander following meeting with military leadership</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年8月18日 00:46 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/zelensky-appoints-new-logistics-forces-commander-following-meeting-with-military-leadership/" data-title="Zelensky appoints new Logistics Forces commander following meeting with military" data-src="Kyiv Independent" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/they-will-simply-kill-my-son-prominent-ukrainian-volunteer-claims-fsb-blackmail-travels-to-russia/" target="_blank">&#x27;They will simply kill my son&#x27; — Prominent Ukrainian volunteer claims FSB blackmail, travels to Russia</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年8月17日 22:42 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/they-will-simply-kill-my-son-prominent-ukrainian-volunteer-claims-fsb-blackmail-travels-to-russia/" data-title="&#x27;They will simply kill my son&#x27; — Prominent Ukrainian volunteer claims FSB blackm" data-src="Kyiv Independent" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/ideas/2026/08/cmmc-works-now-lets-sharpen-it/415470/" target="_blank">CMMC Works. Now let’s sharpen it.</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年8月17日 15:19 UTC</span></div><div class="art-body"><p>以下、記事の要約です。</p>
+<br>
+<ul>
+<li><strong>主題</strong>: 米国国防総省（DOD）のサイバーセキュリティ認証制度 CMMC (Cybersecurity Maturity Model Certification) の現状評価と、その強化の必要性について論じている。</li>
+<li><strong>背景・文脈</strong>: 国家主導型サイバー攻撃が激化する中、DODサプライチェーンである国防産業基盤 (Defense Industrial Base, DIB) のサイバーセキュリティを確保し、米国の技術的優位性と国家安全保障を維持することが喫緊の課題となっている。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   CMMCはDODサプライチェーンのサイバーセキュリティを向上させる上で有効であり、その標準を緩和するのではなく、さらに強化・洗練させるべきである。</p>
+<p>    *   中小企業を含む契約企業の負担軽減のため、サイバーセキュリティ対策の自動化や、より効率的で的を絞った監査プロセスの導入が推奨される。</p>
+<p>    *   DOD内部における各機関間の連携を強化し、CMMCの実装と運用における一貫性と透明性を高める必要がある。</p>
+<p>    *   CMMCの最終目標は、中国などの敵対勢力による知的財産窃取を防ぎ、米国の軍事的・技術的優位性を維持し、国家安全保障を確保することであると再認識すべきである。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: DODサプライチェーンのサイバーレジリエンス強化は、中国等の国家主導型サイバー攻撃に対抗し、米国および同盟国の軍事的・技術的優位性を維持するために不可欠である。これは、現在のグローバルなパワーバランスと将来の紛争における抑止力に直接影響を与える。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/ideas/2026/08/cmmc-works-now-lets-sharpen-it/415470/" data-title="CMMC Works. Now let’s sharpen it." data-src="Defense One" data-date="2026-08-17"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
