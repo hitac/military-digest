@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-08-18 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-08-18.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-08-18</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>10 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（10 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vs3ppx/ukrainian_79th_air_assault_brigade_took_out/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ第79空挺強襲旅団がオレクサンドリフカ方面でロシア兵を排除 (2026年8月)</div><div class="vc-en">Ukrainian 79th Air Assault Brigade took out Russian soldiers. Oleksandrivka direction. August 2026, published 18.08.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 22:11</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vs3ppx/ukrainian_79th_air_assault_brigade_took_out/" data-title="Ukrainian 79th Air Assault Brigade took out Russian soldiers. Oleksandrivka dire" data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vrz4qg/russian_majorgeneral_vyacheslav_gladkikh_killed/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ロシアのグラドキーフ少将、ISISのIED視察中に死亡（2020年8月デリゾール）</div><div class="vc-en">Russian Major-General Vyacheslav Gladkikh killed after convoy stops t.o inspect ISIS IED, Deir ez-Zor, 8/16/2020</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 19:20</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vrz4qg/russian_majorgeneral_vyacheslav_gladkikh_killed/" data-title="Russian Major-General Vyacheslav Gladkikh killed after convoy stops t.o inspect " data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vrymhw/hezbollah_published_fpv_strike_compilation_filmed/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ヒズボラが停戦前に撮影されたFPV攻撃の編集動画を公開</div><div class="vc-en">Hezbollah published FPV strike compilation. Filmed before ceasefire</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 19:02</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vrymhw/hezbollah_published_fpv_strike_compilation_filmed/" data-title="Hezbollah published FPV strike compilation. Filmed before ceasefire" data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vruptb/colombian_paramilitary_groups_fighting_each_other/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">コロンビアの準軍事組織同士が戦闘</div><div class="vc-en">Colombian paramilitary groups fighting each other.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 16:46</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vruptb/colombian_paramilitary_groups_fighting_each_other/" data-title="Colombian paramilitary groups fighting each other." data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vroasa/bagan_garuda_force_rebel_group_pov_during_anyar/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ミャンマー軍に対するアニャル・タマ作戦中のバガン・ガルーダ部隊反乱軍の視点映像 (2026年5月～8月)</div><div class="vc-en">Bagan Garuda Force rebel group POV during Anyar Tama operation against Myanmar (Burma) Army (between 5/1-8/15/2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 12:51</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vroasa/bagan_garuda_force_rebel_group_pov_during_anyar/" data-title="Bagan Garuda Force rebel group POV during Anyar Tama operation against Myanmar (" data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vrg4ca/south_african_soldiers_capturing_basotho/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">南アフリカ兵が銃撃後、レソトでバソト反体制派の陣地と捕虜を確保 (1998年)</div><div class="vc-en">South African soldiers capturing Basotho dissident position + prisoners after taking fire. 1998, Lesotho</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 05:29</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vrg4ca/south_african_soldiers_capturing_basotho/" data-title="South African soldiers capturing Basotho dissident position + prisoners after ta" data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vrbo6c/yna_drone_bomber_strikes_against_houthi_fighters/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">YNAドローン爆撃機がマリブでフーシ派戦闘員、陣地、車両を攻撃 (2026年8月)</div><div class="vc-en">YNA drone bomber strikes against Houthi fighters, positions, vehicles, Marib, August 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 01:50</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vrbo6c/yna_drone_bomber_strikes_against_houthi_fighters/" data-title="YNA drone bomber strikes against Houthi fighters, positions, vehicles, Marib, Au" data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vrbjhw/myanmarburma_warazein_rebel_group_ai_fusion_drone/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ワラゼイン反乱軍のAIフュージョンドローンが空軍基地に接近後、墜落 (2026年8月ミャンマー)</div><div class="vc-en">(Myanmar/Burma) Warazein rebel group AI Fusion Drone gets past jammers, getting near Taungoo Air Base aircraft storage unit before losing power, crashing 400 meters away (August 16, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 01:44</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vrbjhw/myanmarburma_warazein_rebel_group_ai_fusion_drone/" data-title="(Myanmar/Burma) Warazein rebel group AI Fusion Drone gets past jammers, getting " data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vrb7jv/yemen_national_army_drones_target_houthi_vehicles/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">イエメン国軍のドローンが西海岸戦線でフーシ派の車両、集結地、陣地を標的 (2026年8月)</div><div class="vc-en">Yemen National Army drones target Houthi vehicles, gatherings, positions, western coastal fronts, August 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 01:29</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vrb7jv/yemen_national_army_drones_target_houthi_vehicles/" data-title="Yemen National Army drones target Houthi vehicles, gatherings, positions, wester" data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1vraatj/myingyan_black_tiger_rebel_group_during_2026/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ミャンマー軍に対する2026年アニャル・タマ作戦中のミャンジャン・ブラックタイガー反乱軍</div><div class="vc-en">Myingyan Black Tiger rebel group during 2026 Anyar Tama operation against Myanmar (Burma) Army (Magway Region/Dry Zone)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>08/18 00:48</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1vraatj/myingyan_black_tiger_rebel_group_during_2026/" data-title="Myingyan Black Tiger rebel group during 2026 Anyar Tama operation against Myanma" data-src="r/CombatFootage" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>作業1: 日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<p>（該当なし）</p>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<p>（該当なし）</p>
+<br>
+<h3>ドローン・FPV</h3>
+<p>（該当なし）</p>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  [id=0] 2026年8月、オレクサンドリフカ方面でウクライナ第79空挺強襲旅団がロシア兵を排除。</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>装甲車両・戦車</h3>
+<p>（該当なし）</p>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  [id=1] 2020年8月、デリゾールでロシアのグラドキーフ少将がISISのIEDを視察中に死亡。</li>
+<li>  [id=2] ヒズボラが停戦前に撮影されたFPV攻撃の編集動画を公開。</li>
+<li>  [id=6] 2026年8月、マリブでYNAのドローン爆撃機がフーシ派戦闘員、陣地、車両を攻撃。</li>
+<li>  [id=8] 2026年8月、イエメン国軍のドローンが西海岸戦線でフーシ派の車両、集結地、陣地を標的とした。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<br>
+<ul>
+<li>  [id=3] コロンビアで準軍事組織同士が戦闘。</li>
+<li>  [id=4] 2026年5月～8月、ミャンマー軍に対するアニャル・タマ作戦中のバガン・ガルーダ部隊反乱軍の視点映像。</li>
+<li>  [id=5] 1998年、レソトで南アフリカ兵が銃撃を受けた後、バソト反体制派の陣地と捕虜を確保。</li>
+<li>  [id=7] 2026年8月16日、ミャンマーのワラゼイン反乱軍のAIフュージョンドローンが妨害装置を突破し、タウングー空軍基地の航空機格納庫に接近後、電力喪失し400m離れた地点に墜落。</li>
+<li>  [id=9] 2026年、ミャンマー軍に対するアニャル・タマ作戦中のミャンジャン・ブラックタイガー反乱軍の活動（マグウェイ地域／乾燥地帯）。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<br>
+<ul>
+<li>  [id=1] ロシアのグラドキーフ少将がISISのIEDにより死亡。（幹部の死亡という衝撃的な事件）</li>
+<li>  [id=7] AIフュージョンドローンが敵の妨害を突破し、空軍基地に迫る。（最新技術を用いたドローンの運用事例）</li>
+<li>  [id=2] ヒズボラによるFPV攻撃の編集動画。（FPVドローンの継続的な利用を示す）</li>
+<li>  [id=0] ウクライナ第79空挺強襲旅団がロシア兵を排除。（ウクライナ戦場の具体的な交戦報告）</li>
+<li>  [id=5] 南アフリカ兵による陣地確保と捕虜獲得。（具体的な戦闘行動と結果の報告）</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>作業2: タイトル翻訳JSON</h2></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/russian-strike-hits-dtek-thermal-power-plant-forces-halt-in-operations/" target="_blank">Russian strike hits DTEK thermal power plant, forces halt in operations</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年8月19日 01:25 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/russian-strike-hits-dtek-thermal-power-plant-forces-halt-in-operations/" data-title="Russian strike hits DTEK thermal power plant, forces halt in operations" data-src="Kyiv Independent" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/fedorov-calls-for-wartime-elections-says-putin-shouldnt-decide-when-ukrainians-vote/" target="_blank">Breaking: Fedorov calls for wartime elections, says Putin shouldn&#x27;t decide when Ukrainians vote</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年8月18日 22:23 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/fedorov-calls-for-wartime-elections-says-putin-shouldnt-decide-when-ukrainians-vote/" data-title="Breaking: Fedorov calls for wartime elections, says Putin shouldn&#x27;t decide when " data-src="Kyiv Independent" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-belgium-working-toward-proposed-new-drone-deal/" target="_blank">Ukraine, Belgium working toward proposed new ‘Drone Deal’</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年8月18日 22:02 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-belgium-working-toward-proposed-new-drone-deal/" data-title="Ukraine, Belgium working toward proposed new ‘Drone Deal’" data-src="Kyiv Independent" data-date="2026-08-18"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
