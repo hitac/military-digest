@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場ダイジェスト 2026-08-30</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Meiryo,sans-serif;display:flex;flex-direction:column;height:100vh;background:#f5f5f5;color:#212529}
+#hd{padding:8px 14px;background:#fff;border-bottom:1px solid #dee2e6;display:flex;align-items:center;gap:10px;flex-wrap:wrap;flex-shrink:0;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+#hd h1{font-size:.95em;color:#d32f2f;white-space:nowrap;font-weight:700}
+.nav-a{font-size:.78em;color:#1565c0;text-decoration:none;border:1px solid #bbdefb;padding:3px 10px;border-radius:12px;white-space:nowrap;background:#e3f2fd}
+.nav-a:hover{background:#bbdefb}
+#filters{display:flex;gap:5px;flex-wrap:wrap}
+.fb{padding:3px 10px;border:1px solid #cfd8dc;background:#fff;color:#546e7a;cursor:pointer;border-radius:12px;font-size:.78em;transition:all .15s}
+.fb:hover{border-color:#90a4ae;background:#eceff1}
+.fb.on{background:#1565c0;color:#fff;border-color:#1565c0}
+#main{display:flex;flex:1;overflow:hidden}
+#map{flex:1}
+#sb{width:300px;background:#fff;border-left:1px solid #dee2e6;display:flex;flex-direction:column;overflow:hidden}
+#sb-top{padding:7px 12px;border-bottom:1px solid #dee2e6;font-size:.75em;color:#888;flex-shrink:0;background:#f8f9fa}
+#elist{flex:1;overflow-y:auto}
+.ev{padding:9px 12px;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .1s}
+.ev:hover{background:#f5f5f5}
+.ev.hi{display:none}
+.ev-h{display:flex;align-items:center;gap:5px;margin-bottom:3px}
+.ev-t{font-size:.68em;font-weight:700;text-transform:uppercase;padding:1px 5px;border-radius:3px}
+.tu{background:#e3f2fd;color:#1565c0}
+.tm{background:#fff3e0;color:#e65100}
+.to{background:#f3e5f5;color:#6a1b9a}
+.ev-s{font-size:.8em;line-height:1.4;margin-bottom:3px;color:#212529}
+.ev-l{font-size:.7em;color:#9e9e9e}
+.nl{color:#ef5350}
+/* MapLibre popup */
+.maplibregl-popup-content{background:#fff!important;border:1px solid #dee2e6!important;color:#212529!important;border-radius:8px!important;padding:12px 14px!important;min-width:200px;max-width:290px;box-shadow:0 4px 12px rgba(0,0,0,.15)!important}
+.maplibregl-popup-close-button{color:#666!important;font-size:18px!important}
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip{border-top-color:#dee2e6!important}
+.pt{font-size:.7em;font-weight:700;text-transform:uppercase;padding:2px 6px;border-radius:3px;display:inline-block;margin-bottom:5px}
+.pt.tu{background:#e3f2fd;color:#1565c0}
+.pt.tm{background:#fff3e0;color:#e65100}
+.pt.to{background:#f3e5f5;color:#6a1b9a}
+.ps{font-size:.88em;font-weight:600;margin:0 0 4px;line-height:1.4;color:#212529}
+.pl{font-size:.75em;color:#757575;margin-bottom:9px}
+.pa{font-size:.82em;color:#fff;text-decoration:none;background:#1565c0;padding:4px 12px;border-radius:4px;display:inline-block}
+.pa:hover{background:#0d47a1}
+.mk{border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:14px;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer}
+</style>
+</head>
+<body>
+<div id="hd">
+  <h1>🌍 戦場ダイジェスト 2026-08-30</h1>
+  <a class="nav-a" href="2026-08-30-report.html">📄 レポート</a>
+  <a class="nav-a" href="../index.html">🏠 一覧</a>
+  <div id="filters">
+    <button class="fb on" data-f="all">すべて</button>
+    <button class="fb" data-f="ukraine">🇺🇦 ウクライナ</button>
+    <button class="fb" data-f="middle_east">⚔️ 中東</button>
+    <button class="fb" data-f="other">🌏 その他</button>
+    <button class="fb" data-f="drone">🤖 ドローン</button>
+    <button class="fb" data-f="armor">🛡️ 装甲</button>
+    <button class="fb" data-f="missile">🚀 ミサイル</button>
+    <button class="fb" data-f="infantry">🪖 歩兵</button>
+    <button class="fb" data-f="air">✈️ 航空</button>
+  </div>
+</div>
+<div id="main">
+  <div id="map"></div>
+  <div id="sb">
+    <div id="sb-top"><span id="vc"></span></div>
+    <div id="elist"></div>
+  </div>
+</div>
+<script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+<script>
+const EV=[{"id": 0, "title_ja": "ウクライナ第60機械化旅団が敵ドローンと交戦し、ロシアの戦車などを破壊。", "location_name": "Ukraine", "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ドローン交戦、戦車・SPG破壊、歩兵攻撃", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2cpif/ukraines_60th_mechanized_brigade_fatum_engaged/", "title_orig": "Ukraine's 60th Mechanized Brigade \"Fatum\" engaged hostile drones in air-to-air combat, burned down two Russian tanks, destroyed an artillery piece and \"Giatsint-S\" SPG, and surprised an enemy infantryman hiding in shrubs. Posted August 28, 2026"}, {"id": 1, "title_ja": "イランがヨルダンへ弾道ミサイルを発射した映像。", "location_name": "Jordan", "lat": null, "lng": null, "theater": "middle_east", "weapon_type": "missile", "summary_ja": "イランがヨルダンへミサイル発射", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2v0p0/a_recorded_iranian_ballistic_missile_launch/", "title_orig": "A recorded Iranian ballistic missile launch toward Jordan, 31.08.2026."}, {"id": 2, "title_ja": "ヨルダン・アカバでイランの弾道ミサイル2発が迎撃される。", "location_name": "Aqaba, Jordan", "lat": 29.53, "lng": 35.0, "theater": "middle_east", "weapon_type": "missile", "summary_ja": "ヨルダン・アカバでイランミサイル迎撃", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2uy0s/two_iranian_ballistic_missiles_seen_being/", "title_orig": "Two Iranian ballistic missiles seen being intercepted by Patriot systems in Aqaba Jordan, from the Dead Sea. 31.08.2026"}, {"id": 3, "title_ja": "フーシ派がサウジ軍陣地に対しRPGで近接戦闘を行う。", "location_name": "Yemen/Saudi Arabia Border Region", "lat": null, "lng": null, "theater": "middle_east", "weapon_type": "infantry", "summary_ja": "フーシ派がRPGでサウジ軍を攻撃", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2q9hl/houthis_using_an_rpg_in_close_combat_against_a/", "title_orig": "Houthis using an RPG in close combat against a Saudi military position"}, {"id": 4, "title_ja": "トルコ軍M60戦車が陣地へ長距離射撃を行う。", "location_name": "Unspecified, Middle East", "lat": null, "lng": null, "theater": "middle_east", "weapon_type": "armor", "summary_ja": "トルコM60戦車が長距離射撃", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2plaj/turkish_m60_long_range_firing_to_positions/", "title_orig": "Turkish M60 long range firing to position's"}, {"id": 5, "title_ja": "イエメン国民軍第5軍管区がフーシ派の無人水上艇を攻撃。", "location_name": "Red Sea Coast, Yemen", "lat": null, "lng": null, "theater": "middle_east", "weapon_type": "drone", "summary_ja": "イエメン軍がフーシ派USVを攻撃", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2on4x/yna_5th_military_region_strike_on_houthi_usv/", "title_orig": "YNA 5th Military Region strike on Houthi USV, August 2026"}, {"id": 6, "title_ja": "ウクライナ兵がスムイ方面でロシア陣地を襲撃、その後FPVドローン攻撃を受ける。", "location_name": "Sumy, Sumy Oblast, Ukraine", "lat": 50.92, "lng": 34.79, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "スムイ方面で陣地襲撃、ドローン攻撃", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2knme/ukrainian_soldiers_assaulted_a_russian_position/", "title_orig": "Ukrainian soldiers assaulted a Russian position in the Sumy direction and captured a Russian soldier. The unit then was attacked by enemy FPV drones. Two soldiers were WIA. Sword Michaels, 78th Air Assault Brigade. Published 30.08.2026"}, {"id": 7, "title_ja": "ヤンゴンPDF反乱軍の狙撃兵がミャンマー国軍部隊を標的にする。", "location_name": "Yangon, Myanmar", "lat": 16.8, "lng": 96.15, "theater": "other", "weapon_type": "infantry", "summary_ja": "ヤンゴンで反乱軍狙撃兵が国軍攻撃", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2jhi8/rangoon_yangon_pdf_rebel_snipers_targeting/", "title_orig": "Rangoon (Yangon) PDF rebel snipers targeting Myanmar (Burma) Army troops (between mid-2025 to mid-2026)"}, {"id": 8, "title_ja": "ウクライナ第6SSO連隊のドローンオペレーターがロシアの兵站を攻撃する映像。", "location_name": "Ukraine", "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ウクライナSSOがドローンで兵站攻撃", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2hikv/video_of_ukrainian_drone_operators_of_the_6th_sso/", "title_orig": "Video of Ukrainian drone operators of the 6th SSO regiment attacking Russian logistics."}, {"id": 9, "title_ja": "ウクライナ第414USF旅団がFPVドローンでロシア歩兵と車両を破壊。", "location_name": "Ukraine", "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ウクライナ軍がFPVドローンで敵破壊", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2d7m8/ukraines_414th_usf_brigade_wormbusters_battalion/", "title_orig": "Ukraine's 414th USF Brigade \"Wormbusters\" battalion tracked down and destroyed Russian infantry and vehicles using FPV strike drones during the month of August, 2026. (August compilation, to date) Posted August 30, 2026"}, {"id": 10, "title_ja": "ロシア・ブリャンスクでのウクライナドローン攻撃による爆発のCCTV映像。", "location_name": "Bryansk, Bryansk Oblast, Russia", "lat": 53.25, "lng": 34.36, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ロシア・ブリャンスクでドローン爆発", "url": "https://www.reddit.com/r/CombatFootage/comments/1w2arlq/cctv_footage_captures_the_exact_moment_of_a/", "title_orig": "CCTV footage captures the exact moment of a powerful explosion from a Ukrainian drone strike in Bryansk, Russia (August 30, 2026)"}, {"id": 11, "title_ja": "ウクライナ兵が東部戦線でロシアのFPVドローンと交戦。", "location_name": "Eastern Front, Ukraine", "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "東部戦線でウクライナ兵がドローン交戦", "url": "https://www.reddit.com/r/CombatFootage/comments/1w21jsh/ukrainian_soldiers_engaged_russian_fpv_drone/", "title_orig": "Ukrainian soldiers engaged Russian FPV drone during patrol on the eastern front. Summer 2026. Published 29.08.2026. 4th Operational Brigade Rubizh."}];
+const TC={ukraine:'#1976d2',middle_east:'#f57c00',other:'#7b1fa2'};
+const TN={ukraine:'ウクライナ',middle_east:'中東',other:'その他'};
+const WE={drone:'🤖',armor:'🛡️',missile:'🚀',air:'✈️',infantry:'🪖',other:'💥'};
+
+const _lang=(navigator.language||'en').slice(0,2);
+const _nameField={
+  ja:['coalesce',['get','name:ja'],['get','name:en'],['get','name']],
+  zh:['coalesce',['get','name:zh'],['get','name:en'],['get','name']],
+  ko:['coalesce',['get','name:ko'],['get','name:en'],['get','name']],
+}[_lang]||['coalesce',['get','name:en'],['get','name']];
+
+const map=new maplibregl.Map({
+  container:'map',
+  style:'https://tiles.openfreemap.org/styles/positron',
+  center:[38,47],
+  zoom:4
+});
+
+const mb={};
+map.on('load',()=>{
+  map.getStyle().layers.forEach(layer=>{
+    if(layer.type==='symbol'&&layer.layout&&layer.layout['text-field']){
+      try{map.setLayoutProperty(layer.id,'text-field',_nameField);}catch(e){}
+    }
+  });
+
+  EV.forEach((ev,i)=>{
+    if(ev.lat==null||ev.lng==null)return;
+    const c=TC[ev.theater]||'#7b1fa2',e=WE[ev.weapon_type]||'💥';
+    const el=document.createElement('div');
+    el.className='mk';
+    el.style.background=c;
+    el.textContent=e;
+
+    const thCls=ev.theater==='ukraine'?'tu':ev.theater==='middle_east'?'tm':'to';
+    const popup=new maplibregl.Popup({offset:16,closeButton:true})
+      .setHTML(`<div class="pt ${thCls}">${TN[ev.theater]||ev.theater} ${e}</div><div class="ps">${ev.summary_ja}</div><div class="pl">📍 ${ev.location_name||''}</div><a class="pa" href="${ev.url}" target="_blank">▶ 動画を見る</a>`);
+
+    const m=new maplibregl.Marker({element:el})
+      .setLngLat([ev.lng,ev.lat])
+      .setPopup(popup)
+      .addTo(map);
+    mb[i]={marker:m,ev};
+  });
+
+  buildSidebar();
+  upd();
+});
+
+function buildSidebar(){
+  const el=document.getElementById('elist');
+  EV.forEach((ev,i)=>{
+    const d=document.createElement('div');
+    d.className='ev';d.dataset.theater=ev.theater;d.dataset.weapon=ev.weapon_type;d.dataset.i=i;
+    const hl=ev.lat!=null;
+    const thCls=ev.theater==='ukraine'?'tu':ev.theater==='middle_east'?'tm':'to';
+    d.innerHTML=`<div class="ev-h"><span class="ev-t ${thCls}">${TN[ev.theater]||ev.theater}</span><span>${WE[ev.weapon_type]||''}</span></div><div class="ev-s">${ev.summary_ja}</div><div class="ev-l ${hl?'':'nl'}">${ev.location_name||'位置不明'}</div>`;
+    d.addEventListener('click',()=>{
+      if(mb[i]){map.flyTo({center:[ev.lng,ev.lat],zoom:9});mb[i].marker.togglePopup();}
+      else window.open(ev.url,'_blank');
+    });
+    el.appendChild(d);
+  });
+}
+
+let active=new Set(['all']);
+function upd(){
+  const all=active.has('all');let n=0;
+  document.querySelectorAll('.ev').forEach(d=>{
+    const show=all||active.has(d.dataset.theater)||active.has(d.dataset.weapon);
+    d.classList.toggle('hi',!show);
+    const entry=mb[+d.dataset.i];
+    if(entry){if(show){entry.marker.addTo(map);n++;}else entry.marker.remove();}
+  });
+  document.getElementById('vc').textContent=`地図: ${n}件 / 全${EV.length}件`;
+}
+
+document.querySelectorAll('.fb').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const f=b.dataset.f;
+    if(f==='all'){active=new Set(['all']);document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on'));}
+    else{
+      active.delete('all');document.querySelector('[data-f="all"]').classList.remove('on');
+      active.has(f)?active.delete(f):active.add(f);
+      if(!active.size){active.add('all');document.querySelector('[data-f="all"]').classList.add('on');}
+    }
+    b.classList.toggle('on',active.has(f));upd();
+  });
+});
+</script>
+</body>
+</html>
