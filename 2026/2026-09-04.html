@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場ダイジェスト 2026-09-04</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Meiryo,sans-serif;display:flex;flex-direction:column;height:100vh;background:#f5f5f5;color:#212529}
+#hd{padding:8px 14px;background:#fff;border-bottom:1px solid #dee2e6;display:flex;align-items:center;gap:10px;flex-wrap:wrap;flex-shrink:0;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+#hd h1{font-size:.95em;color:#d32f2f;white-space:nowrap;font-weight:700}
+.nav-a{font-size:.78em;color:#1565c0;text-decoration:none;border:1px solid #bbdefb;padding:3px 10px;border-radius:12px;white-space:nowrap;background:#e3f2fd}
+.nav-a:hover{background:#bbdefb}
+#filters{display:flex;gap:5px;flex-wrap:wrap}
+.fb{padding:3px 10px;border:1px solid #cfd8dc;background:#fff;color:#546e7a;cursor:pointer;border-radius:12px;font-size:.78em;transition:all .15s}
+.fb:hover{border-color:#90a4ae;background:#eceff1}
+.fb.on{background:#1565c0;color:#fff;border-color:#1565c0}
+#main{display:flex;flex:1;overflow:hidden}
+#map{flex:1}
+#sb{width:300px;background:#fff;border-left:1px solid #dee2e6;display:flex;flex-direction:column;overflow:hidden}
+#sb-top{padding:7px 12px;border-bottom:1px solid #dee2e6;font-size:.75em;color:#888;flex-shrink:0;background:#f8f9fa}
+#elist{flex:1;overflow-y:auto}
+.ev{padding:9px 12px;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .1s}
+.ev:hover{background:#f5f5f5}
+.ev.hi{display:none}
+.ev-h{display:flex;align-items:center;gap:5px;margin-bottom:3px}
+.ev-t{font-size:.68em;font-weight:700;text-transform:uppercase;padding:1px 5px;border-radius:3px}
+.tu{background:#e3f2fd;color:#1565c0}
+.tm{background:#fff3e0;color:#e65100}
+.to{background:#f3e5f5;color:#6a1b9a}
+.ev-s{font-size:.8em;line-height:1.4;margin-bottom:3px;color:#212529}
+.ev-l{font-size:.7em;color:#9e9e9e}
+.nl{color:#ef5350}
+/* MapLibre popup */
+.maplibregl-popup-content{background:#fff!important;border:1px solid #dee2e6!important;color:#212529!important;border-radius:8px!important;padding:12px 14px!important;min-width:200px;max-width:290px;box-shadow:0 4px 12px rgba(0,0,0,.15)!important}
+.maplibregl-popup-close-button{color:#666!important;font-size:18px!important}
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip{border-top-color:#dee2e6!important}
+.pt{font-size:.7em;font-weight:700;text-transform:uppercase;padding:2px 6px;border-radius:3px;display:inline-block;margin-bottom:5px}
+.pt.tu{background:#e3f2fd;color:#1565c0}
+.pt.tm{background:#fff3e0;color:#e65100}
+.pt.to{background:#f3e5f5;color:#6a1b9a}
+.ps{font-size:.88em;font-weight:600;margin:0 0 4px;line-height:1.4;color:#212529}
+.pl{font-size:.75em;color:#757575;margin-bottom:9px}
+.pa{font-size:.82em;color:#fff;text-decoration:none;background:#1565c0;padding:4px 12px;border-radius:4px;display:inline-block}
+.pa:hover{background:#0d47a1}
+.mk{border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:14px;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer}
+</style>
+</head>
+<body>
+<div id="hd">
+  <h1>🌍 戦場ダイジェスト 2026-09-04</h1>
+  <a class="nav-a" href="2026-09-04-report.html">📄 レポート</a>
+  <a class="nav-a" href="../index.html">🏠 一覧</a>
+  <div id="filters">
+    <button class="fb on" data-f="all">すべて</button>
+    <button class="fb" data-f="ukraine">🇺🇦 ウクライナ</button>
+    <button class="fb" data-f="middle_east">⚔️ 中東</button>
+    <button class="fb" data-f="other">🌏 その他</button>
+    <button class="fb" data-f="drone">🤖 ドローン</button>
+    <button class="fb" data-f="armor">🛡️ 装甲</button>
+    <button class="fb" data-f="missile">🚀 ミサイル</button>
+    <button class="fb" data-f="infantry">🪖 歩兵</button>
+    <button class="fb" data-f="air">✈️ 航空</button>
+  </div>
+</div>
+<div id="main">
+  <div id="map"></div>
+  <div id="sb">
+    <div id="sb-top"><span id="vc"></span></div>
+    <div id="elist"></div>
+  </div>
+</div>
+<script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+<script>
+const EV=[{"id": 0, "title_ja": "ウクライナ「マギャルズ・バーズ」のドローン操縦士が隠れた露軍戦車を発見し、FPVで攻撃、着火。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "隠れた露軍戦車をFPVドローンで破壊。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7fnmm/drone_pilot_of_ukraines_magyars_birds_spotted_a/", "title_orig": "Drone pilot of Ukraine's \"Magyar's Birds\" spotted a Russian tank hidden under a large amount of brush and debris, which made for unintentionally excellent kindling as the pile is ignited by an FPV strike. September 4, 2026"}, {"id": 1, "title_ja": "ウクライナ兵が塹壕に潜む露軍兵士から予期せぬ銃撃を受ける。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "infantry", "summary_ja": "ウクライナ兵が露軍の銃撃を受ける。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7iffy/ukrainian_soldier_unexpectedly_comes_under_fire/", "title_orig": "Ukrainian soldier unexpectedly comes under fire from a Russian hiding in a dugout — bullet whizzes past him."}, {"id": 2, "title_ja": "ウクライナ第63機械化旅団「スティールライオンズ」が露軍歩兵の攻撃を撃退。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "infantry", "summary_ja": "ウクライナ63機械化旅団が露軍歩兵を撃退。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7hj4t/ukraines_63rd_mechanized_brigade_steel_lions/", "title_orig": "Ukraine's 63rd Mechanized Brigade \"Steel Lions\" continue to repel Russian attacks, running down enemy infantrymen, some wearing ineffective \"anti-drone\" cloaks, others hiding or fleeing. (NSFW) September 2, 2026"}, {"id": 3, "title_ja": "親ウクライナのカリノウスキー連隊のベラルーシ義勇兵がザポリージャ方面で支援活動。", "location_name": "Zaporizhzhia, Zaporizhzhia Oblast", "lat": 47.84, "lng": 35.14, "theater": "ukraine", "weapon_type": "infantry", "summary_ja": "ベラルーシ義勇兵がザポリージャ方面で部隊支援。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7hdn3/belarusian_volunteers_of_the_proukrainian/", "title_orig": "Belarusian Volunteers of the Pro-Ukrainian Kalinouski Regiment evacuated and supported adjacent units in the Zaporizhzhia direction. Summer 2026, published 04.09.2026"}, {"id": 4, "title_ja": "ウクライナKRAKEN特殊作戦部隊の偵察中隊が掃討作戦の映像を公開。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "infantry", "summary_ja": "ウクライナ特殊部隊KRAKENが掃討作戦映像公開。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7h9i1/ukrainian_recon_company_of_the_kraken_sof/", "title_orig": "Ukrainian recon company of the KRAKEN SOF, subordinated to the reconnaissance Battalion of the 3rd Army Corps, published footage from clearing operations. Posted 04.09.2026"}, {"id": 5, "title_ja": "ウクライナ第129重機械化旅団が南スロボジャンスケ方面で露軍歩兵の攻撃をFPVドローンで撃退。", "location_name": "Kupiansk, Kharkiv Oblast", "lat": 49.71, "lng": 37.66, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ウクライナ129旅団がドローンで露軍攻撃を撃退。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7ghy0/ukraines_129th_heavy_mechanized_brigade_rugby/", "title_orig": "Ukraine's 129th Heavy Mechanized Brigade \"Rugby Team\" used munition drops and FPV drone strikes to defeat Russian infantry attacks in the South Slobozhanske direction, striking small groups and individuals on the move. NSFW. September 4, 2026"}, {"id": 6, "title_ja": "ウクライナSOF「イヴァン・フランコ・グループ」ドローン部隊がドネツク地域の敵後方補給路を監視・攻撃。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ウクライナSOFドローン部隊がドネツク州後方で露軍補給路を攻撃。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7g8vu/ukraines_sof_ivan_franko_group_drone_unit/", "title_orig": "Ukraine's SOF \"Ivan Franko Group\" drone unit continues to surveil and strike Russian logistical routes well behind enemy lines in the Donetsk region. (Brightened) September 4, 2026"}, {"id": 7, "title_ja": "パキスタン陸軍がアフガニスタンからのタリバン戦闘員を待ち伏せ攻撃。", "location_name": "Pakistan-Afghanistan border region", "lat": null, "lng": null, "theater": "other", "weapon_type": "infantry", "summary_ja": "パキスタン軍がアフガンからのタリバンを待ち伏せ。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7cfzw/pakistan_army_ambushed_taliban_fighters_coming/", "title_orig": "Pakistan Army ambushed Taliban fighters coming from Afghanistan | Ops Nigehban | Sep 02, 2026"}, {"id": 8, "title_ja": "オペレーション・グランドスラムからの銃カメラ映像：インド軍ヴァンパイアがチュンブ上空でF-86セイバーに追撃され撃墜される。", "location_name": "Chumb Valley, Jammu and Kashmir, India (disputed region)", "lat": null, "lng": null, "theater": "other", "weapon_type": "air", "summary_ja": "オペレーション・グランドスラム、インド軍機がパキスタン軍機に撃墜される。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7b0de/rare_gun_camera_still_from_operation_grand_slam/", "title_orig": "Rare gun camera still from Operation Grand Slam — Indian De Havilland Vampire chasing a PAF F-86 Sabre over Chumb, unbeknownst to it another F-86 has him in his gunsight and will shoot it down seconds later."}, {"id": 9, "title_ja": "塹壕を走る露軍兵士がウクライナFPVドローンに直撃され、即死傷。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "露軍兵士がFPVドローンに直撃され死傷。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w7831k/russian_soldier_running_through_a_trench_is/", "title_orig": "Russian soldier running through a trench is directly struck by a Ukrainian FPV drone, causing an immediate casualty - Date: 03/21/2024 | Location: Unknown"}, {"id": 10, "title_ja": "ロシアの民間人がソチでのウクライナドローンによるS-300/400防空システム攻撃の瞬間を記録。", "location_name": "Sochi, Krasnodar Krai, Russia", "lat": 43.58, "lng": 39.72, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ロシアのソチでウクライナドローンがS-300/400を攻撃。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w779c2/a_russian_civilian_recorded_the_moment_of_the/", "title_orig": "A Russian civilian recorded the moment of the Ukrainian drone attack on the Russian S-300/400 air defense system in Sochi during the night. 04/09/2026"}, {"id": 11, "title_ja": "6機のウクライナ迎撃ドローンが1機の露軍ゲラニ/シャヘド・ドローンに集中する映像。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ウクライナの迎撃ドローンが露軍ドローンを迎撃。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w75p9g/footage_of_six_different_ukrainian_interceptor/", "title_orig": "Footage of six different Ukrainian interceptor drones converging on a single Russian Gerbera/Shahed drone (Published September 2026)"}, {"id": 12, "title_ja": "偵察UAVが露軍ブーク防空システムの発射を観察し、ウクライナ軍HIMARSによる即時攻撃も記録。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "missile", "summary_ja": "露軍ブーク発射後、ウクライナ軍HIMARSが即座に陣地を攻撃。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w70d96/a_reconnaissance_uav_operator_observed_a_launch/", "title_orig": "A reconnaissance UAV operator observed a launch from a Russian 9K37 Buk air defense system. The drone also recorded how the position was almost immediately hit by rockets fired from an M142 HIMARS by the Ukrainian 45th Artillery Brigade. published 03/09/2026"}, {"id": 13, "title_ja": "フーシ派がイエメンでサウジ支援部隊に対しFPVドローンで攻撃を仕掛けた。", "location_name": "Sana'a, Yemen", "lat": 15.37, "lng": 44.19, "theater": "middle_east", "weapon_type": "drone", "summary_ja": "フーシ派がイエメンでサウジ支援部隊をFPVドローンで攻撃。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w6zfcx/houthis_staged_attacks_on_saudibacked_forces_in/", "title_orig": "Houthis Staged Attacks On Saudi-Backed Forces in Yemen With FPV Drones, Date Unknown"}, {"id": 14, "title_ja": "ロシアのソチでウクライナドローンがS-300/400防空システムを攻撃する映像。", "location_name": "Sochi, Krasnodar Krai, Russia", "lat": 43.61204, "lng": 39.7015, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ロシアのソチでウクライナドローンがS-300/400を攻撃。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w6zczc/footage_from_different_angles_shows_the_ukrainian/", "title_orig": "Footage from different angles shows the Ukrainian drone attack on the Russian S-300/400 air defense system in Sochi during the night. 04/09/2026"}, {"id": 15, "title_ja": "ウクライナドローンがクリミアの複数地点を標的とし、露軍バスティオン対艦ミサイル複合体も攻撃。", "location_name": "Sevastopol, Crimea", "lat": 44.6, "lng": 33.52, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ウクライナドローンがクリミアの露軍ミサイル複合体を攻撃。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w6yf2e/ukrainian_drones_targeted_several_sites_in_crimea/", "title_orig": "Ukrainian drones targeted several sites in Crimea, including a Russian Bastion coastal missile complex parked between other trucks."}, {"id": 16, "title_ja": "ウクライナの遠隔操作兵器「Khyzhak」がヘリコプターに搭載され、対ドローン任務に展開。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "air", "summary_ja": "ウクライナがヘリにドローン迎撃兵器「Khyzhak」を搭載し運用。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w6xfxz/a_ukrainian_remotely_operated_weapon_station_the/", "title_orig": "A Ukrainian remotely operated weapon station, the \"Khyzhak\", has been successfully integrated onto a helicopter for anti-drone missions. It has already been deployed in combat to shoot down Iranian/Russian Shahed UAVs"}, {"id": 17, "title_ja": "ウクライナドローンがロシアのソチでS-400施設を攻撃。", "location_name": "Sochi, Krasnodar Krai, Russia", "lat": 43.53756, "lng": 39.6955, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ロシアのソチでウクライナドローンがS-400施設を攻撃。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w6vkny/ukrainian_drone_hits_c400_installation_sochi/", "title_orig": "Ukrainian drone hits C-400 installation, Sochi, Russia (04.09.2026)"}, {"id": 18, "title_ja": "バングラデシュ陸軍将校がデモ隊への発砲命令を拒否し、武装したアワミ連盟職員に対峙。", "location_name": "Dhaka, Bangladesh", "lat": 23.8103, "lng": 90.4125, "theater": "other", "weapon_type": "infantry", "summary_ja": "バングラデシュ陸軍将校が命令を拒否し、デモ隊に合流。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w6vd3b/handful_of_bangladesh_army_junior_officers/", "title_orig": "Handful of Bangladesh Army junior officers disregard orders to shoot protestors and turns against armed Awami-League personnel, 4th August, 2024"}, {"id": 19, "title_ja": "ウクライナ第5強襲旅団がFPVドローンと爆弾投下で露軍歩兵攻撃を阻止し、正確な打撃を与える。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ウクライナ第5強襲旅団がドローンで露軍歩兵攻撃を撃退。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w6rb13/nsfw_ukraines_5th_assault_brigade_used_munition/", "title_orig": "(NSFW) Ukraine's 5th Assault Brigade used munition drops and FPV drones to counter Russian infantry attacks, landing accurate strikes. September 3, 2026"}, {"id": 20, "title_ja": "ウクライナFPVドローンが希少な露軍2S43マルヴァ車輪式自走榴弾砲を破壊。", "location_name": null, "lat": null, "lng": null, "theater": "ukraine", "weapon_type": "drone", "summary_ja": "ウクライナFPVドローンが露軍の珍しい自走榴弾砲マルヴァを破壊。", "url": "https://www.reddit.com/r/CombatFootage/comments/1w6q1ok/ukrainian_fpv_drones_destroyed_a_rare_russian/", "title_orig": "Ukrainian FPV drones destroyed a rare Russian 2S43 Malva wheeled self-propelled howitzer recently (Published September 2026, Ukraine's 22nd Mechanized Brigade)"}];
+const TC={ukraine:'#1976d2',middle_east:'#f57c00',other:'#7b1fa2'};
+const TN={ukraine:'ウクライナ',middle_east:'中東',other:'その他'};
+const WE={drone:'🤖',armor:'🛡️',missile:'🚀',air:'✈️',infantry:'🪖',other:'💥'};
+
+const _lang=(navigator.language||'en').slice(0,2);
+const _nameField={
+  ja:['coalesce',['get','name:ja'],['get','name:en'],['get','name']],
+  zh:['coalesce',['get','name:zh'],['get','name:en'],['get','name']],
+  ko:['coalesce',['get','name:ko'],['get','name:en'],['get','name']],
+}[_lang]||['coalesce',['get','name:en'],['get','name']];
+
+const map=new maplibregl.Map({
+  container:'map',
+  style:'https://tiles.openfreemap.org/styles/positron',
+  center:[38,47],
+  zoom:4
+});
+
+const mb={};
+map.on('load',()=>{
+  map.getStyle().layers.forEach(layer=>{
+    if(layer.type==='symbol'&&layer.layout&&layer.layout['text-field']){
+      try{map.setLayoutProperty(layer.id,'text-field',_nameField);}catch(e){}
+    }
+  });
+
+  EV.forEach((ev,i)=>{
+    if(ev.lat==null||ev.lng==null)return;
+    const c=TC[ev.theater]||'#7b1fa2',e=WE[ev.weapon_type]||'💥';
+    const el=document.createElement('div');
+    el.className='mk';
+    el.style.background=c;
+    el.textContent=e;
+
+    const thCls=ev.theater==='ukraine'?'tu':ev.theater==='middle_east'?'tm':'to';
+    const popup=new maplibregl.Popup({offset:16,closeButton:true})
+      .setHTML(`<div class="pt ${thCls}">${TN[ev.theater]||ev.theater} ${e}</div><div class="ps">${ev.summary_ja}</div><div class="pl">📍 ${ev.location_name||''}</div><a class="pa" href="${ev.url}" target="_blank">▶ 動画を見る</a>`);
+
+    const m=new maplibregl.Marker({element:el})
+      .setLngLat([ev.lng,ev.lat])
+      .setPopup(popup)
+      .addTo(map);
+    mb[i]={marker:m,ev};
+  });
+
+  buildSidebar();
+  upd();
+});
+
+function buildSidebar(){
+  const el=document.getElementById('elist');
+  EV.forEach((ev,i)=>{
+    const d=document.createElement('div');
+    d.className='ev';d.dataset.theater=ev.theater;d.dataset.weapon=ev.weapon_type;d.dataset.i=i;
+    const hl=ev.lat!=null;
+    const thCls=ev.theater==='ukraine'?'tu':ev.theater==='middle_east'?'tm':'to';
+    d.innerHTML=`<div class="ev-h"><span class="ev-t ${thCls}">${TN[ev.theater]||ev.theater}</span><span>${WE[ev.weapon_type]||''}</span></div><div class="ev-s">${ev.summary_ja}</div><div class="ev-l ${hl?'':'nl'}">${ev.location_name||'位置不明'}</div>`;
+    d.addEventListener('click',()=>{
+      if(mb[i]){map.flyTo({center:[ev.lng,ev.lat],zoom:9});mb[i].marker.togglePopup();}
+      else window.open(ev.url,'_blank');
+    });
+    el.appendChild(d);
+  });
+}
+
+let active=new Set(['all']);
+function upd(){
+  const all=active.has('all');let n=0;
+  document.querySelectorAll('.ev').forEach(d=>{
+    const show=all||active.has(d.dataset.theater)||active.has(d.dataset.weapon);
+    d.classList.toggle('hi',!show);
+    const entry=mb[+d.dataset.i];
+    if(entry){if(show){entry.marker.addTo(map);n++;}else entry.marker.remove();}
+  });
+  document.getElementById('vc').textContent=`地図: ${n}件 / 全${EV.length}件`;
+}
+
+document.querySelectorAll('.fb').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const f=b.dataset.f;
+    if(f==='all'){active=new Set(['all']);document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on'));}
+    else{
+      active.delete('all');document.querySelector('[data-f="all"]').classList.remove('on');
+      active.has(f)?active.delete(f):active.add(f);
+      if(!active.size){active.add('all');document.querySelector('[data-f="all"]').classList.add('on');}
+    }
+    b.classList.toggle('on',active.has(f));upd();
+  });
+});
+</script>
+</body>
+</html>
