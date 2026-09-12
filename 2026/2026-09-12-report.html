@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-09-12 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-09-12.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-09-12</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>21 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（21 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1weozl6/tow_strike_causes_massive_explosion_on_a_syrian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">TOW strike causes massive explosion on a Syrian tank near Aleppo, reportedly a T-90 - December 2015</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 21:35</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1weozl6/tow_strike_causes_massive_explosion_on_a_syrian/" data-title="TOW strike causes massive explosion on a Syrian tank near Aleppo, reportedly a T" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wefrxq/ukrainian_omega_special_forces_destroyed_a_rare/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian Omega special forces destroyed a rare Russian Typhoon modular armored vehicle worth $2 million, behind enemy lines [09.09. 2026]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 15:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wefrxq/ukrainian_omega_special_forces_destroyed_a_rare/" data-title="Ukrainian Omega special forces destroyed a rare Russian Typhoon modular armored " data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1we5v90/3_ukrainian_drones_hit_sanctioned_tanker_despite/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">3 Ukrainian drones hit sanctioned tanker despite Russian helicopter trying to intercept them. Black Sea. Published September 12, 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 07:23</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1we5v90/3_ukrainian_drones_hit_sanctioned_tanker_despite/" data-title="3 Ukrainian drones hit sanctioned tanker despite Russian helicopter trying to in" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wep38j/ukraines_424th_usf_brigade_rarog_drone_unit/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s 424th USF Brigade &quot;Rarog&quot; drone unit destroyed a rare Russian 2S1 &quot;Gvozdika&quot; self-propelled howitzer, which had attempted to &quot;shoot and scoot&quot; from a concealed position in the (UA) 119th TDF Brigade&#x27;s sector. September 11, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 21:39</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wep38j/ukraines_424th_usf_brigade_rarog_drone_unit/" data-title="Ukraine&#x27;s 424th USF Brigade &quot;Rarog&quot; drone unit destroyed a rare Russian 2S1 &quot;Gvo" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1weouqf/ukraines_414th_usf_brigade_magyars_birds_continue/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; continue to defeat Russian infantry attacks, running down dozens more enemy infantrymen with FPV strike drones. (Episode 60) September 11, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 21:29</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1weouqf/ukraines_414th_usf_brigade_magyars_birds_continue/" data-title="Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; continue to defeat Russian infantry" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wen1gl/abu_sayyaf_group_in_firefight_with_philippine/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Abu sayyaf group in firefight with Philippine army 2012</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 20:17</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wen1gl/abu_sayyaf_group_in_firefight_with_philippine/" data-title="Abu sayyaf group in firefight with Philippine army 2012" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wekpoc/fsa_shoot_down_saa_l39_with_igla_north_eastern/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">FSA Shoot Down SAA L-39 with Igla North Eastern Hama Syria 26-12-2017</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 18:48</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wekpoc/fsa_shoot_down_saa_l39_with_igla_north_eastern/" data-title="FSA Shoot Down SAA L-39 with Igla North Eastern Hama Syria 26-12-2017" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wek3rz/new_footage_from_the_ground_at_muwaffaq_al_salti/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">New footage from the ground at Muwaffaq Al Salti air base in Jordan from Irans last strike a few nights ago.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 18:25</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wek3rz/new_footage_from_the_ground_at_muwaffaq_al_salti/" data-title="New footage from the ground at Muwaffaq Al Salti air base in Jordan from Irans l" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wehorl/black_sea_september_12_2026_ukraines_navy_reports/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Black Sea, September 12, 2026: Ukraine&#x27;s Navy Reports First-Ever USV-on-USV Battle as Sargan Destroys Russian Drone Boat</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 16:53</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wehorl/black_sea_september_12_2026_ukraines_navy_reports/" data-title="Black Sea, September 12, 2026: Ukraine&#x27;s Navy Reports First-Ever USV-on-USV Batt" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wefz0v/russian_civilians_filmed_ukrainian_fp5_flamingo/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian civilians filmed Ukrainian FP-5 Flamingo cruise missile flying over Tatarstan, Russia. [date unknown]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 15:45</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wefz0v/russian_civilians_filmed_ukrainian_fp5_flamingo/" data-title="Russian civilians filmed Ukrainian FP-5 Flamingo cruise missile flying over Tata" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wefxnm/ukrainian_special_operations_forces_gopro_drone/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian Special Operations Forces GoPro &amp; Drone Footage of Ukraine’s 2023 Counteroffensive in Zaporizhzhia — HIMARS Strikes from 2:28</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 15:44</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wefxnm/ukrainian_special_operations_forces_gopro_drone/" data-title="Ukrainian Special Operations Forces GoPro &amp; Drone Footage of Ukraine’s 2023 Coun" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wefvnp/firstperson_footage_from_chasiv_yar_area_donetsk/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">First-person footage from Chasiv Yar area, Donetsk region, as seen through the eyes of foreign volunteers in the International Legion of Ukraine [archive]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 15:42</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wefvnp/firstperson_footage_from_chasiv_yar_area_donetsk/" data-title="First-person footage from Chasiv Yar area, Donetsk region, as seen through the e" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wefp8h/ukrainian_sargan_3000_sea_drone_destroys_russian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian Sargan 3000 sea drone destroys Russian unmanned surface vessel during Black Sea engagement. Published September 12, 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 15:34</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wefp8h/ukrainian_sargan_3000_sea_drone_destroys_russian/" data-title="Ukrainian Sargan 3000 sea drone destroys Russian unmanned surface vessel during " data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wecshr/heavy_fighting_lasting_several_hours_broke_out_in/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Heavy fighting lasting several hours broke out in Saravan, Iran between the IRGC and unknown gunmen. Sources report at least dozens killed and wounded</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 13:33</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wecshr/heavy_fighting_lasting_several_hours_broke_out_in/" data-title="Heavy fighting lasting several hours broke out in Saravan, Iran between the IRGC" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1webdwu/ukraines_security_service_sbu_special_operations/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine’s Security Service (SBU) Special Operations Center &quot;A&quot; released new footage showing a series of strikes on Russian targets. The compilation includes attacks on air defense systems, Shahed launch sites, radars, and infantry. Most notably, a strike on a Russian S-300 air defense system.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 12:30</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1webdwu/ukraines_security_service_sbu_special_operations/" data-title="Ukraine’s Security Service (SBU) Special Operations Center &quot;A&quot; released new foot" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wea974/compilation_of_airstrikes_by_the_yemeni_air_force/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Compilation of airstrikes by the Yemeni Air Force on Houthis in Dhubab, Taiz Governorate [12.09.2026]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 11:34</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wea974/compilation_of_airstrikes_by_the_yemeni_air_force/" data-title="Compilation of airstrikes by the Yemeni Air Force on Houthis in Dhubab, Taiz Gov" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1we1oru/failed_npa_attack_at_mawab_1612012/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Failed NPA attack at Mawab 16-1-2012</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 03:42</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1we1oru/failed_npa_attack_at_mawab_1612012/" data-title="Failed NPA attack at Mawab 16-1-2012" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1we00uq/1st_coastal_division_destroys_saa_t62_with_tow/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">1st Coastal Division destroys SAA T-62 with TOW eastern countryside of Hama 30-12-2018</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 02:20</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1we00uq/1st_coastal_division_destroys_saa_t62_with_tow/" data-title="1st Coastal Division destroys SAA T-62 with TOW eastern countryside of Hama 30-1" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wdysbg/houthi_close_range_combat_against_the_yemen/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Houthi close range combat against the Yemen national army</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 01:22</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wdysbg/houthi_close_range_combat_against_the_yemen/" data-title="Houthi close range combat against the Yemen national army" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wdykem/extended_footage_of_the_pdf_rebel_fpv_drone/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Extended footage of the PDF rebel FPV drone attack on Myanmar (Burmese) Air Force jets in Tada-U, Mandalay Region (September 10)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 01:11</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wdykem/extended_footage_of_the_pdf_rebel_fpv_drone/" data-title="Extended footage of the PDF rebel FPV drone attack on Myanmar (Burmese) Air Forc" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wdxz4t/ukrainian_soldiers_engaged_and_shot_russian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian soldiers engaged and shot Russian strike drones. Kostiantinivka direction. Police Patrol Brigade &quot;Predator&quot;. Published 11.09.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/12 00:44</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wdxz4t/ukrainian_soldiers_engaged_and_shot_russian/" data-title="Ukrainian soldiers engaged and shot Russian strike drones. Kostiantinivka direct" data-src="r/CombatFootage" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 429 RESOURCE_EXHAUSTED. {&#x27;error&#x27;: {&#x27;code&#x27;: 429, &#x27;message&#x27;: &#x27;You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n</em> Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 45.375918086s.&#x27;, &#x27;status&#x27;: &#x27;RESOURCE_EXHAUSTED&#x27;, &#x27;details&#x27;: [{&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.Help&#x27;, &#x27;links&#x27;: [{&#x27;description&#x27;: &#x27;Learn more about Gemini API quotas&#x27;, &#x27;url&#x27;: &#x27;https://ai.google.dev/gemini-api/docs/rate-limits&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.QuotaFailure&#x27;, &#x27;violations&#x27;: [{&#x27;quotaMetric&#x27;: &#x27;generativelanguage.googleapis.com/generate_content_free_tier_requests&#x27;, &#x27;quotaId&#x27;: &#x27;GenerateRequestsPerDayPerProjectPerModel-FreeTier&#x27;, &#x27;quotaDimensions&#x27;: {&#x27;location&#x27;: &#x27;global&#x27;, &#x27;model&#x27;: &#x27;gemini-2.5-flash&#x27;}, &#x27;quotaValue&#x27;: &#x27;20&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.RetryInfo&#x27;, &#x27;retryDelay&#x27;: &#x27;45s&#x27;}]}}*</p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/immoral-and-self-destructive-zelensky-blasts-eus-failure-to-renew-sanctions-on-russian-oligarchs/" target="_blank">&#x27;Immoral and self-destructive&#x27; — Zelensky blasts EU for considering lifting sanctions on Russian oligarchs</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年9月12日 23:37 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/immoral-and-self-destructive-zelensky-blasts-eus-failure-to-renew-sanctions-on-russian-oligarchs/" data-title="&#x27;Immoral and self-destructive&#x27; — Zelensky blasts EU for considering lifting sanc" data-src="Kyiv Independent" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/ideas/2026/09/cold-comfort/415955/" target="_blank">Cold comfort</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年9月12日 15:50 UTC</span></div><div class="art-body"><p><strong>主題</strong>:</p>
+<p>ポーランド海軍特殊部隊員が登場する架空のシナリオを通じ、現在の地政学的環境におけるNATO東部フランクの安全保障上の課題と対応策を考察する、Defense Oneの架空のインテリジェンス分析コラムである。</p>
+<br>
+<p><strong>背景・文脈</strong>:</p>
+<p>Defense Oneの「Fictional Intelligence column」は、仮説的な状況設定を用いることで、通常の分析では扱いにくい複雑な軍事・地政学的な問題に、洞察と新たな視点をもたらす手法である。NATO加盟国であるポーランドは、バルト海およびロシアとの国境に位置する地政学的重要性から、その安全保障上の役割が国際情勢の緊迫化の中で注目されている。</p>
+<br>
+<p><strong>主要な内容</strong>:</p>
+<p>（記事本文が提供されていないため、与えられた情報からの推測に基づきます。）</p>
+<br>
+<ul>
+<li>  架空の対話や状況設定を通じて、NATO東部フランクにおけるポーランドの防衛能力、特に海軍特殊作戦の課題と潜在的な役割を検証する。</li>
+<li>  「Cold comfort」というタイトルが示唆するように、厳しい安全保障環境下での不十分な点や、あるいはわずかながらも存在する前向きな要素、希望的観測が描かれる可能性がある。</li>
+<li>  ロシアからの潜在的な脅威（例：ハイブリッド戦争、バルト海での海上活動）に対するポーランドおよびNATOの対応策や準備態勢に関する議論が含まれると推測される。</li>
+<li>  同盟国間の連携、あるいは特定の軍事技術や戦術が将来の紛争に与える影響についても言及される可能性がある。</li>
+</ul>
+<br>
+<p><strong>軍事的・地政学的意義</strong>:</p>
+<p>ロシアとの緊張が高まる中、ポーランドはNATOのバルト海沿岸における戦略的要衝であり、その海軍特殊部隊に焦点を当てることは、地域の防衛戦略や抑止力に大きな示唆を与える。本稿は、架空のシナリオを通じて、東欧の安全保障環境の複雑さと、それに対するNATOおよびポーランドの取り組みの有効性について洞察を提供するものと考えられる。</p></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/ideas/2026/09/cold-comfort/415955/" data-title="Cold comfort" data-src="Defense One" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/russian-drones-target-volyn-rivne-oblasts-in-rare-mass-attack-in-western-ukraine/" target="_blank">Russian drones target Volyn, Rivne oblasts in rare mass attack in western Ukraine</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年9月12日 22:26 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ロシア軍がウクライナ西部 Volyn および Rivne oblasts を含む広範囲にわたり大規模なドローン攻撃を実施した。</li>
+</ul>
+<br>
+<ul>
+<li><strong>背景・文脈</strong>: ウクライナ侵攻が続く中、ロシアによるウクライナ西部への大規模ドローン攻撃は珍しく、ウクライナ全土への圧力強化とロシアの攻撃能力を示すものとして注目される。</li>
+</ul>
+<br>
+<ul>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   9月12日、ロシアはウクライナ西部の Volyn および Rivne oblasts をドローンで攻撃した。</p>
+<p>    *   これらの攻撃は、ウクライナ全土を標的とした広範なドローン攻撃の一部であった。</p>
+<p>    *   President Volodymyr Zelensky によると、ロシアは同日中に約500機の攻撃ドローンをウクライナに向けて発射した。</p>
+<p>    *   ウクライナ西部に対するこれほど大規模な攻撃は稀であると報じられている。</p>
+<br>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ウクライナ全土、特に比較的後方とされてきた西部地域への大規模攻撃は、ウクライナの広範な防空体制への負担を増大させる。ロシアが依然として多数の無人攻撃機を運用する能力を保持していることを示し、ウクライナは西側からの継続的な防空支援の必要性が改めて浮き彫りになった。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/russian-drones-target-volyn-rivne-oblasts-in-rare-mass-attack-in-western-ukraine/" data-title="Russian drones target Volyn, Rivne oblasts in rare mass attack in western Ukrain" data-src="Kyiv Independent" data-date="2026-09-12"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
