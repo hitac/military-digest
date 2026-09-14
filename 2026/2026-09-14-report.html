@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-09-14 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-09-14.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-09-14</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>11 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（11 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wghcjd/army_of_conquest_detonate_tunnel_bomb_under/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Army of Conquest Detonate Tunnel Bomb under Al-Fanar Military Checkpoint Mount Arbaeen Syria 05.12.15</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/14 21:52</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wghcjd/army_of_conquest_detonate_tunnel_bomb_under/" data-title="Army of Conquest Detonate Tunnel Bomb under Al-Fanar Military Checkpoint Mount A" data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wgg1eb/pakistani_soldiers_eliminate_4_bla_turbat/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Pakistani soldiers eliminate 4 BLA, Turbat, Pakistan, dated 15 September 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/14 21:02</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wgg1eb/pakistani_soldiers_eliminate_4_bla_turbat/" data-title="Pakistani soldiers eliminate 4 BLA, Turbat, Pakistan, dated 15 September 2026" data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wgd0lo/frontier_crops_troops_clear_bla_compound_mastung/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Frontier crops troops clear BLA compound, Mastung , Pakistan</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/14 19:13</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wgd0lo/frontier_crops_troops_clear_bla_compound_mastung/" data-title="Frontier crops troops clear BLA compound, Mastung , Pakistan" data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wg3fr1/a_dashcam_captures_the_moment_a_ukrainian_drone/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">A dashcam captures the moment a Ukrainian drone hits a logistics truck somewhere in Russian occupied southern Ukraine (Unknown date)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/14 13:27</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wg3fr1/a_dashcam_captures_the_moment_a_ukrainian_drone/" data-title="A dashcam captures the moment a Ukrainian drone hits a logistics truck somewhere" data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wg34m8/a_ukrainian_automated_smart_turret_tracks_and/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">A Ukrainian automated smart turret tracks and destroys a Russian Shahed/Gerbera drone near the Kharkiv-Donetsk regional border (Published September 14, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/14 13:14</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wg34m8/a_ukrainian_automated_smart_turret_tracks_and/" data-title="A Ukrainian automated smart turret tracks and destroys a Russian Shahed/Gerbera " data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wfwofv/ongoing_gunbattle_today_september_14_2026_in/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ongoing gunbattle today September 14, 2026, in Maguindanao del Sur, Philippines between government forces and an armed group (currently unknown).</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/14 07:29</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wfwofv/ongoing_gunbattle_today_september_14_2026_in/" data-title="Ongoing gunbattle today September 14, 2026, in Maguindanao del Sur, Philippines " data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wfvy7p/footage_of_a_thai_military_attackdrone_team/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">footage of a Thai military attack-drone team conducting operations to destroy counter-UAV and jamming systems, communications infrastructure, military equipment, and Cambodian military positions in the vicinity of Preah Vihear Temple and surrounding areas</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/14 06:46</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wfvy7p/footage_of_a_thai_military_attackdrone_team/" data-title="footage of a Thai military attack-drone team conducting operations to destroy co" data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wfsoqr/rescue_footage_of_downed_us_pilot_in_iran_60/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Rescue Footage of Downed US Pilot in Iran, 60 minutes</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/14 03:52</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wfsoqr/rescue_footage_of_downed_us_pilot_in_iran_60/" data-title="Rescue Footage of Downed US Pilot in Iran, 60 minutes" data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wfptni/ukrainian_92nd_assault_brigades_1st_battalion/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian 92nd Assault Brigade&#x27;s 1st Battalion took out multiple Russian soldiers and destroyed enemy positions and equipment. Huliaipole Novoselivka direction. Published 13.09.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/14 01:33</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wfptni/ukrainian_92nd_assault_brigades_1st_battalion/" data-title="Ukrainian 92nd Assault Brigade&#x27;s 1st Battalion took out multiple Russian soldier" data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wfm0kv/ukraines_border_guard_service_dpsu_feniks_fpv/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s Border Guard Service (DPSU) &quot;Feniks&quot; FPV &amp; heavy bomber drone pilots targeted numerous Russian infantrymen and vehicles, plus artillery pieces, an &quot;Osa&quot; air defense system, and a Msta-S SPG. (10-minute compilation of recent work) Published September 13, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/13 22:39</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wfm0kv/ukraines_border_guard_service_dpsu_feniks_fpv/" data-title="Ukraine&#x27;s Border Guard Service (DPSU) &quot;Feniks&quot; FPV &amp; heavy bomber drone pilots t" data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wflzei/ukraines_45th_artillery_brigade_used_a_himars/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s 45th Artillery Brigade used a HIMARS strike to hit a Russian &quot;Buk&quot; air defense system, which cooks off afterward, sending missiles in several directions. September 12, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/13 22:38</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wflzei/ukraines_45th_artillery_brigade_used_a_himars/" data-title="Ukraine&#x27;s 45th Artillery Brigade used a HIMARS strike to hit a Russian &quot;Buk&quot; air" data-src="r/CombatFootage" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>作業1: 日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<ul>
+<li>  [id=9] ウクライナ国境警備隊のFPVおよび重爆撃ドローンが、ロシアの「Osa」防空システムと「Msta-S」自走砲を標的とし、破壊した（2026年9月13日公開）。</li>
+<li>  [id=10] ウクライナ第45砲兵旅団がHIMARS攻撃によりロシアの「Buk」防空システムを破壊。攻撃後、システムは誘爆し、ミサイルが複数方向に飛散した（2026年9月12日）。</li>
+</ul>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<ul>
+<li>  [id=10] ウクライナ第45砲兵旅団がHIMARSでロシアの「Buk」防空システムを攻撃し、誘爆させた（2026年9月12日）。</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  [id=3] ロシア占領下のウクライナ南部で、ウクライナのドローンが兵站トラックを攻撃する瞬間をダッシュカムが捉えた（日時不明）。</li>
+<li>  [id=4] ウクライナの自動スマート砲塔が、ハルキウ-ドネツク地域境界付近でロシアのShahed/Gerberaドローンを追跡・破壊した（2026年9月14日公開）。</li>
+<li>  [id=9] ウクライナ国境警備隊のFPVおよび重爆撃ドローンが、多数のロシア歩兵、車両、砲兵に加え、「Osa」防空システムと「Msta-S」自走砲を標的とした（2026年9月13日公開）。</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  [id=8] ウクライナ第92突撃旅団第1大隊が、Huliaipole Novoselivka方面で多数のロシア兵を排除し、敵の陣地と装備を破壊した（2026年9月13日公開）。</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  [id=0] シリアのArbaeen山Al-Fanar軍事検問所の下で、征服軍が地下トンネル爆弾を爆発させた（2015年5月12日）。</li>
+<li>  [id=7] イランで撃墜された米軍パイロットの救出映像が公開された（60分）。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<br>
+<ul>
+<li>  [id=1] パキスタン軍兵士がパキスタンのトゥルバトでBLA戦闘員4人を排除した（2026年9月15日付）。</li>
+<li>  [id=2] パキスタンのマスタングで国境部隊がBLAの拠点を掃討した。</li>
+<li>  [id=5] フィリピンのマギンダナオ・デル・スルで、政府軍と武装集団の間で銃撃戦が発生した（2026年9月14日）。</li>
+<li>  [id=6] タイ軍の攻撃ドローンチームが、プレアビヒア寺院とその周辺地域で、対UAVおよび妨害システム、通信インフラ、軍事装備、カンボジア軍陣地の破壊作戦を実施した。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<br>
+<ul>
+<li>  <strong>[id=10] ウクライナ第45砲兵旅団、HIMARSでロシアのBuk防空システムを破壊し、誘爆させる。</strong></li>
+<li>  <strong>[id=9] ウクライナ国境警備隊のドローンが、ロシアのOsa防空システムとMsta-S自走砲を標的に破壊。</strong></li>
+<li>  <strong>[id=3] ウクライナのドローンが、ロシア占領下のウクライナ南部で兵站トラックを攻撃。</strong></li>
+<li>  <strong>[id=6] タイ軍の攻撃ドローンチームが、UAV対策システムや通信インフラなど多岐にわたる標的を破壊。</strong></li>
+<li>  <strong>[id=0] シリアの軍事検問所の下で、征服軍が地下トンネル爆弾を爆発させる。</strong></li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>作業2: タイトル翻訳JSON</h2>
+<br>
+<p>```json</p>
+<p>{</p>
+<p>  &quot;titles&quot;: [</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 0,</p>
+<p>      &quot;title_ja&quot;: &quot;征服軍がシリア・アルバイーン山アルファナー軍事検問所下でトンネル爆弾を爆発 (15年5月12日)&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 1,</p>
+<p>      &quot;title_ja&quot;: &quot;パキスタン兵、パキスタンのトゥルバトでBLA戦闘員4人を排除（2026年9月15日付）&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 2,</p>
+<p>      &quot;title_ja&quot;: &quot;国境部隊、パキスタンのマスタングでBLA拠点を掃討&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 3,</p>
+<p>      &quot;title_ja&quot;: &quot;ロシア占領下のウクライナ南部で、ウクライナドローンが兵站トラックを攻撃する瞬間をドラレコが捉える&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 4,</p>
+<p>      &quot;title_ja&quot;: &quot;ウクライナの自動スマート砲塔がハルキウ-ドネツク境界付近でロシアのShahed/Gerberaドローンを追跡・破壊 (2026年9月14日公開)&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 5,</p>
+<p>      &quot;title_ja&quot;: &quot;フィリピン・マギンダナオ・デル・スルで政府軍と武装集団の銃撃戦が継続中（2026年9月14日）&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 6,</p>
+<p>      &quot;title_ja&quot;: &quot;タイ軍攻撃ドローンチーム、プレアビヒア寺院周辺でUAV対策システム、通信インフラ等を破壊する作戦を実施&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 7,</p>
+<p>      &quot;title_ja&quot;: &quot;イランで撃墜された米軍パイロットの救出映像（60分）&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 8,</p>
+<p>      &quot;title_ja&quot;: &quot;ウクライナ第92突撃旅団第1大隊、Huliaipole Novoselivka方面でロシア兵を排除し敵陣地・装備を破壊 (2026年9月13日公開)&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 9,</p>
+<p>      &quot;title_ja&quot;: &quot;ウクライナ国境警備隊、FPV・重爆撃ドローンでロシア歩兵、車両、砲兵、Osa防空システム、Msta-S自走砲等を標的化 (2026年9月13日公開)&quot;</p>
+<p>    },</p>
+<p>    {</p>
+<p>      &quot;id&quot;: 10,</p>
+<p>      &quot;title_ja&quot;: &quot;ウクライナ第45砲兵旅団、HIMARSでロシアのBuk防空システムを攻撃、誘爆しミサイルが飛散 (2026年9月12日)&quot;</p>
+<p>    }</p>
+<p>  ]</p>
+<p>}</p>
+<p>```</p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/us-slaps-new-penalties-on-russias-vtb-bank-over-iran-sanctions-evasion/" target="_blank">US slaps new penalties on Russia&#x27;s VTB Bank over Iran sanctions evasion</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年9月15日 01:24 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/us-slaps-new-penalties-on-russias-vtb-bank-over-iran-sanctions-evasion/" data-title="US slaps new penalties on Russia&#x27;s VTB Bank over Iran sanctions evasion" data-src="Kyiv Independent" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/donald-trump-jr-admits-russian-oligarch-with-putin-ties-partially-funded-wedding-celebration/" target="_blank">Donald Trump Jr. admits Russian oligarch with Putin ties partially funded wedding celebration</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年9月15日 00:23 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/donald-trump-jr-admits-russian-oligarch-with-putin-ties-partially-funded-wedding-celebration/" data-title="Donald Trump Jr. admits Russian oligarch with Putin ties partially funded weddin" data-src="Kyiv Independent" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/kyiv-warns-state-budget-nearing-critical-point-urges-lawmakers-to-pass-key-finance-bills/" target="_blank">Kyiv warns state budget nearing &#x27;critical point,&#x27; urges lawmakers to pass key finance bills</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年9月14日 22:39 UTC</span></div><div class="art-body"><h2>要約形式（日本語）</h2>
+<br>
+<ul>
+<li>  <strong>主題</strong>: ウクライナの国家予算が「危機的状況」に近づいており、Serhii Koretskyi首相が議会に重要財政法案の迅速な可決を促している件。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>背景・文脈</strong>: ロシアとの戦争が長期化する中、ウクライナは国家運営および戦費を国際的な財政支援に大きく依存している。議会での法案承認が遅れれば、計画された巨額の資金が失われ、国家財政が破綻の危機に瀕する可能性があるため、この問題は喫緊の課題となっている。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   Serhii Koretskyi首相は、ウクライナの国家予算が「critical point」に達しつつあると警告。</p>
+<p>    *   議会が必要な財政法案を期限内に可決できない場合、計画されている295億ドルの資金のうち「significant portion」を失う恐れがある。</p>
+<p>    *   首相は議会に対し、喫緊に重要財政法案を可決するよう強く要請している。</p>
+<br>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: 議会による重要財政法案の滞りは、戦時下のウクライナの抗戦能力に直接的な影響を及ぼす。国際社会からの財政支援が途絶えれば、防衛力の維持、兵器購入、部隊の士気、そして国家としての安定性が損なわれ、対ロシア戦におけるパワーバランスを不利にする可能性がある。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/kyiv-warns-state-budget-nearing-critical-point-urges-lawmakers-to-pass-key-finance-bills/" data-title="Kyiv warns state budget nearing &#x27;critical point,&#x27; urges lawmakers to pass key fi" data-src="Kyiv Independent" data-date="2026-09-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
