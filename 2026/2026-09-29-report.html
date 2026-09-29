@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-09-29 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-09-29.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-09-29</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>18 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（18 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wto2qn/alrahman_legion_fsa_uses_prepared_tunnel_mines/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Al-Rahman Legion (FSA) uses prepared tunnel mines against advancing SAA units from the 4th Armored Division and Republican Guard, killing dozens, Ayn Tarma, 9/28/2017</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 22:24</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wto2qn/alrahman_legion_fsa_uses_prepared_tunnel_mines/" data-title="Al-Rahman Legion (FSA) uses prepared tunnel mines against advancing SAA units fr" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wtkimy/heavy_clashes_once_again_in_baluchistan_iran/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Heavy clashes once again in Baluchistan, Iran tonight. This time in Iranshahr. Reports of machinegun &amp; RPG fire and that the IRGC has deployed tanks &amp; drones to the city.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 20:02</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wtkimy/heavy_clashes_once_again_in_baluchistan_iran/" data-title="Heavy clashes once again in Baluchistan, Iran tonight. This time in Iranshahr. R" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wte8rb/idf_merkava_tank_opens_fire_on_hezbollah_fighters/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">IDF Merkava Tank opens fire on Hezbollah fighters 2024</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 16:08</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wte8rb/idf_merkava_tank_opens_fire_on_hezbollah_fighters/" data-title="IDF Merkava Tank opens fire on Hezbollah fighters 2024" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wti033/trying_to_find_a_video_hit_by_shrapnel_in_the/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Trying to find a video (Hit by shrapnel in the back of a BMP)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 18:27</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wti033/trying_to_find_a_video_hit_by_shrapnel_in_the/" data-title="Trying to find a video (Hit by shrapnel in the back of a BMP)" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wtlwiq/russian_pow_attack_ukrainian_soldier_with_a_knife/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian POW attack ukrainian soldier with a knife</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 20:56</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wtlwiq/russian_pow_attack_ukrainian_soldier_with_a_knife/" data-title="Russian POW attack ukrainian soldier with a knife" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wth9f2/ukrainian_sso_fighters_from_bully_boys_eliminate/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian SSO fighters from “Bully Boys” eliminate one Russian serviceman in a small-arms battle and take another prisoner during the clearing of a position in the Sumy direction.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 18:00</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wth9f2/ukrainian_sso_fighters_from_bully_boys_eliminate/" data-title="Ukrainian SSO fighters from “Bully Boys” eliminate one Russian serviceman in a s" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wtgfzb/ukraines_21st_usf_brigade_kraken_silver_battalion/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s 21st USF Brigade &quot;Kraken&quot; Silver Battalion used &quot;waiter&quot; ambush FPV strike drones to chase down Russian infantry fleeing destroyed bunkers during the ongoing &quot;Operation Vivaldi&quot;. Posted September 29, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 17:30</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wtgfzb/ukraines_21st_usf_brigade_kraken_silver_battalion/" data-title="Ukraine&#x27;s 21st USF Brigade &quot;Kraken&quot; Silver Battalion used &quot;waiter&quot; ambush FPV st" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wtgbld/ukraines_border_guard_service_dpsu_feniks_fpv/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s Border Guard Service (DPSU) &quot;Feniks&quot; FPV strike drone pilots chased down dozens of Russian infantrymen on foot, in vehicles, and on motorbikes. An incendiary &quot;Dragon&quot; drone is seen burning enemy dugouts. (10-minute compilation of recent work) Published September 29, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 17:25</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wtgbld/ukraines_border_guard_service_dpsu_feniks_fpv/" data-title="Ukraine&#x27;s Border Guard Service (DPSU) &quot;Feniks&quot; FPV strike drone pilots chased do" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wtcsdq/libyan_rebels_antigaddafi_rebels_during_the/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Libyan Rebels (Anti-Gaddafi Rebels) during the Second Battle of Benghazi, Libya, 3/19/2011</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 15:13</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wtcsdq/libyan_rebels_antigaddafi_rebels_during_the/" data-title="Libyan Rebels (Anti-Gaddafi Rebels) during the Second Battle of Benghazi, Libya," data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wt9p51/ukrainian_fpv_drone_kills_russian_soldier_spotted/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian FPV drone kills Russian soldier spotted walking through open fields. 6th Battalion of 414th Strike UAS Brigade, published September 28th 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 13:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wt9p51/ukrainian_fpv_drone_kills_russian_soldier_spotted/" data-title="Ukrainian FPV drone kills Russian soldier spotted walking through open fields. 6" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wt75ap/ukrainian_soldiers_clear_russian_positions_near/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian soldiers clear Russian positions near Vovchansk. Reconnaissance Company of the 57th Motorized Brigade, published September 29th 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 11:04</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wt75ap/ukrainian_soldiers_clear_russian_positions_near/" data-title="Ukrainian soldiers clear Russian positions near Vovchansk. Reconnaissance Compan" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wt56oh/russian_infantry_and_equipment_are_burning_as_fpv/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian infantry and equipment are burning as FPV pilots from the 128th Separate Mountain Assault Brigade are in action. Precision work, seconds to make a decision – and another russian soldier is eliminated.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 09:05</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wt56oh/russian_infantry_and_equipment_are_burning_as_fpv/" data-title="Russian infantry and equipment are burning as FPV pilots from the 128th Separate" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wt4jew/cockpit_view_from_a_ukrainian_air_force_su25/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Cockpit view from a Ukrainian Air Force Su-25 Frogfoot on a strike mission over the eastern front, low over the ground before pitching up, clawing for altitude, and launching a French AASM guided bomb</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 08:24</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wt4jew/cockpit_view_from_a_ukrainian_air_force_su25/" data-title="Cockpit view from a Ukrainian Air Force Su-25 Frogfoot on a strike mission over " data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wt3uqq/highdef_footage_of_the_ukrainian_crew_hawk_from/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">High-def footage of the Ukrainian crew &quot;Hawk&quot; from the 1020th Anti-aircraft Missile Regiment shooting down a jet-powered Shahed at 425 km/h and &gt;3 km altitude. This is the first time a jet interceptor provided by the &quot;United Collection&quot; the &quot;Clear Sky&quot; initiative successfully destroyed a jet drone.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/29 07:40</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wt3uqq/highdef_footage_of_the_ukrainian_crew_hawk_from/" data-title="High-def footage of the Ukrainian crew &quot;Hawk&quot; from the 1020th Anti-aircraft Miss" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wsujuy/ukrainian_2nd_battalion_of_the_81st_airmobile/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian 2nd Battalion of the 81st Airmobile Brigade smoked out Russian positions in the Slovyansk direction. Published 26.09.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/28 23:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wsujuy/ukrainian_2nd_battalion_of_the_81st_airmobile/" data-title="Ukrainian 2nd Battalion of the 81st Airmobile Brigade smoked out Russian positio" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wsuie0/ukrainian_apachi_strike_group_hunted_russian/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian Apachi Strike Group hunted Russian soldiers and their equipment. Slovyansk Siversk direction. 81st Airmobile Brigade. Published 27.09.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/28 23:35</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wsuie0/ukrainian_apachi_strike_group_hunted_russian/" data-title="Ukrainian Apachi Strike Group hunted Russian soldiers and their equipment. Slovy" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wsua1t/fiberoptics_fpv_drone_lying_in_ambush_records/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Fiber-Optics FPV drone lying in ambush records airstrike of a Russian FAB-250 bomb with a unified guiding and aiming module (UMPK)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/28 23:25</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wsua1t/fiberoptics_fpv_drone_lying_in_ambush_records/" data-title="Fiber-Optics FPV drone lying in ambush records airstrike of a Russian FAB-250 bo" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wsty8o/giants_brigades_atgm_strike_on_a_houthi_truck/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Giants Brigades ATGM strike on a Houthi truck causing a big explosion - Kahbub front, bab el Mandeb 2026/9/28</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>09/28 23:10</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wsty8o/giants_brigades_atgm_strike_on_a_houthi_truck/" data-title="Giants Brigades ATGM strike on a Houthi truck causing a big explosion - Kahbub f" data-src="r/CombatFootage" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。</em></p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-receives-air-defense-missiles-for-nasams-systems-zelensky-says-amid-shortage/" target="_blank">Ukraine receives air defense missiles for NASAMS systems, Zelensky says amid shortage</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年9月29日 23:46 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-receives-air-defense-missiles-for-nasams-systems-zelensky-says-amid-shortage/" data-title="Ukraine receives air defense missiles for NASAMS systems, Zelensky says amid sho" data-src="Kyiv Independent" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-war-latest-record-russian-military-budget-for-2027-confirms-no-interest-in-ending-war/" target="_blank">Ukraine war latest: Record Russian military budget for 2027 confirms no interest in ending war</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年9月29日 20:43 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-war-latest-record-russian-military-budget-for-2027-confirms-no-interest-in-ending-war/" data-title="Ukraine war latest: Record Russian military budget for 2027 confirms no interest" data-src="Kyiv Independent" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/threats/2026/09/after-40-days-combat-navy-destroyer-returns-home/416311/" target="_blank">After 40 days of combat, Navy destroyer returns home</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年9月29日 13:38 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/threats/2026/09/after-40-days-combat-navy-destroyer-returns-home/416311/" data-title="After 40 days of combat, Navy destroyer returns home" data-src="Defense One" data-date="2026-09-29"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
