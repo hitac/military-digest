@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-10-04 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-10-04.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-10-04</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>10 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（10 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wx4lr5/ukraines_3rd_assault_brigade_fpv_strike_drone/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ第3強襲旅団FPVドローンがロシアの歩兵、車両などを攻撃</div><div class="vc-en">Ukraine&#x27;s 3rd Assault Brigade FPV strike drone pilots targeted Russian infantry, vehicles, cannons, armored vehicles, and other equipment during the ongoing &quot;Operation Vivaldi&quot;. (September extra footage, chronological) October 3, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 02:35</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wx4lr5/ukraines_3rd_assault_brigade_fpv_strike_drone/" data-title="Ukraine&#x27;s 3rd Assault Brigade FPV strike drone pilots targeted Russian infantry," data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wxq7t0/ukraines_unmanned_systems_forces_struck_another/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナの無人システム部隊がクリミアのロシアの変電所などを攻撃</div><div class="vc-en">Ukraine&#x27;s Unmanned Systems Forces struck another 44 Russian gas and electrical substations in occupied Crimea and other territories, bringing the operation&#x27;s tally to 456 nodes struck since July 6, 2026. Posted October 4, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 20:49</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wxq7t0/ukraines_unmanned_systems_forces_struck_another/" data-title="Ukraine&#x27;s Unmanned Systems Forces struck another 44 Russian gas and electrical s" data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wxpzgj/ukraines_414th_usf_brigade_magyars_birds_drone/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ第414USF旅団が隠れたロシア兵をドローンで攻撃</div><div class="vc-en">Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; drone pilots carefully combed through dense foliage, uncovering and striking a group of concealed Russian soldiers. (NSFW) Posted October 4, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 20:39</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wxpzgj/ukraines_414th_usf_brigade_magyars_birds_drone/" data-title="Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; drone pilots carefully combed throu" data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wxp4ij/another_view_of_pdf_peoples_defense_force/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ミャンマーのKyou Wa Kye近郊で人民防衛軍が国軍を攻撃</div><div class="vc-en">Another view of PDF (People&#x27;s Defense Force) attacking Myanmar (Burma) Army forces near Kyou Wa Kye, Mindon Township, Magway Region(between August 31-October 3)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 20:03</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wxp4ij/another_view_of_pdf_peoples_defense_force/" data-title="Another view of PDF (People&#x27;s Defense Force) attacking Myanmar (Burma) Army forc" data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wxmi1i/combat_between_azerbaijani_and_armenian_infantry/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">アゼルバイジャンとアルメニアの歩兵戦闘</div><div class="vc-en">combat between azerbaijani and armenian infantry. ~2023</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 18:17</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wxmi1i/combat_between_azerbaijani_and_armenian_infantry/" data-title="combat between azerbaijani and armenian infantry. ~2023" data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wxjfvf/peoples_defense_force_pdf_rebels_attack_myanmar/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ミャンマーのKyou Wa Kye近郊で人民防衛軍が国軍を攻撃</div><div class="vc-en">People&#x27;s Defense Force (PDF) rebels attack Myanmar (Burma) Army forces near Kyou Wa Kye, Mindon Township, Magway Region(between August 31-October 3)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 16:11</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wxjfvf/peoples_defense_force_pdf_rebels_attack_myanmar/" data-title="People&#x27;s Defense Force (PDF) rebels attack Myanmar (Burma) Army forces near Kyou" data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wxdnwx/ukrainian_mig29_cockpit_perspective_r60m_airtoair/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">ウクライナMiG-29がロシアのジェット動力ドローンを空対空ミサイルで迎撃</div><div class="vc-en">Ukrainian MiG-29 Cockpit Perspective: R-60M Air-to-Air Missile Interception of Russian Jet-Powered Geran UAV</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 11:42</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wxdnwx/ukrainian_mig29_cockpit_perspective_r60m_airtoair/" data-title="Ukrainian MiG-29 Cockpit Perspective: R-60M Air-to-Air Missile Interception of R" data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wx4rir/ukrainian_airstrike_on_two_enemy_positions/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">ウクライナ軍が敵陣地2か所に空爆</div><div class="vc-en">Ukrainian Airstrike on Two Enemy Positions</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 02:44</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wx4rir/ukrainian_airstrike_on_two_enemy_positions/" data-title="Ukrainian Airstrike on Two Enemy Positions" data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wx4lfq/ukraines_57th_mechanized_brigade_2nd_motorized/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ第57機械化旅団FPVドローンがヴォウチャンスク方面で露歩兵を排除</div><div class="vc-en">Ukraine&#x27;s 57th Mechanized Brigade 2nd Motorized Infantry Battalion FPV strike drone pilots eliminated 30 Russian infantrymen while defending positions in the Vovchansk direction. (NSFW) Posted September 17, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 02:35</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wx4lfq/ukraines_57th_mechanized_brigade_2nd_motorized/" data-title="Ukraine&#x27;s 57th Mechanized Brigade 2nd Motorized Infantry Battalion FPV strike dr" data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1wx4l7l/nsfw_ukraines_77th_airmobile_brigade_rubaka/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ第77空中機動旅団が精密弾薬投下でロシア歩兵攻撃を撃退</div><div class="vc-en">(NSFW!) Ukraine&#x27;s 77th Airmobile Brigade &quot;Rubaka&quot; defeated a Russian infantry attack with help from accurate munition drops. Posted October 3, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/04 02:35</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1wx4l7l/nsfw_ukraines_77th_airmobile_brigade_rubaka/" data-title="(NSFW!) Ukraine&#x27;s 77th Airmobile Brigade &quot;Rubaka&quot; defeated a Russian infantry at" data-src="r/CombatFootage" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p>---</p>
+<br>
+<h2>作業1: 日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<ul>
+<li>  [id=0] ウクライナ第3突撃旅団のFPV攻撃ドローンが、進行中の「Operation Vivaldi」においてロシア歩兵、車両、砲、<strong>装甲車両</strong>、その他の装備を標的とした。具体的な車両型番や破壊状況の詳細は記述されていないが、攻撃対象に含まれている。</li>
+</ul>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<ul>
+<li>  [id=6] ウクライナのMiG-29コックピット視点映像にて、R-60M空対空ミサイルでロシアのジェット推進型Geran UAVを迎撃した。</li>
+<li>  [id=7] ウクライナ軍が敵陣地2箇所を空爆した。</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  [id=0] ウクライナ第3突撃旅団のFPV攻撃ドローンが、ロシア歩兵、車両、砲、装甲車両、その他装備を標的とした「Operation Vivaldi」の追加映像が公開された。</li>
+<li>  [id=2] ウクライナ第414USF旅団「Magyar&#x27;s Birds」のドローンパイロットが、密林を丹念に捜索し、隠れていたロシア兵グループを発見し攻撃した。</li>
+<li>  [id=8] ウクライナ第57機械化旅団第2自動車化歩兵大隊のFPV攻撃ドローンパイロットが、ヴォウチャンシク方面の陣地防衛中にロシア歩兵30名を排除した。</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  [id=1] ウクライナの無人システム部隊が、占領下のクリミアとその他の地域でロシアのガス・変電所44箇所を追加で攻撃し、7月6日以降の作戦における総攻撃ノード数を456箇所とした。</li>
+<li>  [id=9] ウクライナ第77空中機動旅団「Rubaka」が、正確な弾薬投下によってロシア歩兵の攻撃を撃退した。</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<p>該当なし</p>
+<br>
+<h2>その他の地域</h2>
+<ul>
+<li>  [id=3], [id=5] <strong>ミャンマー</strong>: 人民防衛軍(PDF)が、ミャンマー(ビルマ)国軍部隊をマグウェ地域ミンドン郡区キョウワキー付近で攻撃した（8月31日～10月3日の間に発生）。</li>
+<li>  [id=4] <strong>アゼルバイジャン・アルメニア</strong>: アゼルバイジャンとアルメニアの歩兵部隊間で戦闘が発生した（約2023年）。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<p>1.  [id=0] ウクライナ第3突撃旅団によるFPVドローン攻撃映像: ロシアの装甲車両を含む多種の目標を標的とした大規模な作戦の追加映像。</p>
+<p>2.  [id=6] ウクライナMiG-29からのGeran UAV迎撃映像: 空対空ミサイルによる敵ドローン迎撃という稀有なコックピット視点映像。</p>
+<p>3.  [id=8] ウクライナ第57機械化旅団によるFPVドローンでのロシア歩兵30名排除: ドローンの歩兵戦における致死的な有効性を示す事例。</p>
+<p>4.  [id=1] ウクライナ無人システム部隊によるロシアのインフラ攻撃: 広範囲にわたるインフラへの継続的な攻撃の規模を示す。</p>
+<p>5.  [id=2] ウクライナ第414USF旅団による隠蔽されたロシア兵の捜索・攻撃: ドローンの偵察・攻撃能力の高さを示す事例。</p>
+<br>
+<p>---</p>
+<br>
+<h2>作業2: タイトル翻訳JSON</h2></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/russian-drone-strike-hits-energy-facility-in-poltava-oblast-leaves-22-000-without-power/" target="_blank">Russian drone strike hits energy facility in Poltava Oblast, leaves 22,000 without power</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月5日 00:37 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ロシアによるドローン攻撃がウクライナのPoltava Oblastにあるエネルギー施設を直撃し、22,000人に電力供給が停止した。</li>
+</ul>
+<br>
+<ul>
+<li><strong>背景・文脈</strong>: 今回の攻撃は、わずか2日前に同地域のLubny districtのエネルギー施設が別のロシアのドローン攻撃を受け、約6,000人が停電に見舞われた事案に続くものである。</li>
+</ul>
+<br>
+<ul>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   ロシア軍がPoltava Oblastのエネルギー施設を標的としたドローン攻撃を実施した。</p>
+<p>    *   この攻撃の結果、Poltava Oblast内の22,000人が電力供給を失った。</p>
+<p>    *   今回の事態は、同地域で発生した最近の同様の攻撃（Lubny districtで約6,000人が停電）に続くものである。</p>
+<br>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ロシアはウクライナのエネルギーインフラに対する組織的な攻撃を継続しており、これはウクライナの国民生活と経済に打撃を与え、継戦能力を低下させる戦略の一環である。このような攻撃は、戦線での停滞が続く中、ウクライナに対する複合的な圧力を高めることを目的としている。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/russian-drone-strike-hits-energy-facility-in-poltava-oblast-leaves-22-000-without-power/" data-title="Russian drone strike hits energy facility in Poltava Oblast, leaves 22,000 witho" data-src="Kyiv Independent" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/us-proposes-trilateral-talks-with-russia-ukraine-by-end-of-october-zelensky-says/" target="_blank">US proposes trilateral talks with Russia, Ukraine by end of October, Zelensky says</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月4日 23:58 UTC</span></div><div class="art-body"><h2>要約形式</h2>
+<br>
+<ul>
+<li>  <strong>主題</strong>:</li>
+</ul>
+<p>    米国が、ウクライナとロシアに対し、10月末までに技術レベルでの三者協議開催を提案している。</p>
+<br>
+<ul>
+<li>  <strong>背景・文脈</strong>:</li>
+</ul>
+<p>    ロシアによるウクライナ侵攻が長期化し、直接的な和平交渉が停滞する中で、米国が外交的解決の道筋を探るべく、関係国間の対話機会を創出しようとしている。</p>
+<br>
+<ul>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   米国は現在、ウクライナとロシア双方と連絡を取っている。</p>
+<p>    *   提案されているのは、米国、ロシア、ウクライナによる三者協議である。</p>
+<p>    *   協議は「技術レベル」での会合を意図している。</p>
+<p>    *   開催時期の目標は10月末まで。</p>
+<p>    *   この提案はウクライナのZelensky大統領によって公にされた。</p>
+<br>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>:</li>
+</ul>
+<p>    この「技術レベル」の協議は、即座の停戦や和平交渉には繋がらないものの、紛争解決に向けた将来的な外交的進展の足がかりとなる可能性がある。米国が主要な仲介役として関与を深めることで、ウクライナ紛争を巡る地政学的力学に影響を与える動きとして注目される。</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/us-proposes-trilateral-talks-with-russia-ukraine-by-end-of-october-zelensky-says/" data-title="US proposes trilateral talks with Russia, Ukraine by end of October, Zelensky sa" data-src="Kyiv Independent" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraines-deep-strikes-have-wrecked-over-half-of-russias-oil-refining-capacity-defense-ministry-says/" target="_blank">Ukraine&#x27;s deep strikes have wrecked over half of Russia&#x27;s oil refining capacity, Defense Ministry says</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月4日 22:46 UTC</span></div><div class="art-body"><h2>要約形式（日本語）</h2>
+<br>
+<ul>
+<li><strong>主題</strong>: ウクライナ国防省が発表した、ロシアの石油精製能力に対するウクライナ軍の「deep strikes」による損害状況について。</li>
+</ul>
+<br>
+<ul>
+<li><strong>背景・文脈</strong>: ロシアによる全面侵攻が長期化する中、ウクライナはロシアの戦争遂行能力を削ぐため、軍事目標に加え、経済インフラへの攻撃を強化している。エネルギー関連施設はロシア経済の主要な柱であり、その損害は戦局に大きな影響を与える可能性がある。</li>
+</ul>
+<br>
+<ul>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    - ウクライナ国防省は、ロシアの石油精製能力の51%がウクライナ軍の攻撃により損傷したと発表した。</p>
+<p>    - この損害は、ウクライナ軍によるロシア国内への「deep strikes」（長距離攻撃）の結果である。</p>
+<p>    - Yevhen Khmara国防大臣が10月4日にこの情報を明らかにした。</p>
+<p>    - Khmara大臣は、この打撃がロシア経済、侵略遂行能力、および軍事部隊への供給能力にとって重大であると強調した。</p>
+<br>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ロシアの石油精製能力の著しい低下は、同国の戦争経済を直接的に弱体化させ、軍事作戦の継続に必要な燃料供給に支障をきたす可能性を秘めている。これは、ウクライナがロシアの戦争遂行能力を内部から侵食し、戦場のパワーバランスに間接的な影響を与える非対称戦略の一環である。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraines-deep-strikes-have-wrecked-over-half-of-russias-oil-refining-capacity-defense-ministry-says/" data-title="Ukraine&#x27;s deep strikes have wrecked over half of Russia&#x27;s oil refining capacity," data-src="Kyiv Independent" data-date="2026-10-04"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
