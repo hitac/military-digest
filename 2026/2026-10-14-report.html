@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-10-14 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-10-14.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-10-14</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>11 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（11 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x5ovqa/ukraines_59th_assault_brigade_signum_conducted/" target="_blank"><span class="vc-ico">💥</span><div class="vc-body"><div class="vc-ja">ウクライナ第59強襲旅団「シグナム」がロシアの兵站ルートを中距離攻撃。機関車、装甲車、移動式砲撃グループなどを破壊。</div><div class="vc-en">Ukraine&#x27;s 59th Assault Brigade &quot;Signum&quot; conducted midrange strikes on Russian logistical routes, hitting a locomotive, armored vehicles, three mobile fire groups, heavy and light trucking, a crane truck, and a military checkpoint. Posted October 14, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 11:36</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x5ovqa/ukraines_59th_assault_brigade_signum_conducted/" data-title="Ukraine&#x27;s 59th Assault Brigade &quot;Signum&quot; conducted midrange strikes on Russian lo" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x63hw6/ukrainian_group_two_sof_operators_clearing/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ウクライナ特殊作戦部隊「グループ2」がココスティアンティニフカ方面で建物を掃討。</div><div class="vc-en">Ukrainian &quot;Group two&quot; SOF operators clearing buildings in the Kostyantynivka direction. Published 10/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 21:22</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x63hw6/ukrainian_group_two_sof_operators_clearing/" data-title="Ukrainian &quot;Group two&quot; SOF operators clearing buildings in the Kostyantynivka dir" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x62a3u/ukrainian_evacuation_team_came_under_russian_fpv/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナの避難チームが民間人避難中にロシアFPVドローン攻撃を受けるも、幸い爆発せず。</div><div class="vc-en">Ukrainian evacuation team came under Russian FPV drone attack while evacuation civilians. Luckily the enemy drone failed to explode on their vehicle. Published 10/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 20:32</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x62a3u/ukrainian_evacuation_team_came_under_russian_fpv/" data-title="Ukrainian evacuation team came under Russian FPV drone attack while evacuation c" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x61kuw/proukrainian_fighters_of_the_hatred_battalion_of/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">親ウクライナ派「憎悪」大隊（ベラルーシ志願兵団）がリマン方面でロシア兵を排除。</div><div class="vc-en">Pro-Ukrainian fighters of the &quot;Hatred&quot; Battalion of the Belarusian Volunteers Corps eliminated Russian Army soldiers in the Lyman direction. Fall 2026. Published 13.10.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 20:04</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x61kuw/proukrainian_fighters_of_the_hatred_battalion_of/" data-title="Pro-Ukrainian fighters of the &quot;Hatred&quot; Battalion of the Belarusian Volunteers Co" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x61arm/iranian_dhow_boat_allegedly_conducting_targeting/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">標的偵察を行っていた疑いのあるイランのダウ船が、AH-1Zヴァイパーによって破壊される。</div><div class="vc-en">Iranian Dhow Boat, Allegedly Conducting Targeting Surveillance, Destroyed by AH-1Z Vipers (Oct. 6, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 19:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x61arm/iranian_dhow_boat_allegedly_conducting_targeting/" data-title="Iranian Dhow Boat, Allegedly Conducting Targeting Surveillance, Destroyed by AH-" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x5tqyy/russian_invader_gets_hit_by_drone_another_one/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ロシア侵攻兵がドローンに命中され、焼ける遺体のそばを別の兵士が通り過ぎる。</div><div class="vc-en">Russian invader gets hit by drone, another one passes by his alive and burning body</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 15:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x5tqyy/russian_invader_gets_hit_by_drone_another_one/" data-title="Russian invader gets hit by drone, another one passes by his alive and burning b" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x5t1qy/2004_grozny_stadium_bombing_that_killed_akhmad/" target="_blank"><span class="vc-ico">💥</span><div class="vc-body"><div class="vc-ja">2004年グロズヌイ競技場爆破事件。アフマド・カディロフら複数のロシア政治家が死亡。</div><div class="vc-en">2004 Grozny Stadium bombing that killed Akhmad Kadyrov and multiple Russian politicians</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 14:42</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x5t1qy/2004_grozny_stadium_bombing_that_killed_akhmad/" data-title="2004 Grozny Stadium bombing that killed Akhmad Kadyrov and multiple Russian poli" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x5lsu0/drone_footage_captures_the_destruction_of_a/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">U2「ブラザーフッド」特殊部隊がポクロフスク方面でロシア弾薬輸送車をドローンで破壊。</div><div class="vc-en">Drone footage captures the destruction of a Russian ammunition delivery vehicle in the Pokrovsk direction by the U2 &quot;Brotherhood&quot; special forces unit. A second drone recorded the explosion, which instantly killed the driver and two occupants. Published 13/10/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 08:26</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x5lsu0/drone_footage_captures_the_destruction_of_a/" data-title="Drone footage captures the destruction of a Russian ammunition delivery vehicle " data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x5kjw1/a_ukrainian_fpv_interceptor_drone_hit_a_moving/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナのFPV迎撃ドローンが、移動中のロシアMi-28NM攻撃ヘリコプターに命中。</div><div class="vc-en">A Ukrainian FPV interceptor drone hit a moving Russian Mi-28NM attack helicopter (Published October 14, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 07:04</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x5kjw1/a_ukrainian_fpv_interceptor_drone_hit_a_moving/" data-title="A Ukrainian FPV interceptor drone hit a moving Russian Mi-28NM attack helicopter" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x5jsuz/yemensaudi_war_drone_drop_short_compilation/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">イエメンとサウジアラビアの戦争におけるドローン投下映像の短編コンピレーション。</div><div class="vc-en">Yemen-Saudi war drone drop short compilation</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 06:17</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x5jsuz/yemensaudi_war_drone_drop_short_compilation/" data-title="Yemen-Saudi war drone drop short compilation" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x5dvy7/ynaplc_troops_assaulting_houthi_positions_in/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">イエメン国軍/人民抵抗軍の部隊が南部マリブでフーシ派の陣地を攻撃。</div><div class="vc-en">YNA/PLC troops assaulting Houthi positions in Southern Marib (Oct 14, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/14 00:55</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x5dvy7/ynaplc_troops_assaulting_houthi_positions_in/" data-title="YNA/PLC troops assaulting Houthi positions in Southern Marib (Oct 14, 2026)" data-src="r/CombatFootage" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>作業1: 日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<ul>
+<li>  [id=0] ウクライナ第59強襲旅団「Signum」がロシアの兵站ルートに対し中距離攻撃を実施。これにより機関車、<strong>装甲車両</strong>、移動式火力部隊3つ、大型・小型トラック、クレーン車、軍事検問所が被弾した。</li>
+</ul>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<ul>
+<li>  [id=0] ウクライナ第59強襲旅団「Signum」がロシアの兵站ルートに対し中距離攻撃を実施。機関車、装甲車両、移動式火力部隊3つ、大型・小型トラック、クレーン車、軍事検問所が被弾した。</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  [id=2] ロシアのFPVドローンが民間人を避難中のウクライナの避難チームを攻撃したが、ドローンは車両に命中したものの爆発に失敗した。</li>
+<li>  [id=5] ロシア侵攻兵がドローンに被弾し、別のドローンが彼の手前を通過する映像が公開された。</li>
+<li>  [id=7] U2「ブラザーフッド」特殊部隊がポクロウスク方面でロシアの弾薬輸送車両をドローンで破壊。運転手と搭乗者2名が即死した。</li>
+<li>  [id=8] ウクライナのFPV迎撃ドローンが移動中のロシアのMi-28NM攻撃ヘリコプターに命中した。</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  [id=1] ウクライナ特殊作戦部隊「グループ2」がコスティアンティニフカ方面で建物の掃討作戦を実施した。</li>
+<li>  [id=3] 親ウクライナ派のベラルーシ義勇軍「憎悪」大隊がリマン方面でロシア軍兵士を排除した。</li>
+<li>  [id=7] ロシアの弾薬輸送車両が破壊され、運転手と搭乗者2名が即死した。</li>
+<li>  [id=8] ロシアのMi-28NM攻撃ヘリコプターがウクライナのFPV迎撃ドローンに命中された。</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  [id=4] 標的偵察を行っていたとされるイランのダウ船がAH-1Zヴァイパーによって破壊された（10月6日）。</li>
+<li>  [id=9] イエメン・サウジ戦争におけるドローン投下攻撃の短編コンピレーションが公開された。</li>
+<li>  [id=10] YNA/PLC部隊が南部マリブでフーシ派の陣地を襲撃した（10月14日）。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<ul>
+<li>  [id=6] 2004年にグロズヌイ競技場で発生した爆破事件に関する投稿。この事件でアフマド・カディロフおよび複数のロシア人政治家が死亡した。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<p>1.  [id=8] ウクライナのFPV迎撃ドローンが移動中のロシアMi-28NM攻撃ヘリコプターに命中。</p>
+<p>    <em>動く攻撃ヘリコプターをドローンで攻撃したとされる注目すべき事例。</em></p>
+<p>2.  [id=0] ウクライナ第59旅団がロシア兵站ルートを攻撃、装甲車両や鉄道車両などを破壊。</p>
+<p>    <em>ロシアの兵站網に広範な打撃を与えた可能性のある攻撃。</em></p>
+<p>3.  [id=7] ウクライナ特殊部隊がドローンでロシアの弾薬輸送車両を破壊、搭乗員3名を殺害。</p>
+<p>    <em>弾薬輸送車両の破壊と搭乗員の即死が明確に記録された事例。</em></p>
+<p>4.  [id=2] ロシアFPVドローンがウクライナの避難チームを攻撃するも、爆発に失敗。</p>
+<p>    <em>民間人避難中のチームを狙った攻撃と、幸運な爆発失敗の事例。</em></p>
+<p>5.  [id=4] 標的偵察を行っていたとされるイランのダウ船がAH-1Zヴァイパーによって破壊。</p>
+<p>    <em>中東地域における船舶に対する航空機からの攻撃事例。</em></p>
+<br>
+<p>---</p>
+<br>
+<h2>作業2: タイトル翻訳JSON</h2></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/hungarys-magyar-to-meet-zelensky-for-first-time-at-upcoming-eu-summit/" target="_blank">Hungary’s Magyar to meet Zelensky for first time at upcoming EU summit</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月14日 23:47 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ハンガリーのMagyar首相とウクライナのZelensky大統領が、来たるEUサミットで初の直接会談を行う予定である。</li>
+<li><strong>背景・文脈</strong>: ハンガリーは、ウクライナ国内の少数民族の権利保障を巡り、これまでウクライナのEU加盟交渉に障害を設けてきた。Zelensky大統領による関連法案への署名が、両国間の関係改善とウクライナのEU加盟プロセス進展への道を開く可能性を示唆しており、今回の会談はその重要な節目となる。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   ハンガリーのMagyar首相は、今後のEUサミットにおいて、ウクライナのZelensky大統領と初めて会談することを発表した。</p>
+<p>    *   この発表は、Zelensky大統領がウクライナ国内の少数民族の教育権を強化する法律に署名した2日後に行われた。</p>
+<p>    *   ウクライナの少数民族の権利強化は、ハンガリーが以前からウクライナのEU加盟交渉進展の前提条件として強く要求していた事項であった。</p>
+<p>    *   これにより、ハンガリーがこれまで懸念事項としていた点が解消され、ウクライナのEU加盟交渉における重要な障壁が取り除かれる可能性が高まった。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ウクライナのEU加盟プロセスにおけるハンガリーの障害が解消に向かうことは、ウクライナの西側統合への動きを加速させ、ロシアからの影響力を減らす上で地政学的に極めて重要である。EU加盟交渉の進展は、長期的なウクライナの安定と安全保障体制の強化に寄与し、ロシアによる侵略に対する抵抗力を高める。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/hungarys-magyar-to-meet-zelensky-for-first-time-at-upcoming-eu-summit/" data-title="Hungary’s Magyar to meet Zelensky for first time at upcoming EU summit" data-src="Kyiv Independent" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/exclusive-hungary-bulgaria-water-down-ambition-on-ukraines-eu-membership-bid-again/" target="_blank">Exclusive: Hungary, Bulgaria, water down ambition on Ukraine&#x27;s EU membership bid — again</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月14日 23:25 UTC</span></div><div class="art-body"><h2>要約</h2>
+<br>
+<ul>
+<li>  <strong>主題</strong>: EU首脳会議の最新ドラフト結論において、ウクライナのEU加盟に向けた進捗に関する表現が後退したこと。</li>
+<li>  <strong>背景・文脈</strong>: ロシアの侵攻を受けるウクライナにとって、EU加盟交渉の迅速な開始は国の将来の安全保障と欧州統合への重要なステップとして期待されている。EU加盟プロセスにおける表現の変更は、ウクライナの国際的支援の勢いに影響を与える可能性がある。</li>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   10月15-16日のEU首脳会議の最新ドラフト結論において、ウクライナのEU加盟交渉の進展に関する「as soon as possible（できるだけ早く）」という表現が削除された。</p>
+<p>    *   この文言の緩和は、ブルガリアとハンガリーからの圧力によるものとされている。</p>
+<p>    *   EU首脳会議の共同結論は、27加盟国によって事前に準備され、会議終了まで変更される可能性がある。</p>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: この動きは、ロシアからの侵攻に直面するウクライナへのEU内の連帯に亀裂が生じていることを示唆する。EU加盟プロセスの遅延は、ウクライナの士気に影響を与えるだけでなく、東欧におけるEUの地政学的影響力や対露戦略の有効性にも疑問を投げかける可能性がある。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/exclusive-hungary-bulgaria-water-down-ambition-on-ukraines-eu-membership-bid-again/" data-title="Exclusive: Hungary, Bulgaria, water down ambition on Ukraine&#x27;s EU membership bid" data-src="Kyiv Independent" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/policy/2026/10/hegseth-service-secretaries-discuss-generational-change-autonomous-warfare-command/416586/" target="_blank">Hegseth, service secretaries discuss ‘generational change’ of Autonomous Warfare Command</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年10月14日 14:07 UTC</span></div><div class="art-body"><p>以下に、提供された情報に基づき要約を記述します。</p>
+<br>
+<p>---</p>
+<br>
+<h2>要約形式（日本語）</h2>
+<br>
+<ul>
+<li>  <strong>主題</strong>: 米軍におけるAutonomous Warfare Commandの創設と、これに関連する各軍種（service）における組織再編の動き。</li>
+<li>  <strong>背景・文脈</strong>: AIや自律型システムが将来の戦場に「世代交代（generational change）」をもたらすとの認識が高まる中、米国防省は新たな脅威と機会に対応するための軍事組織の確立を進めている。</li>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   Hegsethと各軍種長官（service secretaries）が、Autonomous Warfare Commandに関する議論を行った。</p>
+<p>    *   この司令部の創設は、自律型兵器の時代における「世代交代」と位置づけられる。</p>
+<p>    *   国防長官は、各軍種がそれぞれAutonomous Warfare Commandに連動するコンポーネントコマンド（component command）を立ち上げる計画であると述べた。</p>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: 米軍が自律型技術の急速な発展に対応し、戦略的優位性を維持しようとする強い意志を示す。これは、新たな戦争ドメインにおける指揮統制能力の強化と、将来の紛争における技術的優位性の確保を目指すものであり、競争相手国に対する抑止力構築にも影響を与える。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/policy/2026/10/hegseth-service-secretaries-discuss-generational-change-autonomous-warfare-command/416586/" data-title="Hegseth, service secretaries discuss ‘generational change’ of Autonomous Warfare" data-src="Defense One" data-date="2026-10-14"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
