@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-10-15 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-10-15.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-10-15</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>11 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（11 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6er3y/ukraines_border_guard_service_dpsu_feniks_drone/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ国境警備隊のドローン部隊がロシア軍の多様な装備を攻撃する10分間の映像集</div><div class="vc-en">Ukraine&#x27;s Border Guard Service (DPSU) &quot;Feniks&quot; drone unit targeted Russian infantry in buggies and on motorbikes, as well as &quot;Pion&quot; and &quot;Msta-S&quot; SPGs, a tank, several &quot;Grad&quot; and &quot;Uragan&quot; MLRS, varied logistics, and armored vehicles. (10-minute compilation of recent work) Published October 13, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 06:56</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6er3y/ukraines_border_guard_service_dpsu_feniks_drone/" data-title="Ukraine&#x27;s Border Guard Service (DPSU) &quot;Feniks&quot; drone unit targeted Russian infan" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6wn1x/footage_shows_launch_of_ukraines_navy_neptune/" target="_blank"><span class="vc-ico">🚀</span><div class="vc-body"><div class="vc-ja">ウクライナ海軍のネプチューンミサイルシステムがボリソグレブスク空軍基地を攻撃</div><div class="vc-en">Footage shows launch of Ukraine’s Navy Neptune coastal missile system, which sunk the Moskva on 14 April 2022, and attacked Borisoglebsk military airfield destroying 6 Russian Su-34M fighter-bombers on Oct 15th 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 20:27</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6wn1x/footage_shows_launch_of_ukraines_navy_neptune/" data-title="Footage shows launch of Ukraine’s Navy Neptune coastal missile system, which sun" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6wfom/yaf_strikes_on_houthis_1014_1015_2026/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">YAFによるフーシ派への攻撃（2026年10月14日～15日）</div><div class="vc-en">YAF Strikes on Houthis. 10/14 - 10/15, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 20:19</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6wfom/yaf_strikes_on_houthis_1014_1015_2026/" data-title="YAF Strikes on Houthis. 10/14 - 10/15, 2026" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6rklv/ukrainian_sof_drone_russians_before_entering/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ特殊部隊のドローンが建物突入前にロシア兵を攻撃</div><div class="vc-en">Ukrainian SOF drone Russians before entering buildings</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 17:14</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6rklv/ukrainian_sof_drone_russians_before_entering/" data-title="Ukrainian SOF drone Russians before entering buildings" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6pypa/ukrainian_servicemen_from_the_timur_special_unit/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ウクライナGURティムール特殊部隊がカホフカ貯水池沿いでロシア軍を捕捉</div><div class="vc-en">Ukrainian servicemen from the Timur Special Unit of the GUR identified and intercepted a group of Russian servicemen from the 10th Seperate Special Purpose Brigade of the GRU somewhere along the Kakhovka Resovior, Oct. 11, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 16:14</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6pypa/ukrainian_servicemen_from_the_timur_special_unit/" data-title="Ukrainian servicemen from the Timur Special Unit of the GUR identified and inter" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6om8v/southern_giants_drone_strikes_on_houthis_10152026/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">「サザン・ジャイアンツ」によるフーシ派へのドローン攻撃（2026年10月15日）</div><div class="vc-en">&#x27;Southern Giants&#x27; Drone Strikes on Houthis - 10/15/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 15:23</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6om8v/southern_giants_drone_strikes_on_houthis_10152026/" data-title="&#x27;Southern Giants&#x27; Drone Strikes on Houthis - 10/15/2026" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6lby1/yaf_storms_houthi_positions_10142026_enemy_visible/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">YAFがフーシ派の陣地を襲撃（2026年10月14日）</div><div class="vc-en">YAF Storms Houthi Positions - 10/14/2026 [Enemy Visible]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 13:14</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6lby1/yaf_storms_houthi_positions_10142026_enemy_visible/" data-title="YAF Storms Houthi Positions - 10/14/2026 [Enemy Visible]" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6l7d0/houthi_sam_proporting_to_hit_a_saudi_eurofighter/" target="_blank"><span class="vc-ico">🚀</span><div class="vc-body"><div class="vc-ja">フーシ派のSAMがサウジアラビアのユーロファイタータイフーンを攻撃（2026年10月14日）</div><div class="vc-en">Houthi SAM proporting to hit a Saudi Eurofighter Typhoon on 14 October 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 13:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6l7d0/houthi_sam_proporting_to_hit_a_saudi_eurofighter/" data-title="Houthi SAM proporting to hit a Saudi Eurofighter Typhoon on 14 October 2026" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6h8y0/a_civilian_has_captured_footage_of_a_ukrainian/" target="_blank"><span class="vc-ico">🚀</span><div class="vc-body"><div class="vc-ja">民間人が撮影したウクライナのネプチューン巡航ミサイルによるロシアのボリソグレブスク空軍基地攻撃</div><div class="vc-en">A civilian has captured footage of a Ukrainian Neptune cruise missile strike on the Borisoglebsk airbase in Russia. According to the Ukrainian Navy, at least six Su-34 fighter-bombers were destroyed in the attack on October 15, 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 09:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6h8y0/a_civilian_has_captured_footage_of_a_ukrainian/" data-title="A civilian has captured footage of a Ukrainian Neptune cruise missile strike on " data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6a5dy/joint_forces_prosaf_millitia_fighting_in_kordofan/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">合同部隊（親SAF民兵）がコルドファンで戦闘（2026年10月14日）</div><div class="vc-en">Joint Forces (pro-SAF millitia) fighting in Kordofan, 14/10/26</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 02:33</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6a5dy/joint_forces_prosaf_millitia_fighting_in_kordofan/" data-title="Joint Forces (pro-SAF millitia) fighting in Kordofan, 14/10/26" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x69mq3/pdf_and_kndf_peoples_defense_forcekarenni/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">PDFとKNDFの反乱軍がミャンマー軍東部方面司令部の前哨基地を襲撃</div><div class="vc-en">PDF and KNDF (People&#x27;s Defense Force/Karenni Nationalities Defense Force) rebels raid a Myanmar (Burma) Army Eastern Command outpost near Mobye, Shan State (probably recorded between October 7-8)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 02:06</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x69mq3/pdf_and_kndf_peoples_defense_forcekarenni/" data-title="PDF and KNDF (People&#x27;s Defense Force/Karenni Nationalities Defense Force) rebels" data-src="r/CombatFootage" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<ul>
+<li>  ロシア軍の「Pion」自走榴弾砲がウクライナ国境警備隊（DPSU）の「Feniks」ドローン部隊の標的となった（10/13の作業）。</li>
+<li>  ロシア軍の「Msta-S」自走榴弾砲がウクライナ国境警備隊（DPSU）の「Feniks」ドローン部隊の標的となった（10/13の作業）。</li>
+<li>  ロシア軍の戦車1両がウクライナ国境警備隊（DPSU）の「Feniks」ドローン部隊の標的となった（10/13の作業）。</li>
+<li>  ロシア軍の装甲車両複数がウクライナ国境警備隊（DPSU）の「Feniks」ドローン部隊の標的となった（10/13の作業）。</li>
+</ul>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<ul>
+<li>  ウクライナ海軍のネプチューン沿岸ミサイルシステムが発射され、ロシアのボリソグレブスク軍用飛行場を攻撃し、ロシアのSu-34M戦闘爆撃機6機を破壊した（10/15）。</li>
+<li>  ロシア軍の「Grad」MLRS複数がウクライナ国境警備隊（DPSU）の「Feniks」ドローン部隊の標的となった（10/13の作業）。</li>
+<li>  ロシア軍の「Uragan」MLRS複数がウクライナ国境警備隊（DPSU）の「Feniks」ドローン部隊の標的となった（10/13の作業）。</li>
+<li>  民間人が、ウクライナのネプチューン巡航ミサイルによるロシアのボリソグレブスク空軍基地への攻撃映像を撮影。ウクライナ海軍によると、10月15日の攻撃で少なくともSu-34M戦闘爆撃機6機が破壊された。</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  ウクライナ国境警備隊（DPSU）の「Feniks」ドローン部隊が、ロシア歩兵（バギー・バイク搭乗）、自走榴弾砲（Pion、Msta-S）、戦車、MLRS（Grad、Uragan）、各種兵站、装甲車両を標的に攻撃（10/13の作業の10分間コンピレーション）。</li>
+<li>  ウクライナ特殊作戦部隊（SOF）が、建物に入る前のロシア兵をドローンで攻撃した。</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  ウクライナGUR（国防省情報総局）のティムール特殊部隊が、カホフカ貯水池沿いでロシアGRU（参謀本部情報総局）第10独立特殊任務旅団の兵士グループを特定し迎撃した（10/11）。</li>
+<li>  ロシア軍歩兵がバギーやバイクに乗車中にウクライナ国境警備隊（DPSU）の「Feniks」ドローン部隊の標的となった（10/13の作業）。</li>
+<li>  ロシア軍の各種兵站がウクライナ国境警備隊（DPSU）の「Feniks」ドローン部隊の標的となった（10/13の作業）。</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  YAF（フーシと対立する勢力）がフーシに対し攻撃を行った（10/14-10/15）。</li>
+<li>  「南部巨人」部隊がフーシに対しドローン攻撃を実施した（10/15）。</li>
+<li>  YAFがフーシの陣地を襲撃した（10/14）。</li>
+<li>  フーシが、地対空ミサイルでサウジアラビアのユーロファイタータイフーンに命中したと主張した（10/14）。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<br>
+<ul>
+<li>  合同部隊（スーダン国軍（SAF）支持民兵）がコルドファンで戦闘を行っている（10/14）。</li>
+<li>  PDF（人民防衛軍）とKNDF（カレンニー民族防衛軍）の反政府勢力がミャンマー軍東部方面軍の前哨基地を襲撃した（シャン州、10/7-8頃に記録）。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<br>
+<ul>
+<li>  [id=0] ウクライナDPSUの「Feniks」ドローン部隊が、ロシア軍のPion、Msta-S自走榴弾砲、戦車、装甲車両を標的に。</li>
+<li>  [id=1] ウクライナ海軍のネプチューンミサイルにより、ロシアのボリソグレブスク空軍基地でSu-34M戦闘爆撃機6機が破壊された。</li>
+<li>  [id=8] 民間人が撮影したウクライナのネプチューンミサイルによるロシア空軍基地への攻撃映像、Su-34M戦闘爆撃機6機破壊を確認。</li>
+<li>  [id=4] ウクライナGURのティムール特殊部隊が、ロシアGRU第10独立特殊任務旅団の兵士グループを迎撃。</li>
+<li>  [id=7] フーシの地対空ミサイルがサウジアラビアのユーロファイタータイフーンに命中したと主張。</li>
+</ul>
+<br>
+<p>---</p>
+<h2>作業2: タイトル翻訳JSON</h2></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/g7-countries-pledge-260-million-euros-for-chornobyl-safety-infrastructure-repairs-damaged-in-russian-attack/" target="_blank">G7 countries pledge 260 million euros to repair Chornobyl safety infrastructure damaged in Russian attack</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月16日 01:06 UTC</span></div><div class="art-body"><ul>
+<li>  <strong>主題</strong>: G7諸国が、ロシアによる攻撃で損傷したChornobyl原子力発電所の安全インフラ修復に対し、2億6000万ユーロの資金拠出を約束した。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>背景・文脈</strong>: Chornobylは過去に重大な原子力事故を経験しており、その封じ込め施設の損傷は、広範な放射線学的リスクと環境安全保障上の懸念を引き起こすため、国際社会にとって喫緊の課題となっている。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   G7諸国は、Chornobylの安全インフラ修復のために合計2億6000万ユーロを拠出することを表明した。</p>
+<p>    *   修復対象は、Kyivの北約130kmに位置するconfinement structureである。</p>
+<p>    *   当該施設は、2022年2月にロシアのdrone攻撃を受け、深刻な損害を被った。</p>
+<p>    *   この資金提供は、放射性物質の拡散防止とウクライナにおける核安全保障体制の維持を目的としている。</p>
+<br>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: ロシアによるChornobylへの攻撃と重要インフラの損傷は、国際法および原子力施設の保護に関する規範に対する重大な違反であり、ウクライナ紛争がもたらす長期的な環境・人道リスクを浮き彫りにする。G7による本件への資金拠出は、国際社会がウクライナの核安全保障問題に引き続き深くコミットしていることを示し、ロシアの行動に対する連携した国際的対応の意志を強調するものである。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/g7-countries-pledge-260-million-euros-for-chornobyl-safety-infrastructure-repairs-damaged-in-russian-attack/" data-title="G7 countries pledge 260 million euros to repair Chornobyl safety infrastructure " data-src="Kyiv Independent" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/zelensky-meets-belgian-prime-minister-de-wever-but-silence-reigns-on-russian-assets/" target="_blank">Zelensky meets Belgian Prime Minister De Wever, but silence reigns on Russian assets</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月16日 00:05 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ウクライナのZelensky大統領とベルギーのDe Wever首相の会談における、ロシア凍結資産の処遇に関する議論。</li>
+<li><strong>背景・文脈</strong>: ロシアによるウクライナ侵攻を受け、欧州は多額のロシア資産を凍結しており、ウクライナはこれらの資産の活用を強く望んでいる。特にベルギーは大量のロシア資産を管理しており、その処遇はウクライナ支援の動向と国際法における重要課題となっている。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   Zelensky大統領がベルギーのDe Wever首相と会談を実施した。</p>
+<p>    *   会談の主要な議題の一つは、ベルギーの金融機関Euroclearによって凍結されている約2000億ユーロ（2270億ドル）相当のロシア資産の処遇であった。</p>
+<p>    *   しかし、会談ではロシア凍結資産の活用に関して具体的な進展は見られず、沈黙が続いている。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ロシア凍結資産の活用はウクライナの長期的な戦費および復興資金の重要な源泉となり得るため、この進展の欠如はウクライナ支援における資金調達課題の継続を示唆する。これは、国際法と主権尊重の原則の狭間で、欧州が直面する法的・政治的複雑性を浮き彫りにしている。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/zelensky-meets-belgian-prime-minister-de-wever-but-silence-reigns-on-russian-assets/" data-title="Zelensky meets Belgian Prime Minister De Wever, but silence reigns on Russian as" data-src="Kyiv Independent" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/russian-drone-strikes-leave-portions-of-kyiv-without-power-fires-burning/" target="_blank">Russian drone strikes leave portions of Kyiv without power, fires burning</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月15日 23:23 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: Kyivを標的としたロシアのドローン攻撃が、同市のエネルギーインフラに深刻な被害を与えている。</li>
+<li><strong>背景・文脈</strong>: ロシアによるウクライナ侵攻が継続する中、ロシア軍はウクライナの主要都市、特に首都Kyivのエネルギーインフラを頻繁に標的としている。これは、ウクライナの抗戦能力と市民生活に甚大な影響を及ぼす戦略の一環である。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   ロシアのドローン攻撃により、Kyivの一部地域で停電が発生。</p>
+<p>    *   Kyiv州のエネルギー施設が損害を受けた。</p>
+<p>    *   Dnipro River右岸のKyivの一部地域で水道水圧が低下。</p>
+<p>    *   緊急専門家が給水ポンプ施設への電力供給を確保するため、供給源の切り替えを実施。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ロシアは冬季を前にウクライナのエネルギーインフラを体系的に攻撃することで、民間人の士気を低下させ、ウクライナ政府に圧力をかけることを意図している。この戦略は、ウクライナの抗戦能力だけでなく、人道状況にも深刻な影響を及ぼし、国際社会の支援の必要性を高める。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/russian-drone-strikes-leave-portions-of-kyiv-without-power-fires-burning/" data-title="Russian drone strikes leave portions of Kyiv without power, fires burning" data-src="Kyiv Independent" data-date="2026-10-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
