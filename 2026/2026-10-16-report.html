@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-10-16 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-10-16.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-10-16</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>12 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（12 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x7sqan/strikes_on_houthi_targets_on_land_and_at_sea/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">フーシ派の陸上・海上目標への攻撃 - 2026年10月16日公開</div><div class="vc-en">Strikes on Houthi Targets on Land and at Sea - Released 10/16/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 21:35</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x7sqan/strikes_on_houthi_targets_on_land_and_at_sea/" data-title="Strikes on Houthi Targets on Land and at Sea - Released 10/16/2026" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x7sn4j/looking_for_an_iran_iraq_war_clip_i_saw_on_reels/" target="_blank"><span class="vc-ico">💥</span><div class="vc-body"><div class="vc-ja">リールで見たイラン・イラク戦争のクリップを探しています</div><div class="vc-en">Looking for an Iran Iraq war clip I saw on Reels</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 21:31</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x7sn4j/looking_for_an_iran_iraq_war_clip_i_saw_on_reels/" data-title="Looking for an Iran Iraq war clip I saw on Reels" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x7n86s/ukrainian_air_defence_battalion_prybultsi_of_the/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">ウクライナ防空大隊がベルゴロド州で2機目のロシアMi-28ヘリを撃墜</div><div class="vc-en">Ukrainian Air Defence Battalion “Prybultsi” of the 115th Mechaniced Brigade struck a second Russian Mi-28 combat helicopter in the Belgorod region. A few days ago the same group struck a Mi-28NM. Result unclear. Published 16.10.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 17:59</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x7n86s/ukrainian_air_defence_battalion_prybultsi_of_the/" data-title="Ukrainian Air Defence Battalion “Prybultsi” of the 115th Mechaniced Brigade stru" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x7lu8f/russian_soldier_records_ukrainian_mediumrange_uav/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ロシア兵がクリミア補給路でウクライナUAVがトラックを攻撃する様子を記録</div><div class="vc-en">Russian soldier records Ukrainian medium-range UAV bypassing mobile air defense team and hitting a truck on the Crimea supply route - Published 16/10/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 17:05</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x7lu8f/russian_soldier_records_ukrainian_mediumrange_uav/" data-title="Russian soldier records Ukrainian medium-range UAV bypassing mobile air defense " data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x7k1vy/yafs_first_brigade_drone_strikes_on_houthis/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">イエメン国軍「第一旅団」によるフーシ派へのドローン攻撃 - 2026年10月16日</div><div class="vc-en">YAF&#x27;s &#x27;First Brigade&#x27; Drone Strikes on Houthis - 10/16/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 15:58</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x7k1vy/yafs_first_brigade_drone_strikes_on_houthis/" data-title="YAF&#x27;s &#x27;First Brigade&#x27; Drone Strikes on Houthis - 10/16/2026" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x7iw6i/russian_soldiers_came_under_ukrainian_fpv_drone/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ロシア兵がウクライナのFPVドローン攻撃を受ける。日時・場所は不明。</div><div class="vc-en">Russian soldiers came under Ukrainian FPV drone attack. Date and location not disclosed. [Music added by source]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 15:14</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x7iw6i/russian_soldiers_came_under_ukrainian_fpv_drone/" data-title="Russian soldiers came under Ukrainian FPV drone attack. Date and location not di" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x75r7g/dobropillia_ukraines_border_guard_service_dpsu/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ドブロピリア：ウクライナ国境警備隊のドローン部隊がロシア歩兵を追撃</div><div class="vc-en">Dobropillia: Ukraine&#x27;s Border Guard Service (DPSU) &quot;Feniks&quot; drone unit chased down Russian infantry on ATVs, on motorbikes, and on foot, using heavy bomber drones and FPV drone strikes to target enemy personnel and vehicles. Includes some multi-perspective strike footage. Published October 15, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 03:32</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x75r7g/dobropillia_ukraines_border_guard_service_dpsu/" data-title="Dobropillia: Ukraine&#x27;s Border Guard Service (DPSU) &quot;Feniks&quot; drone unit chased do" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x74q5a/flashing_lights_combat_edit_of_a_pdf_rebelmade/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ミャンマーのマンダレー地域、ニャウンウー郡区の軍事拠点襲撃の戦闘編集</div><div class="vc-en">(Flashing Lights) Combat edit of a PDF rebel-made compilation showing a raid on a Myanmar (Burma) Army outpost on the Byatta Pannsaat Road (Nyaung U Township, Mandalay Region)-October 11, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 02:38</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x74q5a/flashing_lights_combat_edit_of_a_pdf_rebelmade/" data-title="(Flashing Lights) Combat edit of a PDF rebel-made compilation showing a raid on " data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x72cb8/ynaplc_troops_during_ongoing_firefights_in_taiz/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">タイズでのフーシ派との戦闘中のイエメン国軍/PLC部隊</div><div class="vc-en">YNA/PLC troops during ongoing firefights in Taiz against the Houthis</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 00:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x72cb8/ynaplc_troops_during_ongoing_firefights_in_taiz/" data-title="YNA/PLC troops during ongoing firefights in Taiz against the Houthis" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x71rd0/ukraines_usf_59th_assault_brigade_signum_continue/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ第59突撃旅団「SIGNUM」がFPVドローンでロシア歩兵を攻撃</div><div class="vc-en">Ukraine&#x27;s USF 59th Assault Brigade &quot;SIGNUM&quot; continue to hunt for Russian infantry in forests, fields, and ruins, delivering accurate FPV drone strikes. Posted October 15, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/16 00:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x71rd0/ukraines_usf_59th_assault_brigade_signum_continue/" data-title="Ukraine&#x27;s USF 59th Assault Brigade &quot;SIGNUM&quot; continue to hunt for Russian infantr" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6zyx0/foreign_volunteer_sso_unit_infiltrating_russian/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">外国人義勇兵SSO部隊がロシアの塹壕線に潜入（2026年7月）</div><div class="vc-en">Foreign Volunteer SSO Unit infiltrating Russian Trench Line (July 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 22:47</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6zyx0/foreign_volunteer_sso_unit_infiltrating_russian/" data-title="Foreign Volunteer SSO Unit infiltrating Russian Trench Line (July 2026)" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1x6zxjw/yaf_aerial_footage_of_marib_front_pursuit_of/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">イエメン国軍によるマアリブ戦線でのフーシ派追撃の航空映像 - 2026年10月15日</div><div class="vc-en">YAF Aerial Footage of Marib Front Pursuit of Houthis - 10/15/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/15 22:45</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1x6zxjw/yaf_aerial_footage_of_marib_front_pursuit_of/" data-title="YAF Aerial Footage of Marib Front Pursuit of Houthis - 10/15/2026" data-src="r/CombatFootage" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 503 UNAVAILABLE. {&#x27;error&#x27;: {&#x27;code&#x27;: 503, &#x27;message&#x27;: &#x27;This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.&#x27;, &#x27;status&#x27;: &#x27;UNAVAILABLE&#x27;}}</em></p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/us-lawmaker-introduces-bill-blocking-trumps-russian-diesel-deal-2/" target="_blank">US lawmaker introduces bill blocking Trump&#x27;s Russian diesel deal</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月16日 22:59 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: 米国議員が、Trump前大統領が関与する可能性のあるロシア産ディーゼル燃料取引を阻止するための法案を議会に提出した件。</li>
+<li><strong>背景・文脈</strong>: ロシアによるウクライナ侵攻が継続する中、米国はロシアへの経済制裁を通じて侵攻を抑制しようとしている。この取引は、ロシアの戦費調達を助け、米国の対露政策と矛盾する可能性があるため、重要な焦点となっている。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    * 米国議会に、Trump前大統領が推進する可能性のあるロシア産ディーゼル燃料取引を阻止する法案が提出された。</p>
+<p>    * 提案議員は、この取引が米国民のコスト削減には繋がらず、むしろロシアに数百万ドルの資金を提供することになると主張。</p>
+<p>    * 議員は、この資金がロシアによるUkrainian民間人の「虐殺」継続に利用されると強く批判している。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: この動きは、ロシアへの経済的圧力を維持する上での米国内の政策的一貫性の重要性を示唆する。もしこの取引が実現すれば、ロシアの戦費調達能力を強化し、ウクライナ侵攻の長期化や国際的な対露制裁体制の弱体化を招く恐れがある。また、米国内の政治的対立が対外政策に与える影響も浮き彫りにする。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/us-lawmaker-introduces-bill-blocking-trumps-russian-diesel-deal-2/" data-title="US lawmaker introduces bill blocking Trump&#x27;s Russian diesel deal" data-src="Kyiv Independent" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/threats/2026/10/marines-fielding-new-tech-prolonged-medical-care-battlefield/416656/" target="_blank">Marines fielding new tech for prolonged medical care on the battlefield</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年10月16日 15:51 UTC</span></div><div class="art-body"><h2>要約形式（日本語）</h2>
+<br>
+<ul>
+<li>  <strong>主題</strong>: 米海兵隊 (Marines) が戦場での負傷兵への医療ケアを長期化させるための新技術を導入している。</li>
+<li>  <strong>背景・文脈</strong>: 従来の「黄金時間（golden hour）」に限定されない、戦場での負傷兵の生存率向上と長期的な医療ケア提供の必要性が高まっている。これは、特に大規模紛争や分散型作戦環境における現代の戦場要件に対応するためである。</li>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   <strong>Mobile blood refrigeration</strong>: 輸血用血液の戦場での長期保存を可能にし、必要な時に供給できる体制を確立する。</p>
+<p>    *   <strong>Ultrasounds</strong>: 戦場で迅速かつ正確な負傷診断を可能にし、タイムリーな処置に繋げる。</p>
+<p>    *   <strong>Power generation</strong>: 上記の高度な医療機器を戦場で継続的に稼働させるための安定した電源供給を確保する。</p>
+<p>    *   これらの技術の統合により、Marinesは負傷兵に対する「golden hour」を超えた持続的な医療ケア能力を獲得する。</p>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: この技術導入は、米軍が、特に中国やロシアのような対等な敵との大規模紛争において、後方支援が困難な遠隔地や分散型作戦環境下での兵士の生存率向上を重視していることを示唆する。これは、長期戦における戦力維持能力と士気の向上に貢献し、将来的な戦域での展開能力を強化する。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/threats/2026/10/marines-fielding-new-tech-prolonged-medical-care-battlefield/416656/" data-title="Marines fielding new tech for prolonged medical care on the battlefield" data-src="Defense One" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/policy/2026/10/army-robotics-technician--adaptation/416651/" target="_blank">The real job of the Army’s new ‘robotics technicians’ is constant adaptation</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年10月16日 15:10 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/policy/2026/10/army-robotics-technician--adaptation/416651/" data-title="The real job of the Army’s new ‘robotics technicians’ is constant adaptation" data-src="Defense One" data-date="2026-10-16"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
