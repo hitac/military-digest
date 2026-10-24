@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-10-24 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-10-24.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-10-24</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>8 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（8 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xea4jh/ukraines_59th_assault_brigade_signum_targeted/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ第59強襲旅団「シグナム」が固定翼/FPVドローンでロシア兵站ルートを攻撃、タンカー・装甲車等を破壊。</div><div class="vc-en">Ukraine&#x27;s 59th Assault Brigade &quot;Signum&quot; targeted Russian logistical routes with fixed wing midrange strike drones as well as shorter range FPVs, hitting tankers, equipment, armored vehicles, and supply vehicles of all types. Posted October 23-24, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/24 14:29</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xea4jh/ukraines_59th_assault_brigade_signum_targeted/" data-title="Ukraine&#x27;s 59th Assault Brigade &quot;Signum&quot; targeted Russian logistical routes with " data-src="r/CombatFootage" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xej3nr/ukraines_414th_usf_brigade_magyars_birds/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ第414旅団「マジャーズ・バーズ」がFPVドローンでロシア歩兵攻撃を撃退、連日敵強襲部隊2個相当を破壊。</div><div class="vc-en">Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; continues to defeat Russian infantry attacks with help from FPV drones, running down the equivalent of two enemy assault groups per day, every day so far this month. [Compilation/Highlights] Posted October 22, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/24 20:33</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xej3nr/ukraines_414th_usf_brigade_magyars_birds/" data-title="Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; continues to defeat Russian infantr" data-src="r/CombatFootage" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xeirsz/the_yemeni_armed_forces_houthis_are_targeting/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">イエメン軍（フーシ派）がサウジのため戦うスーダン人傭兵を狙撃部隊で標的。</div><div class="vc-en">The Yemeni armed forces (Houthis) are targeting Sudanese mercenaries fighting for the Saudi Arabia with a sniper unit. (24 October 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/24 20:19</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xeirsz/the_yemeni_armed_forces_houthis_are_targeting/" data-title="The Yemeni armed forces (Houthis) are targeting Sudanese mercenaries fighting fo" data-src="r/CombatFootage" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xebu83/moment_fp1_longrange_strike_uav_attacked_the_ozon/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">FP-1長距離攻撃UAVがロシア・オムスクのOzon物流ハブを攻撃する瞬間（10月24日）。</div><div class="vc-en">Moment FP-1 long-range strike UAV attacked the Ozon logistics hub in Omsk, Russia, October 24, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/24 15:40</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xebu83/moment_fp1_longrange_strike_uav_attacked_the_ozon/" data-title="Moment FP-1 long-range strike UAV attacked the Ozon logistics hub in Omsk, Russi" data-src="r/CombatFootage" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xe6pm4/during_an_assault_russians_from_the_346th_gru_get/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">突撃中、ロシア第346GRU部隊員が地下室に隠れているところをFPVドローンに攻撃される。</div><div class="vc-en">During an assault, Russians from the 346th GRU get hit by an FPV while hiding in a basement</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/24 11:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xe6pm4/during_an_assault_russians_from_the_346th_gru_get/" data-title="During an assault, Russians from the 346th GRU get hit by an FPV while hiding in" data-src="r/CombatFootage" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xe6mz8/yemens_houthis_have_posted_a_clip_of_shawaz_fpv/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">イエメンのフーシ派がマリブ州の親サウジ勢力へのシャワーズFPVドローン攻撃映像を公開。</div><div class="vc-en">Yemen&#x27;s Houthis have posted a clip of Shawaz FPV drone strikes on pro-Saudi forces in Marib province. 22.10.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/24 11:50</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xe6mz8/yemens_houthis_have_posted_a_clip_of_shawaz_fpv/" data-title="Yemen&#x27;s Houthis have posted a clip of Shawaz FPV drone strikes on pro-Saudi forc" data-src="r/CombatFootage" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xe6glj/a_ukrainian_loitering_drone_hits_a_truck_full_of/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナの徘徊型ドローンが東部ウクライナでロシア歩兵満載のトラックを攻撃。</div><div class="vc-en">A Ukrainian loitering drone hits a truck full of Russian infantry somewhere in eastern Ukraine (Unknown date)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/24 11:41</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xe6glj/a_ukrainian_loitering_drone_hits_a_truck_full_of/" data-title="A Ukrainian loitering drone hits a truck full of Russian infantry somewhere in e" data-src="r/CombatFootage" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xdxy6k/kachin_independence_army_and_pdf_peoples_defense/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">カチン独立軍とPDF反乱軍がミャンマー軍に対しFPVドローンを使用（2026年10月）。</div><div class="vc-en">Kachin Independence Army and PDF (People&#x27;s Defense Force) rebels use FPV drones against the Myanmar (Burma) Army (October 2026) [music from source]</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/24 03:19</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xdxy6k/kachin_independence_army_and_pdf_peoples_defense/" data-title="Kachin Independence Army and PDF (People&#x27;s Defense Force) rebels use FPV drones " data-src="r/CombatFootage" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><h2>日本語ダイジェスト</h2>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<ul>
+<li>  ウクライナ第59強襲旅団「シグナム」が固定翼中距離ストライクドローンおよび短距離FPVドローンを使用し、ロシアの兵站ルートを攻撃。タンカー、各種装備、装甲車両、あらゆる種類の補給車両が標的となり、破壊された。</li>
+</ul>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  ウクライナ第59強襲旅団「シグナム」が固定翼中距離ストライクドローンと短距離FPVドローンでロシアの兵站ルートを攻撃し、タンカー、装備、装甲車両、補給車両を破壊。</li>
+<li>  ウクライナ第414USF旅団「マジャーズ・バーズ」がFPVドローンを活用し、ロシア歩兵の攻撃を撃退。</li>
+<li>  ロシア第346GRU部隊の兵士が襲撃中に地下室に隠れているところをFPVドローンに攻撃された。</li>
+<li>  ウクライナの徘徊型ドローンが東ウクライナのどこかでロシア歩兵満載のトラックを攻撃。</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  ウクライナ第414USF旅団「マジャーズ・バーズ」がFPVドローンの支援により、ロシア歩兵の攻撃を撃退し続けており、今月これまでに毎日、敵強襲部隊2個に相当する戦力を撃破している。</li>
+<li>  ロシア第346GRU部隊の兵士が襲撃中にFPVドローンに攻撃された。</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  イエメン武装勢力（フーシ派）がサウジアラビアのために戦うスーダン人傭兵を狙撃部隊で標的にした。</li>
+<li>  イエメンのフーシ派がマリブ州で親サウジアラビア軍に対するシャワーズFPVドローン攻撃の映像を公開した。</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<br>
+<ul>
+<li>  ロシアのオムスクにあるOzon物流ハブがFP-1長距離攻撃UAVによって攻撃された。</li>
+<li>  カチン独立軍（KIA）とPDF（人民防衛軍）反乱軍がミャンマー（ビルマ）軍に対しFPVドローンを使用。</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<br>
+<ul>
+<li>  <strong>id=0</strong> ウクライナが固定翼/FPVドローンでロシアの兵站・装甲車両を広範囲に攻撃。（装甲車両情報を含む最重要報告）</li>
+<li>  <strong>id=3</strong> ロシア国内の主要物流ハブが長距離攻撃UAVにより攻撃された事例。</li>
+<li>  <strong>id=1</strong> ウクライナがFPVドローンで連日多数のロシア歩兵部隊を撃破している報告。</li>
+<li>  <strong>id=2</strong> フーシ派がスーダン人傭兵を狙撃で攻撃する具体的な戦闘行動。</li>
+<li>  <strong>id=7</strong> ミャンマーの内戦でFPVドローンが使用されている新たな戦場での事例。</li>
+</ul></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/deadly-russian-drone-strike-targets-apartment-in-dnipropetrovsk-oblast-killing-3-injuring-12/" target="_blank">Deadly Russian drone strike targets apartment in Dnipropetrovsk Oblast, killing 3, injuring 12</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月25日 00:42 UTC</span></div><div class="art-body"><p><strong>主題</strong>:</p>
+<p>ロシア軍によるDnipropetrovsk Oblastの民間集合住宅に対するドローン攻撃と、それに伴う甚大な民間人犠牲について。</p>
+<br>
+<p><strong>背景・文脈</strong>:</p>
+<p>ロシアのウクライナ侵攻において、民間インフラや居住地域への攻撃は常態化しており、本件は市民の安全保障に対する深刻な脅威を示す最新の事例である。</p>
+<br>
+<p><strong>主要な内容</strong>:</p>
+<ul>
+<li>  ロシアはDnipropetrovsk Oblast内のアパートを標的としたドローン攻撃を実施した。</li>
+<li>  この攻撃により、民間人3人が死亡、12人が負傷した。</li>
+<li>  負傷者の中には11歳の少女が含まれており、病院で治療中の5人のうち2人は重体で手術を受けている。</li>
+</ul>
+<br>
+<p><strong>軍事的・地政学的意義</strong>:</p>
+<p>ロシアによる民間標的への攻撃は、ウクライナ国民の士気を挫くことを意図した戦略の一環であり、国際人道法違反の疑いがある。これはウクライナの防空能力強化と国際社会によるロシアへの圧力継続の重要性を改めて示している。</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/deadly-russian-drone-strike-targets-apartment-in-dnipropetrovsk-oblast-killing-3-injuring-12/" data-title="Deadly Russian drone strike targets apartment in Dnipropetrovsk Oblast, killing " data-src="Kyiv Independent" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukrainian-forces-reportedly-strike-russian-targets-2-500-kilometers-from-border/" target="_blank">Ukrainian forces reportedly strike Russian targets 2,500 kilometers from border</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月24日 19:48 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukrainian-forces-reportedly-strike-russian-targets-2-500-kilometers-from-border/" data-title="Ukrainian forces reportedly strike Russian targets 2,500 kilometers from border" data-src="Kyiv Independent" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/european-parliament-vice-president-ends-hunger-strike-following-oleshky-ceasefire-announcement/" target="_blank">European Parliament Vice President ends hunger strike following Oleshky ceasefire announcement</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月24日 17:22 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/european-parliament-vice-president-ends-hunger-strike-following-oleshky-ceasefire-announcement/" data-title="European Parliament Vice President ends hunger strike following Oleshky ceasefir" data-src="Kyiv Independent" data-date="2026-10-24"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
