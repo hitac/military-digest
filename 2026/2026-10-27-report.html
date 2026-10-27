@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-10-27 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-10-27.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-10-27</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>7 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（7 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xh0jue/new_highres_footage_by_the_ukrainian_sternenko/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナのスティンドローンがイラン/ロシア製シャヘド/ゲランUAVを高高度で迎撃する高解像度映像を公開。</div><div class="vc-en">New high-res footage by the Ukrainian &quot;Sternenko Community&quot; shows high-altitude intercepts by Ukrainian sting drones on Iranian/Russian Shahed/Geran UAVs. Published - 27/10/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/27 18:28</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xh0jue/new_highres_footage_by_the_ukrainian_sternenko/" data-title="New high-res footage by the Ukrainian &quot;Sternenko Community&quot; shows high-altitude " data-src="r/CombatFootage" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xgvs6z/photos_from_the_asrar_area_in_the_mawiya_district/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">タイズ県アスラール地域からの写真：フーシ派のミサイルが目標に到達しなかったと住民が報告。</div><div class="vc-en">Photos from the Asrar area in the Mawiya district of Taiz Governorate. Citizens said that they are Houthi missiles that failed to reach their targets today, October 27/2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/27 15:35</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xgvs6z/photos_from_the_asrar_area_in_the_mawiya_district/" data-title="Photos from the Asrar area in the Mawiya district of Taiz Governorate. Citizens " data-src="r/CombatFootage" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xgvggk/jordanian_specialized_security_forces_launches_a/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ヨルダン特殊治安部隊がカラクの教会銃撃事件容疑者3名のアジトを急襲。</div><div class="vc-en">Jordanian Specialized Security Forces launches a raid on three suspects related to the shooting attack on a church in Karak</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/27 15:23</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xgvggk/jordanian_specialized_security_forces_launches_a/" data-title="Jordanian Specialized Security Forces launches a raid on three suspects related " data-src="r/CombatFootage" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xgtv2t/ukrainian_strike_drone_flies_through_head_on_fire/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ攻撃ドローンがロシア移動式火器グループの発砲をくぐり抜ける映像。</div><div class="vc-en">Ukrainian strike drone flies through head on fire from a Russian mobile fire group, fall 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/27 14:21</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xgtv2t/ukrainian_strike_drone_flies_through_head_on_fire/" data-title="Ukrainian strike drone flies through head on fire from a Russian mobile fire gro" data-src="r/CombatFootage" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xgrmnc/alhajj_alsabikha_the_yemeni_fourth_military/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">イエメン第四軍管区軍、アル・ムダラバー戦線でフーシ派の迫撃砲部隊とブルドーザーを攻撃。</div><div class="vc-en">Al-Hajj - Al-Sabikha The Yemeni Fourth Military Region Army targets a Houthi team launching mortars, along with a crew and bulldozer belonging to the Houthi militia in the Al-Mudarabah front. October 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/27 12:49</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xgrmnc/alhajj_alsabikha_the_yemeni_fourth_military/" data-title="Al-Hajj - Al-Sabikha The Yemeni Fourth Military Region Army targets a Houthi tea" data-src="r/CombatFootage" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xgca0x/ukrainian_soldiers_shot_multiple_russian_strike/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ兵がコスタンティニフカ地区で複数のロシア攻撃ドローンを撃墜。</div><div class="vc-en">Ukrainian soldiers shot multiple Russian strike drones in the Kostyantynivka sector. Autumn 2026, Tsunami Regiment, Liut Assault Brigade. Published 26.10.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/26 23:10</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xgca0x/ukrainian_soldiers_shot_multiple_russian_strike/" data-title="Ukrainian soldiers shot multiple Russian strike drones in the Kostyantynivka sec" data-src="r/CombatFootage" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xgbhyq/ukrainian_soldiers_eliminated_a_russian_soldier/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">ウクライナ兵が投降を拒否したロシア兵を排除。</div><div class="vc-en">Ukrainian soldiers eliminated a Russian soldier who refused to surrender. &quot;Path of SOF&quot; unit. 8th SOF Regiment. Published 26.10.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/26 22:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xgbhyq/ukrainian_soldiers_eliminated_a_russian_soldier/" data-title="Ukrainian soldiers eliminated a Russian soldier who refused to surrender. &quot;Path " data-src="r/CombatFootage" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p>本日の戦場動画・軍事報告コミュニティへの投稿ダイジェストです。</p>
+<br>
+<h2>ウクライナ戦場</h2>
+<br>
+<h3>装甲車両・戦車 ★最優先</h3>
+<p>（該当情報なし）</p>
+<br>
+<h3>砲撃・ミサイル・HIMARS等</h3>
+<p>（該当情報なし）</p>
+<br>
+<h3>ドローン・FPV</h3>
+<ul>
+<li>  ウクライナの「Sternenko Community」が公開した、ウクライナのスティンドローンによるイラン/ロシア製シャヘド/ゲランUAVの高高度迎撃高解像度映像。(id=0)</li>
+<li>  ウクライナの攻撃ドローンがロシアの移動式火器グループの火中を飛行する映像。(id=3)</li>
+<li>  ウクライナ兵がコスタンティニフカ地区で複数のロシア攻撃ドローンを撃墜。(id=5)</li>
+</ul>
+<br>
+<h3>歩兵戦・その他</h3>
+<ul>
+<li>  ウクライナ兵が投降を拒否したロシア兵を排除。「Path of SOF」部隊、第8特殊作戦連隊。(id=6)</li>
+</ul>
+<br>
+<h2>中東（イスラエル・ガザ・レバノン・フーシ等）</h2>
+<br>
+<h3>装甲車両・戦車</h3>
+<p>（該当情報なし）</p>
+<br>
+<h3>その他の戦況</h3>
+<ul>
+<li>  イエメンのタイズ県アスラール地域からの写真で、フーシ派のミサイルが目標に到達しなかったと住民が証言。(id=1)</li>
+<li>  イエメン第四軍管区軍が、アル・ムダラバー戦線で迫撃砲を発射するフーシ派部隊と、フーシ派民兵に属する乗員およびブルドーザーを標的とした。(id=4)</li>
+</ul>
+<br>
+<h2>その他の地域</h2>
+<br>
+<ul>
+<li>  ヨルダン特殊治安部隊が、カラクの教会銃撃事件に関連する3容疑者のアジトを急襲。(id=2)</li>
+</ul>
+<br>
+<h2>本日のハイライト</h2>
+<br>
+<ul>
+<li>  <strong>id=0</strong>: ウクライナのスティンドローンによるシャヘド/ゲランUAVの高高度迎撃映像、ドローンの防空能力向上を示す。</li>
+<li>  <strong>id=3</strong>: ウクライナ攻撃ドローンがロシアの火器グループの火中を飛び抜ける衝撃的な映像。</li>
+<li>  <strong>id=1</strong>: フーシ派ミサイルの目標不達を住民が報告、中東の情勢の一端を示す。</li>
+<li>  <strong>id=4</strong>: イエメンにおけるフーシ派への攻撃、ブルドーザーも標的となる具体的な戦闘状況。</li>
+<li>  <strong>id=6</strong>: 投降拒否のロシア兵排除、戦場の厳しさを物語る。</li>
+</ul></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/policy/2026/10/financial-ukraine/416851/" target="_blank">Financial aid for Ukraine is getting harder to find</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年10月27日 17:28 UTC</span></div><div class="art-body"><h2>要約形式（日本語）</h2>
+<br>
+<ul>
+<li>  <strong>主題</strong>: ウクライナへの国際的な財政支援の確保が困難になっている現状と、その背景にある要因について分析する。</li>
+<li>  <strong>背景・文脈</strong>: ロシアの侵攻に対するウクライナの防衛力維持には、国際社会からの継続的な軍事・財政支援が不可欠である。しかし、支援国側の経済的ストレスと自国の再軍備の必要性が、ウクライナへの支援能力を制約している。</li>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   ウクライナへの支援自体は、支援国の政治的アジェンダとして依然として高い人気を維持している。</p>
+<p>    *   しかし、支援国自身の経済的ストレス（インフレ、エネルギー価格高騰など）が増大しており、財政支出に対する国内的な圧力が強まっている。</p>
+<p>    *   NATO諸国を中心に、自国軍の再軍備、備蓄補充、防衛力強化の必要性が高まっており、これに多額の資金が投じられ、ウクライナへの財政支援に回せる予算が相対的に減少している。</p>
+<p>    *   結果として、ウクライナがロシアの侵攻に対抗し続けるために必要な、包括的な財政および軍事支援の確保がより一層困難な状況に直面している。</p>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: 国際社会からの財政支援の縮小は、ウクライナ軍の戦力維持および長期的な防衛能力に深刻な影響を与え、戦況をロシアに有利に進めるリスクを増大させる。これは、西側諸国が直面する経済的制約と安全保障上の優先順位の複雑なバランスを示唆し、将来的な地政学的パワーバランスにも影響を及ぼす可能性がある。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/policy/2026/10/financial-ukraine/416851/" data-title="Financial aid for Ukraine is getting harder to find" data-src="Defense One" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/trump-reportedly-considering-lifting-sanctions-against-russias-investment-fund/" target="_blank">Trump reportedly considering lifting sanctions against Russia&#x27;s investment fund</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月27日 23:01 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/trump-reportedly-considering-lifting-sanctions-against-russias-investment-fund/" data-title="Trump reportedly considering lifting sanctions against Russia&#x27;s investment fund" data-src="Kyiv Independent" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/policy/2026/10/armys-last-sfab-helped-broker-ceasefire-southeast-asia/416846/" target="_blank">The Army’s only remaining SFAB helped broker a ceasefire in southeast Asia</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年10月27日 16:35 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: 米陸軍唯一のSFABが、southeast Asiaにおける停戦仲介およびIndo-Pacific theaterでの中国の影響力に対抗する活動を担っている。</li>
+</ul>
+<br>
+<ul>
+<li><strong>背景・文脈</strong>: Indo-Pacific theaterにおける中国の影響力増大が懸念される中、米国はtrain-advise-assistユニットを通じた地域の安定化とパートナーシップ強化を重視している。このSFABは、その戦略的アプローチにおいて重要な役割を担う。</li>
+</ul>
+<br>
+<ul>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   当該部隊は米陸軍に残された最後のSecurity Force Assistance Brigade (SFAB)である。</p>
+<p>    *   その主要任務は、train-advise-assist（訓練、助言、支援）活動を通じて地域の安定に貢献することにある。</p>
+<p>    *   具体的には、southeast Asiaにおけるceasefireの仲介に貢献した実績を持つ。</p>
+<p>    *   活動の広範な目的は、Indo-Pacific theaterにおける中国の影響力に対抗することである。</p>
+<br>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: この活動は、米軍がIndo-Pacific theaterにおける大国間競争において、直接的な軍事力行使だけでなく、SFABのような部隊を通じた間接的な影響力行使と地域パートナーシップ構築を重視していることを示す。中国の影響力拡大に対し、地域安定化を介した戦略的利益の追求という米国の姿勢を明確にしている。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/policy/2026/10/armys-last-sfab-helped-broker-ceasefire-southeast-asia/416846/" data-title="The Army’s only remaining SFAB helped broker a ceasefire in southeast Asia" data-src="Defense One" data-date="2026-10-27"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
