@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-10-31 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-10-31.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-10-31</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>17 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（17 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xkfpw4/lyman_ukraines_59th_assault_brigade_signum_ran/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Lyman: Ukraine&#x27;s 59th Assault Brigade &quot;SIGNUM&quot; ran down Russian infantrymen on motorbikes and on foot, flying FPV drones in forests and fields. Posted October 31, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/31 17:13</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xkfpw4/lyman_ukraines_59th_assault_brigade_signum_ran/" data-title="Lyman: Ukraine&#x27;s 59th Assault Brigade &quot;SIGNUM&quot; ran down Russian infantrymen on m" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xkeb41/ukraines_66th_mechanized_brigade_used_a_tarhan200/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s 66th Mechanized Brigade used a Tarhan-200 ground robot to rescue a wounded soldier. The UGV hit two mines, one going in and one with the soldier aboard. The second blast disabled it, but the soldier survived. A second UGV successfully completed the evacuation. Published - 30/10/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/31 16:16</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xkeb41/ukraines_66th_mechanized_brigade_used_a_tarhan200/" data-title="Ukraine&#x27;s 66th Mechanized Brigade used a Tarhan-200 ground robot to rescue a wou" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xkcvvb/russians_storming_pokrovskisis_style_november_2025/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russians storming Pokrovsk—ISIS style (November 2025)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/31 15:18</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xkcvvb/russians_storming_pokrovskisis_style_november_2025/" data-title="Russians storming Pokrovsk—ISIS style (November 2025)" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xkcdxo/graphicnsfw_pdf_rebels_peoples_defense_force/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">(Graphic/NSFW) PDF rebels (People&#x27;s Defense Force) ambush 2 Pyusawhti pro-government militiamen in Nattalin Township, Myanmar (Burma). 2 G3s are captured. (October 29, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/31 14:59</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xkcdxo/graphicnsfw_pdf_rebels_peoples_defense_force/" data-title="(Graphic/NSFW) PDF rebels (People&#x27;s Defense Force) ambush 2 Pyusawhti pro-govern" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjzlvq/capture_of_german_uboat_submarine_u505_during/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Capture of German U-Boat Submarine U-505 during World War Two</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/31 03:18</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjzlvq/capture_of_german_uboat_submarine_u505_during/" data-title="Capture of German U-Boat Submarine U-505 during World War Two" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjx0rh/royal_thai_army_police_and_volunteer_defense/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Royal Thai Army, Police and Volunteer Defense Force take cover from stray rounds and observe fighting between Karen rebels and the Tatmadaw (Myanmar Army) near the Thailand border-October 29, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/31 01:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjx0rh/royal_thai_army_police_and_volunteer_defense/" data-title="Royal Thai Army, Police and Volunteer Defense Force take cover from stray rounds" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjmtpi/iraqi_pmf_military_field_footage_armed_formations/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Iraqi PMF - Military Field Footage &amp; Armed Formations (Date Unknown – Iraq, Location Unconfirmed)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 18:10</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjmtpi/iraqi_pmf_military_field_footage_armed_formations/" data-title="Iraqi PMF - Military Field Footage &amp; Armed Formations (Date Unknown – Iraq, Loca" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjmmlg/ukraines_414th_usf_brigade_magyars_birds_ran_down/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; ran down dozens more Russian infantrymen, defeating attacks and demonstrating skilled FPV drone piloting. (Episode 67) October 30, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 18:02</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjmmlg/ukraines_414th_usf_brigade_magyars_birds_ran_down/" data-title="Ukraine&#x27;s 414th USF Brigade &quot;Magyar&#x27;s Birds&quot; ran down dozens more Russian infant" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjmebo/footage_documenting_the_tribal_forces_progress_on/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Footage documenting the tribal forces progress on the Al-Jawf fronts shows the disabling of several Houthi militia vehicles and the seizure of a mortar gun October 30th 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 17:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjmebo/footage_documenting_the_tribal_forces_progress_on/" data-title="Footage documenting the tribal forces progress on the Al-Jawf fronts shows the d" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjmdhg/ukrainian_hornet_drone_destroys_russian_mi8/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian Hornet drone destroys Russian Mi-8 helicopter caught on the ground. Tarasivka, Luhansk Oblast. Published October 30, 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 17:53</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjmdhg/ukrainian_hornet_drone_destroys_russian_mi8/" data-title="Ukrainian Hornet drone destroys Russian Mi-8 helicopter caught on the ground. Ta" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjm7ap/jaish_alrashideen_army_roadside_ied_compilation/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Jaish al-Rashideen Army Roadside IED Compilation</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 17:46</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjm7ap/jaish_alrashideen_army_roadside_ied_compilation/" data-title="Jaish al-Rashideen Army Roadside IED Compilation" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjm74l/small_collection_of_yemeni_tribal_forces_against/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Small collection of yemeni tribal forces against the hothi in the eastern front of marib October 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 17:46</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjm74l/small_collection_of_yemeni_tribal_forces_against/" data-title="Small collection of yemeni tribal forces against the hothi in the eastern front " data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjc4pv/jordanian_airstrikes_against_druze_drug_smugglers/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Jordanian airstrikes against Druze drug smugglers in Suweida (December 2025)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 10:52</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjc4pv/jordanian_airstrikes_against_druze_drug_smugglers/" data-title="Jordanian airstrikes against Druze drug smugglers in Suweida (December 2025)" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xjb7dg/ukraines_signum_unit_destroyed_a_fully_loaded/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukraine’s SIGNUM unit destroyed a fully loaded Russian BM-21 Grad MLRS with a FPV drone, and other ambushes (Published October 30, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 09:58</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xjb7dg/ukraines_signum_unit_destroyed_a_fully_loaded/" data-title="Ukraine’s SIGNUM unit destroyed a fully loaded Russian BM-21 Grad MLRS with a FP" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xja8am/mercenary_fighting_for_the_russian_army/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Mercenary fighting for the Russian army surrenders to a Ukrainian drone unit while holding a sign</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 08:57</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xja8am/mercenary_fighting_for_the_russian_army/" data-title="Mercenary fighting for the Russian army surrenders to a Ukrainian drone unit whi" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xja0gt/ukrainian_servicemen_from_the_73rd_sso_conducting/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian servicemen from the 73rd SSO conducting an ambush on a Russian vehicle during sabotage and reconnaissance operations inside the Russian Federation, Oct. 30, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 08:43</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xja0gt/ukrainian_servicemen_from_the_73rd_sso_conducting/" data-title="Ukrainian servicemen from the 73rd SSO conducting an ambush on a Russian vehicle" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xj9js3/2_south_africans_and_a_rhodesian_during_the/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">2 South Africans and a Rhodesian during the assault on the 16th SS Pzg stronghold at Monte Stanco. Northern Italy, 8th October 1944</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>10/30 08:12</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xj9js3/2_south_africans_and_a_rhodesian_during_the/" data-title="2 South Africans and a Rhodesian during the assault on the 16th SS Pzg stronghol" data-src="r/CombatFootage" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 429 RESOURCE_EXHAUSTED. {&#x27;error&#x27;: {&#x27;code&#x27;: 429, &#x27;message&#x27;: &#x27;You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n</em> Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 8h29m45.738230908s.&#x27;, &#x27;status&#x27;: &#x27;RESOURCE_EXHAUSTED&#x27;, &#x27;details&#x27;: [{&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.Help&#x27;, &#x27;links&#x27;: [{&#x27;description&#x27;: &#x27;Learn more about Gemini API quotas&#x27;, &#x27;url&#x27;: &#x27;https://ai.google.dev/gemini-api/docs/rate-limits&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.QuotaFailure&#x27;, &#x27;violations&#x27;: [{&#x27;description&#x27;: &#x27;Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.&#x27;, &#x27;quotaMetric&#x27;: &#x27;generativelanguage.googleapis.com/generate_content_free_tier_requests&#x27;, &#x27;quotaId&#x27;: &#x27;GenerateRequestsPerDayPerProjectPerModel-FreeTier&#x27;, &#x27;quotaDimensions&#x27;: {&#x27;model&#x27;: &#x27;gemini-2.5-flash&#x27;, &#x27;location&#x27;: &#x27;global&#x27;}, &#x27;quotaValue&#x27;: &#x27;20&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.RetryInfo&#x27;, &#x27;retryDelay&#x27;: &#x27;30585s&#x27;}]}}*</p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/russia-has-killed-about-120-members-of-the-clergy-zelensky-says/" target="_blank">Russia has killed 120 members of the clergy, Zelensky says</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月31日 23:32 UTC</span></div><div class="art-body"><p>以下に、提供された情報に基づく要約を記述します。</p>
+<br>
+<p>---</p>
+<br>
+<ul>
+<li>  <strong>主題</strong>: ロシアによるウクライナの聖職者殺害および宗教施設被害に関するゼレンスキー大統領の発言。</li>
+<li>  <strong>背景・文脈</strong>: ロシアのウクライナ侵攻が長期化する中で、ロシア軍が非戦闘員や民間インフラ、特に宗教コミュニティを標的としているとウクライナ側が主張している状況。</li>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    -   ゼレンスキー大統領は、ロシア軍がウクライナの聖職者120人を殺害したと発表した。</p>
+<p>    -   同大統領は、ロシア軍の攻撃により800以上の宗教施設が損傷したと述べた。</p>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: ロシアによる宗教関係者への攻撃は、国際法違反の証拠としてロシアの国際的非難を助長し、ウクライナ国内の抵抗意識を一層高める要因となる。これは情報戦においてウクライナに有利に働き、ロシアの国際的孤立を深める。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/russia-has-killed-about-120-members-of-the-clergy-zelensky-says/" data-title="Russia has killed 120 members of the clergy, Zelensky says" data-src="Kyiv Independent" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/i-dont-know-if-negotiated-peace-is-achievable-rubio-says-as-uncertainty-hangs-over-russia-ukraine-talks/" target="_blank">&#x27;I don&#x27;t know if negotiated peace is achievable,&#x27; Rubio says as uncertainty hangs over Russia-Ukraine talks</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月31日 20:06 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/i-dont-know-if-negotiated-peace-is-achievable-rubio-says-as-uncertainty-hangs-over-russia-ukraine-talks/" data-title="&#x27;I don&#x27;t know if negotiated peace is achievable,&#x27; Rubio says as uncertainty hang" data-src="Kyiv Independent" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-never-agreed-to-pause-strikes-on-russian-refineries-sources-confirm/" target="_blank">Ukraine never agreed to pause strikes on Russian refineries, sources confirm</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年10月31日 18:04 UTC</span></div><div class="art-body"><h2>要約形式（日本語）</h2>
+<br>
+<ul>
+<li>  <strong>主題</strong>: ウクライナは、ロシアの石油精製施設に対する攻撃を停止することに合意したとの報道を否定し、作戦の継続を主張している。</li>
+<li>  <strong>背景・文脈</strong>: ウクライナによるロシア国内のエネルギーインフラへの攻撃は、ロシアの戦争遂行能力を阻害するための重要な戦略であり、国際的な関心を集めている。特に、米国中間選挙に関連して攻撃一時停止が報じられたことで、その地政学的含意が注目されていた。</li>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   ウクライナ当局はKyiv Independentに対し、ロシアの石油精製施設に対する攻撃キャンペーンが継続中であることを確認した。</p>
+<p>    *   この確認は、ウクライナが攻撃を一時停止することに合意したという報道を明確に否定するものである。</p>
+<p>    *   The Wall Street Journal（WSJ）は10月29日、関係筋を引用し、ウクライナがロシアの石油精製施設への攻撃を「一時停止」することに合意したと報じていた。</p>
+<p>    *   WSJの報道によると、この一時停止は米国中間選挙後まで続き、最大で11月まで延長されると予想されていた。</p>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: この継続宣言は、ウクライナがロシアの戦争遂行能力を経済的に阻害する戦略を堅持していることを示している。同時に、外部からの外交的・政治的圧力に屈せず、自律的な軍事戦略を遂行するウクライナの意志を強調するものであり、同盟国との関係における交渉力にも影響を与えうる。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-never-agreed-to-pause-strikes-on-russian-refineries-sources-confirm/" data-title="Ukraine never agreed to pause strikes on Russian refineries, sources confirm" data-src="Kyiv Independent" data-date="2026-10-31"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
