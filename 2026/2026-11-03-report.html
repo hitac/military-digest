@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-11-03 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-11-03.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-11-03</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>16 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（16 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xn5j8x/ukraines_3rd_assault_brigade_skyform_midrange/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ第3強襲旅団「スカイフォーム」が、ロシア軍兵士、車両、装甲車、装備をドローンで攻撃。「ヴィヴァルディ作戦」の一部。</div><div class="vc-en">Ukraine&#x27;s 3rd Assault Brigade &quot;Skyform&quot; midrange strike drone pilots targeted Russian soldiers, trucking, armored vehicles, and equipment as part of the ongoing &quot;Operation Vivaldi&quot;. Posted November 3, 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 21:19</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xn5j8x/ukraines_3rd_assault_brigade_skyform_midrange/" data-title="Ukraine&#x27;s 3rd Assault Brigade &quot;Skyform&quot; midrange strike drone pilots targeted Ru" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xn5zi7/southern_giant_brigade_forces_destroy/" target="_blank"><span class="vc-ico">🚀</span><div class="vc-body"><div class="vc-ja">南部巨人旅団がフーシ派のミサイル発射システムを破壊し、乗員を殺害。ミサイル発射を受けての報復。</div><div class="vc-en">Southern Giant Brigade forces destroy Houthi-affiliated missile launch systems and kill their operating crews, following the detection of their missile launches toward the forces&#x27; positions. November 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 21:37</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xn5zi7/southern_giant_brigade_forces_destroy/" data-title="Southern Giant Brigade forces destroy Houthi-affiliated missile launch systems a" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xn4bvt/russian_amputee_with_knife_resists_forced_russian/" target="_blank"><span class="vc-ico">💥</span><div class="vc-body"><div class="vc-ja">ロシアのクズネツク市で、片足のない男性がナイフで軍の強制徴兵に抵抗。</div><div class="vc-en">Russian amputee with knife resists forced Russian military draft. The video originated in the city of Kuznetsk, Penza Oblast, Russia, in June 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 20:33</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xn4bvt/russian_amputee_with_knife_resists_forced_russian/" data-title="Russian amputee with knife resists forced Russian military draft. The video orig" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmw3fw/syria_a_russian_ka52_with_an_impatient_pilot_hits/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">シリアでロシアのKa-52ヘリがISISのトラックと武装勢力を攻撃。</div><div class="vc-en">Syria, a Russian KA-52 with an impatient pilot hits an ISIS truck with militants. English subtitles</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 15:33</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmw3fw/syria_a_russian_ka52_with_an_impatient_pilot_hits/" data-title="Syria, a Russian KA-52 with an impatient pilot hits an ISIS truck with militants" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmr0lk/ynaplc_technicals_and_m163_vads_firing_on_houthis/" target="_blank"><span class="vc-ico">🛡️</span><div class="vc-body"><div class="vc-ja">イエメン国軍/人民抵抗軍のテクニカルとM163 VADSがアル・ジョーフでフーシ派を攻撃。</div><div class="vc-en">YNA/PLC technicals and M163 VADS firing on Houthis in Al-Jawf</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 11:56</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmr0lk/ynaplc_technicals_and_m163_vads_firing_on_houthis/" data-title="YNA/PLC technicals and M163 VADS firing on Houthis in Al-Jawf" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmq8zf/mq9_reaper_downed_near_the_strait_of_hormuz_by_a/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">ホルムズ海峡付近でMQ-9リーパーが358徘徊型SAMにより撃墜。迎撃の映像を記録。</div><div class="vc-en">MQ-9 Reaper downed near the Strait of Hormuz by a 358 loitering SAM, Seeker footage captures the engagement - November 2</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 11:13</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmq8zf/mq9_reaper_downed_near_the_strait_of_hormuz_by_a/" data-title="MQ-9 Reaper downed near the Strait of Hormuz by a 358 loitering SAM, Seeker foot" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmq369/scenes_of_direct_clashes_between_the_yemeni_army/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">イエメン軍とフーシ派民兵がアル・ジョーフで直接衝突する場面。</div><div class="vc-en">scenes of direct clashes between the Yemeni army and the Houthi militia in Al-Jawf. November 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 11:04</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmq369/scenes_of_direct_clashes_between_the_yemeni_army/" data-title="scenes of direct clashes between the Yemeni army and the Houthi militia in Al-Ja" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmpwvp/firstperson_footage_of_a_ukrainian_soldier_firing/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ兵がロシアのFPVドローンを銃撃し、間一髪で回避して無傷だった一人称映像。ドネツク州。</div><div class="vc-en">First-person footage of a Ukrainian soldier firing at a Russian fiber optic FPV quad and dodging the drone last second and remaining unharmed. Donetsk Oblast. Published - 3/11/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 10:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmpwvp/firstperson_footage_of_a_ukrainian_soldier_firing/" data-title="First-person footage of a Ukrainian soldier firing at a Russian fiber optic FPV " data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmopyt/the_moment_a_ukrainian_drone_struck_the_lugakom/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナのドローンがルハンシクのルガコムビルを攻撃した瞬間。</div><div class="vc-en">The moment a Ukrainian drone struck the Lugakom building in Luhansk (November 3, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 09:41</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmopyt/the_moment_a_ukrainian_drone_struck_the_lugakom/" data-title="The moment a Ukrainian drone struck the Lugakom building in Luhansk (November 3," data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmjwy0/to_the_shores_of_iwo_jima_1945_ww2/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">硫黄島の海岸へ (1945年、第二次世界大戦)</div><div class="vc-en">To the Shores of Iwo Jima (1945) WW2</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 04:52</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmjwy0/to_the_shores_of_iwo_jima_1945_ww2/" data-title="To the Shores of Iwo Jima (1945) WW2" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmiqtj/mg3_gunner_of_the_cpb_communist_party_of_burma/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ビルマ共産党PLAのMG3射手が、タトマドー（ミャンマー国軍）の狙撃兵により交戦中に殺害される。</div><div class="vc-en">MG3 gunner of the CPB (Communist Party of Burma) PLA is killed by a Tatmadaw (Myanmar Army) sniper during an engagement- October 20 or 21, 2025</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 03:51</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmiqtj/mg3_gunner_of_the_cpb_communist_party_of_burma/" data-title="MG3 gunner of the CPB (Communist Party of Burma) PLA is killed by a Tatmadaw (My" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmhwhq/mq9_reaper_shot_down_following_defensive_strikes/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">ホルムズ海峡付近で「防衛的攻撃」の後にMQ-9リーパーが撃墜される。</div><div class="vc-en">MQ-9 Reaper Shot Down Following “Defensive Strikes” near the Straight of Hormuz (November 2, 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/03 03:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmhwhq/mq9_reaper_shot_down_following_defensive_strikes/" data-title="MQ-9 Reaper Shot Down Following “Defensive Strikes” near the Straight of Hormuz " data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmct0e/ukrainian_soldiers_survived_russian_fpv_drone/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ兵がロシアのFPVドローン攻撃を無傷で生き延びた。第4作戦旅団「ルビージ」。</div><div class="vc-en">Ukrainian soldiers survived Russian FPV drone attack without a single scratch. 4th Operational Brigade Rubizh. Published 02.11.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/02 23:17</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmct0e/ukrainian_soldiers_survived_russian_fpv_drone/" data-title="Ukrainian soldiers survived Russian FPV drone attack without a single scratch. 4" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmcmtc/ukrainian_soldier_shot_a_russian_ambush_drone_in/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナ兵がチャシブ・ヤール方面でロシアの待ち伏せドローンを撃墜。</div><div class="vc-en">Ukrainian soldier shot a Russian ambush drone in the Chasiv Yar sector. 24th Mechanized Brigade. Published 11/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/02 23:10</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmcmtc/ukrainian_soldier_shot_a_russian_ambush_drone_in/" data-title="Ukrainian soldier shot a Russian ambush drone in the Chasiv Yar sector. 24th Mec" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmcfbr/archived_episodes_of_combat_work_by_ukrainian/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ウクライナ特殊作戦軍「グリムパック・グループ」の戦闘記録映像、前線の様々な場所でGoPro撮影。</div><div class="vc-en">Archived episodes of combat work by Ukrainian Special Operations Forces fighters from the “Grim Pack Group” recorded on GoPro across various sectors of the front.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/02 23:01</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmcfbr/archived_episodes_of_combat_work_by_ukrainian/" data-title="Archived episodes of combat work by Ukrainian Special Operations Forces fighters" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xmc5h3/ukrainian_kord_antiterror_sof_unit_kord_during/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ウクライナ対テロ特殊部隊KORDがコスタンチニウカでの市街戦に参加。</div><div class="vc-en">Ukrainian KORD anti-terror SOF unit Kord during street fighting in Kostyantynivka. May 19, 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/02 22:50</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xmc5h3/ukrainian_kord_antiterror_sof_unit_kord_during/" data-title="Ukrainian KORD anti-terror SOF unit Kord during street fighting in Kostyantynivk" data-src="r/CombatFootage" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 429 RESOURCE_EXHAUSTED. {&#x27;error&#x27;: {&#x27;code&#x27;: 429, &#x27;message&#x27;: &#x27;You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n</em> Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 9h29m33.958686131s.&#x27;, &#x27;status&#x27;: &#x27;RESOURCE_EXHAUSTED&#x27;, &#x27;details&#x27;: [{&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.Help&#x27;, &#x27;links&#x27;: [{&#x27;description&#x27;: &#x27;Learn more about Gemini API quotas&#x27;, &#x27;url&#x27;: &#x27;https://ai.google.dev/gemini-api/docs/rate-limits&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.QuotaFailure&#x27;, &#x27;violations&#x27;: [{&#x27;description&#x27;: &#x27;Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.&#x27;, &#x27;quotaMetric&#x27;: &#x27;generativelanguage.googleapis.com/generate_content_free_tier_requests&#x27;, &#x27;quotaId&#x27;: &#x27;GenerateRequestsPerDayPerProjectPerModel-FreeTier&#x27;, &#x27;quotaDimensions&#x27;: {&#x27;location&#x27;: &#x27;global&#x27;, &#x27;model&#x27;: &#x27;gemini-2.5-flash&#x27;}, &#x27;quotaValue&#x27;: &#x27;20&#x27;}]}, {&#x27;@type&#x27;: &#x27;type.googleapis.com/google.rpc.RetryInfo&#x27;, &#x27;retryDelay&#x27;: &#x27;34173s&#x27;}]}}*</p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/norway-deploys-additional-air-defense-sensors-troops-near-russia-border/" target="_blank">Norway deploys additional air defense sensors, troops near Russia border</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年11月3日 23:25 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/norway-deploys-additional-air-defense-sensors-troops-near-russia-border/" data-title="Norway deploys additional air defense sensors, troops near Russia border" data-src="Kyiv Independent" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://www.defenseone.com/defense-systems/2026/11/pentagon-ukraine-ground-robots/417011/" target="_blank">Pentagon is beginning to follow Ukraine into wider use of ground robots</a></div><div class="art-meta"><span>Defense One</span><span>📅 2026年11月3日 16:21 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://www.defenseone.com/defense-systems/2026/11/pentagon-ukraine-ground-robots/417011/" data-title="Pentagon is beginning to follow Ukraine into wider use of ground robots" data-src="Defense One" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/what-really-happened-during-the-clash-at-a-national-guard-facility-near-kyiv/" target="_blank">What really happened during the clash at a National Guard facility near Kyiv?</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年11月3日 21:16 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: KYIV OBLASTのNational Guard施設付近で発生した住民とウクライナの法執行機関との衝突事件。</li>
+</ul>
+<br>
+<ul>
+<li><strong>背景・文脈</strong>: この衝突はウクライナの動員を巡る情報戦を激化させており、ロシアによる侵攻が長期化する中での国内緊張と情報環境の脆弱性を示唆している。</li>
+</ul>
+<br>
+<ul>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   11月2日、Kyiv郊外のPetropavlivska Borshchahivkaにて、約200人の住民がNational Guardおよび法執行機関の要員と車両を攻撃した。</p>
+<p>    *   当局は催涙ガスを使用し、威嚇射撃を行うことでこれに対応した。</p>
+<p>    *   大統領府長官Kyrylo Budanovが現場に到着し、事態の重大性が強調された。</p>
+<p>    *   この事件は、ウクライナの動員に関する情報戦を激化させる要因となった。</p>
+<br>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: 長期化する紛争下において、国内における動員への不満が表面化し、それが情報戦の材料として利用され得る脆弱性を示している。これはウクライナの国内結束と戦時統制に課題を突きつける可能性がある。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/what-really-happened-during-the-clash-at-a-national-guard-facility-near-kyiv/" data-title="What really happened during the clash at a National Guard facility near Kyiv?" data-src="Kyiv Independent" data-date="2026-11-03"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
