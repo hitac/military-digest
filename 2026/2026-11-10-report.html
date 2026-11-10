@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-11-10 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-11-10.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-11-10</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>11 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（11 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xsoxwi/yaf_houthis_using_shawaz_fpv_drones_produced_by/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">YAF (Houthis), using Shawaz (FPV drones produced by Houthis) to destroying more than 20 personnel carriers and armored vehicles belonging to Saudi-backed militias. (Al- Jawf front/10 November 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 14:55</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xsoxwi/yaf_houthis_using_shawaz_fpv_drones_produced_by/" data-title="YAF (Houthis), using Shawaz (FPV drones produced by Houthis) to destroying more " data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xsyu95/iraqi_army_fighting_isis_near_alazim_dam_iraq_2014/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Iraqi Army fighting ISIS near Al-Azim Dam, Iraq (2014)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 21:11</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xsyu95/iraqi_army_fighting_isis_near_alazim_dam_iraq_2014/" data-title="Iraqi Army fighting ISIS near Al-Azim Dam, Iraq (2014)" data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xsumb4/russian_scouts_are_almost_shot_and_then_shelled/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian scouts are almost shot and then shelled, subtitles</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 18:28</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xsumb4/russian_scouts_are_almost_shot_and_then_shelled/" data-title="Russian scouts are almost shot and then shelled, subtitles" data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xsukf2/el_salvador_military_helicopters_strike_compound/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">El Salvador military helicopters strike compound belonging to 400 Mawozo gang in Port-au-Prince, Haiti. Published 10/11/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 18:27</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xsukf2/el_salvador_military_helicopters_strike_compound/" data-title="El Salvador military helicopters strike compound belonging to 400 Mawozo gang in" data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xspvu0/footage_from_the_plc_side_while_advancing_more/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Footage from the PLC side while advancing more from the eastern front of Al-jawef to recapture the city of Al-hazem, November 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 15:32</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xspvu0/footage_from_the_plc_side_while_advancing_more/" data-title="Footage from the PLC side while advancing more from the eastern front of Al-jawe" data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xspl40/ukrainian_drone_operators_from_the_412th_nemesis/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Ukrainian drone operators from the 412th Nemesis Brigade utilized mid-range FP-2 UAVs to attack a Russian drone launch site at Donetsk Airport, Donetsk Oblast. Published - 10/11/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 15:20</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xspl40/ukrainian_drone_operators_from_the_412th_nemesis/" data-title="Ukrainian drone operators from the 412th Nemesis Brigade utilized mid-range FP-2" data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xsoliu/members_of_the_houthi_militia_were_targeted/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Members of the houthi militia were targeted, leaving 16 members dead and others wounded, while the remaining members fled, in multiple areas on Yemen. November 2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 14:41</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xsoliu/members_of_the_houthi_militia_were_targeted/" data-title="Members of the houthi militia were targeted, leaving 16 members dead and others " data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xsi37i/a_helicopter_from_ukraines_12th_separate_army/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">A helicopter from Ukraine’s 12th Separate Army Aviation Brigade pursued a Russian Shahed drone, taking it down with machine-gun fire before tracking its crash into a field. Published - 10/11/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 08:58</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xsi37i/a_helicopter_from_ukraines_12th_separate_army/" data-title="A helicopter from Ukraine’s 12th Separate Army Aviation Brigade pursued a Russia" data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xsfpj5/fpv_drone_hits_russian_soldier_spotted_walking/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">FPV drone hits Russian soldier spotted walking through field. Ukraine&#x27;s 414th Strike UAS Brigade, published November 10th 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 06:25</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xsfpj5/fpv_drone_hits_russian_soldier_spotted_walking/" data-title="FPV drone hits Russian soldier spotted walking through field. Ukraine&#x27;s 414th St" data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xsanh8/myanmar_burmese_tatmadaw_army_troops_under_fire/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Myanmar (Burmese) Tatmadaw Army troops under fire (allegedly during October-November clashes against the Arakan Army rebel group in Rakhine State)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/10 01:59</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xsanh8/myanmar_burmese_tatmadaw_army_troops_under_fire/" data-title="Myanmar (Burmese) Tatmadaw Army troops under fire (allegedly during October-Nove" data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xs6mjm/russian_mobile_air_defence_gunner_failed_to_down/" target="_blank"><span class="vc-ico">▶</span><div class="vc-body"><div class="vc-ja">Russian mobile air defence gunner failed to down the Unrainian Hornet UAV. Posted 09.11.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/09 22:59</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xs6mjm/russian_mobile_air_defence_gunner_failed_to_down/" data-title="Russian mobile air defence gunner failed to down the Unrainian Hornet UAV. Poste" data-src="r/CombatFootage" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 503 UNAVAILABLE. {&#x27;error&#x27;: {&#x27;code&#x27;: 503, &#x27;message&#x27;: &#x27;This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.&#x27;, &#x27;status&#x27;: &#x27;UNAVAILABLE&#x27;}}</em></p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-strikes-drone-port-at-occupied-donetsk-airport/" target="_blank">Ukraine strikes drone port at occupied Donetsk Airport</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年11月10日 23:46 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ウクライナ軍が、ロシア占領下のDonetsk Airportにあるドローン運用インフラを攻撃した件について。</li>
+<li><strong>背景・文脈</strong>: ウクライナはロシアによるドローン攻撃に日々直面しており、受動的な迎撃に加え、発射元のインフラ破壊へと戦略を転換していることを示唆する。これは、ウクライナの防衛戦略における積極的な変化を反映している。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   ウクライナ軍が、ロシアが占領するDonetsk Airport内のドローン港（drone port）への攻撃を実施した。</p>
+<p>    *   この攻撃は、Unmanned Systems Forcesの412th Brigadeによって実行された。</p>
+<p>    *   同部隊は、敵ドローンを減らすためには、発射済みの迎撃だけでなく、発射インフラの破壊が不可欠であるとの認識を示した。</p>
+<p>    *   本攻撃は、ロシアのドローン運用能力を直接的に低下させることを目的としている。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: ウクライナが、ロシアのドローン攻撃に対し、受動的な防御から、発射源を狙う能動的な対抗措置へと戦略を転換していることを示唆する。これは、ロシアのドローン戦術に対する新たな抑止力として機能する可能性がある。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-strikes-drone-port-at-occupied-donetsk-airport/" data-title="Ukraine strikes drone port at occupied Donetsk Airport" data-src="Kyiv Independent" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-seeks-to-arrange-another-evacuation-for-oleshky-residents-lubinets-said/" target="_blank">Ukraine seeks to arrange another evacuation for Oleshky residents, Lubinets says</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年11月10日 21:12 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: ウクライナは、ロシア占領下のヘルソン州 Oleshky の住民に対する新たな避難手配を試みている。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>背景・文脈</strong>: Oleshkyはドニプロ川左岸のロシア占領下にあり、住民は困難な人道状況に置かれている可能性が高い。ウクライナによる避難支援は、占領下にある自国民への保護義務を示す。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   ウクライナ人権オンブズマン Dmytro Lubinets の事務所は、Oleshky 住民からの問い合わせや支援要請を継続的に受けている。</p>
+<p>    *   ウクライナ当局は、これらの住民のために新たな避難を計画していると Lubinets 氏が述べている。</p>
+<p>    *   ロシア占領下における住民の安全確保と人権保護は、ウクライナにとって喫緊の課題となっている。</p>
+<p>    *   ウクライナは、占領下の自国民に対し、人道支援と安全な避難経路の提供を通じて主権的責任を果たそうとしている。</p>
+<p>    *   こうした活動は、国際社会に対してロシアの占領の不法性と人道侵害を訴える意味合いも持つ。</p>
+<br>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: ロシアによる占領が続く地域における人道危機を浮き彫りにする。ウクライナの避難支援の試みは、占領下にある自国民への正当な主権と責任を主張し、住民の支持を維持する地政学的な意義を持つ。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-seeks-to-arrange-another-evacuation-for-oleshky-residents-lubinets-said/" data-title="Ukraine seeks to arrange another evacuation for Oleshky residents, Lubinets says" data-src="Kyiv Independent" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-war-latest-rubio-says-security-guarantees-for-ukraine-must-also-be-acceptable-to-russia/" target="_blank">Ukraine war latest: Rubio says security guarantees for Ukraine must also be acceptable to Russia</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年11月10日 20:57 UTC</span></div><div class="art-body"><p style="color:#999;font-size:.82em;font-style:italic">（要約を取得できませんでした。元記事をご参照ください）</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-war-latest-rubio-says-security-guarantees-for-ukraine-must-also-be-acceptable-to-russia/" data-title="Ukraine war latest: Rubio says security guarantees for Ukraine must also be acce" data-src="Kyiv Independent" data-date="2026-11-10"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
