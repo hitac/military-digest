@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戦場レポート 2026-11-15 | 軍事ダイジェスト</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f2f5;--white:#fff;--red:#c62828;--blue:#1565c0;--text:#1a1a1a;--muted:#6c757d;--border:#e0e4e8;--r:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shm:0 4px 12px rgba(0,0,0,.12)}
+body{font-family:'Segoe UI',Meiryo,'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+#hd{background:var(--white);border-bottom:1px solid var(--border);height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.logo{font-weight:700;font-size:.85em;color:var(--red);white-space:nowrap}
+#hd nav{margin-left:auto;display:flex;gap:6px}
+.nb{font-size:.78em;color:var(--blue);text-decoration:none;border:1px solid #bbdefb;padding:4px 12px;border-radius:20px;background:#e3f2fd;white-space:nowrap;transition:background .15s}
+.nb:hover{background:#bbdefb}
+.hero{background:linear-gradient(135deg,#1565c0 0%,#1976d2 60%,#42a5f5 100%);color:#fff;padding:28px 20px}
+.hero-in{max-width:860px;margin:0 auto}
+.hero-date{display:inline-block;background:rgba(255,255,255,.2);font-size:.78em;font-weight:700;padding:3px 12px;border-radius:4px;margin-bottom:10px;border:1px solid rgba(255,255,255,.35)}
+.hero h1{font-size:1.5em;margin-bottom:10px;font-weight:800}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+.stat{font-size:.82em;opacity:.92;display:flex;align-items:center;gap:5px}
+.stat strong{font-weight:700}
+main{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+.sec{margin-bottom:36px}
+.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-hd h2{font-size:1em;font-weight:700}
+.vgrid{display:grid;gap:8px}
+.vc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:11px 14px;display:flex;gap:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s;box-shadow:var(--sh)}
+.vc:hover{border-color:#90caf9;box-shadow:var(--shm)}
+.vc-ico{font-size:1.3em;flex-shrink:0;margin-top:1px}
+.vc-body{flex:1;min-width:0}
+.vc-ja{font-size:.87em;font-weight:600;margin-bottom:2px;line-height:1.4}
+.vc-en{font-size:.72em;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vc-foot{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.68em;padding:1px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);background:var(--bg)}
+.pub{font-size:.68em;color:var(--muted)}
+details.digest-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+details.digest-wrap summary{cursor:pointer;padding:14px 18px;font-size:.88em;font-weight:700;color:var(--blue);list-style:none;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);user-select:none}
+details.digest-wrap summary::after{content:'▼';font-size:.7em;margin-left:auto;color:var(--muted);transition:transform .2s}
+details.digest-wrap[open] summary::after{transform:rotate(-180deg)}
+.digest{padding:16px 20px}
+.digest h2{font-size:.93em;color:var(--blue);margin:18px 0 6px;padding-left:8px;border-left:3px solid var(--blue)}
+.digest h3{font-size:.85em;color:#1976d2;margin:12px 0 4px;padding-left:8px}
+.digest p,.digest li{font-size:.87em;line-height:1.65}
+.digest ul{padding-left:1.4em;margin:5px 0}
+.digest li{margin:4px 0}
+.digest strong{font-weight:700}
+.art{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.art-ttl{font-size:.95em;font-weight:700;margin-bottom:6px;line-height:1.4}
+.art-ttl a{color:var(--blue);text-decoration:none}
+.art-ttl a:hover{text-decoration:underline}
+.art-meta{font-size:.75em;color:var(--muted);margin-bottom:12px;display:flex;gap:10px;flex-wrap:wrap}
+.art-body h2{font-size:.87em;color:var(--blue);margin:12px 0 4px;padding-left:6px;border-left:2px solid #90caf9}
+.art-body h3{font-size:.83em;color:#1976d2;margin:10px 0 3px}
+.art-body p,.art-body li{font-size:.85em;line-height:1.6}
+.art-body ul{padding-left:1.4em;margin:4px 0}
+.art-body li{margin:3px 0}
+.art-body strong{font-weight:700}
+.stars{display:inline-flex;gap:2px;cursor:pointer;user-select:none;margin-top:6px}
+.star{font-size:1em;color:#d1d5db;transition:color .1s;padding:0 1px;line-height:1}
+.star.on{color:#f59e0b}
+.exp-btn{cursor:pointer;font:inherit;background:#fff8e1;border-color:#ffe082;color:#f57f17}
+.exp-btn:hover{background:#fff3cd}
+.art-ft{padding:8px 0 0;border-top:1px solid var(--border);margin-top:10px}
+</style>
+</head>
+<body>
+<div id="hd">
+  <span class="logo">🌍 軍事ダイジェスト</span>
+  <nav>
+    <a class="nb" href="2026-11-15.html">🗺 地図で見る</a>
+    <a class="nb" href="../index.html">📋 バックナンバー</a>
+    <button class="nb exp-btn" onclick="exportRatings()">⭐ 評価エクスポート</button>
+  </nav>
+</div>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-date">📅 2026-11-15</div>
+    <h1>戦場動画ダイジェスト</h1>
+    <div class="hero-stats">
+      <div class="stat">🎬 動画投稿 <strong>13 件</strong></div>
+      <div class="stat">📰 分析記事 <strong>3 件</strong></div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="sec">
+    <div class="sec-hd"><span>🎬</span><h2>動画リスト（13 件）</h2></div>
+    <div class="vgrid"><a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xwpofr/panoramic_view_on_a_massive_desert_battlefield_of/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">北イエメンでのサウジ支援勢力とフーシ派の大規模な砂漠戦場のパノラマビュー、2026年9月公開</div><div class="vc-en">Panoramic view on a MASSIVE desert battlefield of Saudi-backed forces convoy VS Houthis, Northern Yemen, Pub. Sept 2026. Absolute coordination nightmare</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 07:45</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xwpofr/panoramic_view_on_a_massive_desert_battlefield_of/" data-title="Panoramic view on a MASSIVE desert battlefield of Saudi-backed forces convoy VS " data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xx7we9/ukrainian_safari_assault_regiment_cleared_enemy/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ウクライナのサファリ強襲連隊が敵陣地を掃討。おそらくコステャンティニウカ方面、2025/2026年冬</div><div class="vc-en">Ukrainian Safari Assault Regiment cleared enemy positions. Liut Brigade. Likely Kostyantynivka direction Winter 2025/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 21:54</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xx7we9/ukrainian_safari_assault_regiment_cleared_enemy/" data-title="Ukrainian Safari Assault Regiment cleared enemy positions. Liut Brigade. Likely " data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xx6zw6/russian_forces_of_the_40th_naval_infantry_brigade/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ロシア海軍歩兵第40旅団がウクライナの中距離ドローン攻撃を受ける。南部方面。2026年11月15日公開</div><div class="vc-en">Russian Forces of the 40th Naval Infantry Brigade came under Ukrainian mid-range drone attacks. Southern direction. Published 15.11.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 21:16</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xx6zw6/russian_forces_of_the_40th_naval_infantry_brigade/" data-title="Russian Forces of the 40th Naval Infantry Brigade came under Ukrainian mid-range" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xx6u3k/mykola_oliinyk_a_ukrainian_army_photographer_with/" target="_blank"><span class="vc-ico">🛡️</span><div class="vc-body"><div class="vc-ja">ウクライナ軍第93旅団の写真家ミコラ・オリーニク、ドルジュキウカにて2026年9月、自走砲部隊に同行</div><div class="vc-en">Mykola Oliinyk, a Ukrainian Army photographer with the 93rd Kholodnyi Yar Brigade’s Communications Section, in Druzhkivka in September 2026, while accompanying artillerymen of the brigade’s self-propelled artillery battalion on a mission.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 21:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xx6u3k/mykola_oliinyk_a_ukrainian_army_photographer_with/" data-title="Mykola Oliinyk, a Ukrainian Army photographer with the 93rd Kholodnyi Yar Brigad" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xwvsuw/ukrainian_intelligence_officer_eliminates_russian/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ウクライナ情報将校がポクロウスク戦線で露兵を小火器で排除。2025年冬</div><div class="vc-en">Ukrainian intelligence officer eliminates Russian soldier encountered in a wooded area using small arms fire, Pokrovsk front. Winter 2025</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 13:42</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xwvsuw/ukrainian_intelligence_officer_eliminates_russian/" data-title="Ukrainian intelligence officer eliminates Russian soldier encountered in a woode" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xwvs5e/russian_soldiers_atv_got_hit_by_ukrainian_fpv/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナのFPVドローンがロシア兵とATVを攻撃。2026年10月公開</div><div class="vc-en">Russian soldiers &amp; ATV got hit by Ukrainian FPV. Published 10.2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 13:41</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xwvs5e/russian_soldiers_atv_got_hit_by_ukrainian_fpv/" data-title="Russian soldiers &amp; ATV got hit by Ukrainian FPV. Published 10.2026" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xwvqqu/unsuccessful_attempt_by_a_russian_mobile_fire/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ドネツク州で露軍移動火力部隊がウクライナのB2カミカゼドローン撃墜に失敗、ドローンは露軍トラックに命中</div><div class="vc-en">unsuccessful attempt by a Russian mobile fire group to shoot down a Ukrainian B2 kamikaze drone flying overhead in the Donetsk region, after which the drone struck a truck belonging to the Russian Armed Forces</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 13:39</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xwvqqu/unsuccessful_attempt_by_a_russian_mobile_fire/" data-title="unsuccessful attempt by a Russian mobile fire group to shoot down a Ukrainian B2" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xws2t3/a_local_resident_films_ukrainian_strike_on/" target="_blank"><span class="vc-ico">🚀</span><div class="vc-body"><div class="vc-ja">住民が露アフトゥビンスク空軍基地へのウクライナ軍攻撃を撮影。二次爆発も発生。2026年11月15日公開</div><div class="vc-en">A local resident films Ukrainian strike on Russia&#x27;s Akhtubinsk airbase. Numerous explosions were reported at the base, which lies roughly 630 km from the front line. The footage shows secondary detonations, likely caused by rocket fuel or ammunition stored at the site. Published - 15/11/2026</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 10:17</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xws2t3/a_local_resident_films_ukrainian_strike_on/" data-title="A local resident films Ukrainian strike on Russia&#x27;s Akhtubinsk airbase. Numerous" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xwlz2l/su30_strafes_ukrainian_watercraft_black_sea_pub/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">露SU-30がウクライナの船舶を機銃掃射、黒海。2023年8月公開（ロシア視点）</div><div class="vc-en">SU-30 strafes Ukrainian watercraft, Black Sea, Pub. August 2023 (Rus perspective) ALLEGEDLY the same boat incident as the Ukrainian marines video I posted earlier</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 04:09</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xwlz2l/su30_strafes_ukrainian_watercraft_black_sea_pub/" data-title="SU-30 strafes Ukrainian watercraft, Black Sea, Pub. August 2023 (Rus perspective" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xwlo6t/nsfwkachin_independence_army_and_peoples_defense/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">ミャンマーのカチン州と乾燥地帯で、カチン独立軍と人民防衛軍が国軍と戦闘 (2024年5月～2026年11月)</div><div class="vc-en">(NSFW)Kachin Independence Army and People&#x27;s Defense Force rebels fighting the Myanmar (Burma) Army with guns, RPGs, grenade launchers, and FPV drones in Kachin State and the Dry Zone (May 2024-November 2026)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 03:52</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xwlo6t/nsfwkachin_independence_army_and_peoples_defense/" data-title="(NSFW)Kachin Independence Army and People&#x27;s Defense Force rebels fighting the My" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xwlk5x/su30_strafes_ukrainian_marines_on_speedboat_with/" target="_blank"><span class="vc-ico">✈️</span><div class="vc-body"><div class="vc-ja">露SU-30が黒海でウクライナ海兵隊の高速艇を機関砲で掃射。2023年8月公開（ウクライナ視点）</div><div class="vc-en">SU-30 strafes Ukrainian Marines on speedboat with auto cannon, Pub. August 2023, Black Sea (Ukr perspective)</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 03:46</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xwlk5x/su30_strafes_ukrainian_marines_on_speedboat_with/" data-title="SU-30 strafes Ukrainian Marines on speedboat with auto cannon, Pub. August 2023," data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xwkk77/fpv_drone_hits_russian_soldier_spotted_walking/" target="_blank"><span class="vc-ico">🤖</span><div class="vc-body"><div class="vc-ja">ウクライナのFPVドローンが開けた野原を歩く露兵に命中。2026年11月14日公開</div><div class="vc-en">FPV drone hits Russian soldier spotted walking through open field. Ukraine&#x27;s 414th Strike UAS Brigade, published November 14th 2026.</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/15 02:53</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xwkk77/fpv_drone_hits_russian_soldier_spotted_walking/" data-title="FPV drone hits Russian soldier spotted walking through open field. Ukraine&#x27;s 414" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a>
+<a class="vc" href="https://www.reddit.com/r/CombatFootage/comments/1xwfuxw/2002_a_russian_scout_steps_on_a_landmine/" target="_blank"><span class="vc-ico">🪖</span><div class="vc-body"><div class="vc-ja">2002年。露軍偵察兵が地雷を踏み、避難。字幕付き</div><div class="vc-en">2002. A Russian scout steps on a landmine; evacuation. Subtitles</div><div class="vc-foot"><span class="badge">r/CombatFootage</span><span class=pub>11/14 23:01</span></div><div class="stars" data-url="https://www.reddit.com/r/CombatFootage/comments/1xwfuxw/2002_a_russian_scout_steps_on_a_landmine/" data-title="2002. A Russian scout steps on a landmine; evacuation. Subtitles" data-src="r/CombatFootage" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></a></div>
+  </div>
+  <div class="sec"><details class="digest-wrap"><summary>📊 AI分析レポート</summary><div class="digest"><p><em>ダイジェスト生成エラー: 503 UNAVAILABLE. {&#x27;error&#x27;: {&#x27;code&#x27;: 503, &#x27;message&#x27;: &#x27;This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.&#x27;, &#x27;status&#x27;: &#x27;UNAVAILABLE&#x27;}}</em></p></div></details></div>
+  <div class="sec"><div class="sec-hd"><span>📰</span><h2>軍事分析・ニュース</h2></div><div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/ukraine-eu-agree-on-reform-steps-to-advance-accession-talks-in-2027/" target="_blank">Ukraine, EU agree on reform steps to advance accession talks in 2027</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年11月15日 23:38 UTC</span></div><div class="art-body"><p><strong>主題</strong>:</p>
+<p>UkraineとEUが、2027年までのEU加盟交渉を進めるための改革ステップで合意した件。</p>
+<br>
+<p><strong>背景・文脈</strong>:</p>
+<p>ロシアによる侵攻が続く中、UkraineのEU加盟は国家の安定と将来の安全保障にとって極めて重要である。今回の合意は、欧州委員会がUkraineの加盟プロセスにおける進捗を評価しつつ、法治国家の原則や汚職対策における課題を指摘したことを受けてのものである。</p>
+<br>
+<p><strong>主要な内容</strong>:</p>
+<ul>
+<li>  UkraineとEUは、2027年までのEU加盟交渉を前進させるための改革ステップで合意した。</li>
+<li>  欧州委員会は、11月4日の年次拡大報告書において、UkraineのEU加盟に向けた進捗を評価した。</li>
+<li>  一方で、同報告書は、法治国家の原則と汚職対策において永続的な課題が存在することを強調した。</li>
+<li>  今回の合意は、上記の課題克服に向けた、新たな改革推進の動きを意味する。</li>
+</ul>
+<br>
+<p><strong>軍事的・地政学的意義</strong>:</p>
+<p>UkraineのEU加盟プロセスの進展は、ロシアによる侵略に対する抵抗力を強化し、西側諸国との連携を深める上で地政学的に重要である。これにより、地域のパワーバランスにおいてUkraineの安定性が向上し、ロシアの影響力拡大を抑制する効果が期待される。</p></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/ukraine-eu-agree-on-reform-steps-to-advance-accession-talks-in-2027/" data-title="Ukraine, EU agree on reform steps to advance accession talks in 2027" data-src="Kyiv Independent" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/estonia-to-close-border-with-russia-after-moscow-linked-sabotage-attempt-on-drone-maker/" target="_blank">Estonia to close border with Russia after Moscow-linked sabotage attempt on drone maker</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年11月15日 22:13 UTC</span></div><div class="art-body"><ul>
+<li><strong>主題</strong>: エストニアが、自国のドローン製造企業 Threod Systems に対するロシア関連の妨害工作未遂事件を受け、ロシアとの国境閉鎖を発表した。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>背景・文脈</strong>: ロシアによるウクライナ侵攻が続く中、NATO加盟国であるエストニア国内でロシア関連とみられる妨害工作が発生したことは、欧州の安全保障環境における緊張の高まりとハイブリッド脅威の深刻化を示す。国境閉鎖という措置は、国家間の緊張の高まりと、安全保障上の懸念が具体化したことの表れである。</li>
+</ul>
+<br>
+<ul>
+<li>  <strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   エストニアは、ロシアとの国境を閉鎖する方針を発表した。</p>
+<p>    *   この国境閉鎖は、11月14日未明にエストニアのドローン製造企業 Threod Systems に対する攻撃未遂があった後に発表された。</p>
+<p>    *   Threod Systems は偵察および攻撃ドローンを製造しており、軍事技術分野で重要な役割を担っている。</p>
+<p>    *   当該妨害工作は、モスクワ政府に関連しているとされている。</p>
+<br>
+<ul>
+<li>  <strong>軍事的・地政学的意義</strong>: この事件は、ロシアがNATO加盟国に対してもハイブリッド戦争や非対称的な妨害活動を活発化させていることを示唆し、バルト三国を含むNATOの東側国境における地政学的緊張をさらに高める可能性がある。また、ドローン技術の軍事的価値の高まりに伴い、その製造拠点が直接的な標的となり得ることを浮き彫りにしている。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/estonia-to-close-border-with-russia-after-moscow-linked-sabotage-attempt-on-drone-maker/" data-title="Estonia to close border with Russia after Moscow-linked sabotage attempt on dron" data-src="Kyiv Independent" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+<div class="art"><div class="art-ttl"><a href="https://kyivindependent.com/iihf-confirms-russia-out-of-2027-world-juniors-canada-to-remain-host/" target="_blank">IIHF confirms Russia out of 2027 World Juniors, Canada to remain host</a></div><div class="art-meta"><span>Kyiv Independent</span><span>📅 2026年11月15日 21:10 UTC</span></div><div class="art-body"><h2>要約</h2>
+<br>
+<ul>
+<li><strong>主題</strong>: IIHFがロシアの2027年世界ジュニア選手権出場を再度禁止し、カナダが引き続き開催国を務めることを確認したこと。</li>
+<li><strong>背景・文脈</strong>: ウクライナ侵攻を受けて国際社会がロシアに科している広範な制裁措置の一環であり、スポーツ分野におけるロシアの国際的な孤立が続いていることを示す最新の事例である。</li>
+<li><strong>主要な内容</strong>:</li>
+</ul>
+<p>    *   IIHFは、ロシアを2027年世界ジュニア選手権から除外することを正式に確認した。</p>
+<p>    *   カナダが引き続き同大会の開催国を務める。</p>
+<p>    *   大会は2026年12月26日から2027年1月5日にかけて、EdmontonとRed Deer, Albertaで開催される予定。</p>
+<ul>
+<li><strong>軍事的・地政学的意義</strong>: 本件は、ウクライナ侵攻に対する国際社会の制裁がスポーツ分野にも継続していることを示し、ロシアの国際的孤立とレピュテーション低下が長期化している現状を裏付ける。これは、軍事行動が地政学的な影響を多方面に及ぼす現代国際関係の一例である。</li>
+</ul></div><div class="art-ft"><div class="stars" data-url="https://kyivindependent.com/iihf-confirms-russia-out-of-2027-world-juniors-canada-to-remain-host/" data-title="IIHF confirms Russia out of 2027 World Juniors, Canada to remain host" data-src="Kyiv Independent" data-date="2026-11-15"><span class="star" data-n="1">★</span><span class="star" data-n="2">★</span><span class="star" data-n="3">★</span><span class="star" data-n="4">★</span><span class="star" data-n="5">★</span></div></div></div>
+</div>
+</main>
+<script>
+const _RK='digest_ratings';
+function _lr(){try{return JSON.parse(localStorage.getItem(_RK)||'{}')}catch(e){return{}}}
+function _sv(url,r,t,s,d){const m=_lr();if(r===0)delete m[url];else m[url]={rating:r,title:(t||'').substring(0,80),source:s,date:d};localStorage.setItem(_RK,JSON.stringify(m))}
+function _us(el,n){el.querySelectorAll('.star').forEach(s=>{s.classList.toggle('on',parseInt(s.dataset.n)<=n)})}
+function initStars(){
+  const m=_lr();
+  document.querySelectorAll('.stars').forEach(el=>{
+    const url=el.dataset.url;
+    if(m[url])_us(el,m[url].rating);
+    el.addEventListener('mouseleave',()=>_us(el,(m[url]||{}).rating||0));
+    el.querySelectorAll('.star').forEach(s=>{
+      const n=parseInt(s.dataset.n);
+      s.addEventListener('mouseenter',()=>_us(el,n));
+      s.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        const cur=(m[url]||{}).rating||0,nr=cur===n?0:n;
+        _sv(url,nr,el.dataset.title,el.dataset.src,el.dataset.date);
+        if(nr)m[url]={rating:nr};else delete m[url];
+        _us(el,nr);
+      });
+    });
+  });
+}
+function exportRatings(){
+  const m=_lr(),cnt=Object.keys(m).length;
+  if(!cnt){alert('評価データがありません。★を付けてからエクスポートしてください。');return;}
+  const blob=new Blob([JSON.stringify(m,null,2)],{type:'application/json'});
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download='ratings.json';document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(u);
+  alert(cnt+'件の評価をエクスポートしました。scripts/ratings.json として保存してください。');
+}
+document.addEventListener('DOMContentLoaded',initStars);
+</script>
+</body>
+</html>
